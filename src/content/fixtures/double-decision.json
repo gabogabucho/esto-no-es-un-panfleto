@@ -1,0 +1,72 @@
+{
+  "id": "FIX-04",
+  "acto": 2,
+  "modo": "FEED",
+  "epigrafe": "La segunda ronda llega antes de lo esperado.",
+  "fecha": "13 de febrero de 2014",
+  "fechaIso": "2014-02-13",
+  "lugar": "Caracas, Distrito Capital",
+  "bloques": [
+    {
+      "tipo": "narracion",
+      "texto": "Dos veces en el mismo día te toca decidir. La primera decisión define la segunda; así funciona esta noche en Caracas."
+    },
+    {
+      "tipo": "narracion",
+      "texto": "El grupo avanza por la avenida y la pregunta vuelve a tus manos."
+    }
+  ],
+  "grupos": [
+    {
+      "id": "g1",
+      "titulo": "Decisión — la primera ronda.",
+      "opciones": [
+        {
+          "label": "Sigues a la multitud.",
+          "deltas": { "CO": 1, "RI": 1 },
+          "flags": { "sigue-multitud": true },
+          "consecuencia": "La marea te lleva por delante."
+        },
+        {
+          "label": "Revisas el celular y te apartas.",
+          "deltas": { "CF": 1 },
+          "consecuencia": "Una bocanada de aire fresco en la acera."
+        },
+        {
+          "label": "Buscas a tus compañeros en la esquina.",
+          "deltas": { "RE": 1 },
+          "consecuencia": "Los encuentras cerca de la librería."
+        }
+      ]
+    },
+    {
+      "id": "g2",
+      "titulo": "Decisión — la segunda ronda.",
+      "condicion": "decisiones[0].opcion === 'Sigues a la multitud.'",
+      "opciones": [
+        {
+          "label": "Cruzas la avenida hacia las barricadas.",
+          "deltas": { "CO": 2, "PP": 1 },
+          "consecuencia": "El humo de las llantas te recibe."
+        },
+        {
+          "label": "Compartes el agua con quien la necesita.",
+          "deltas": { "RE": 2 },
+          "inventario": { "costo": { "agua": 1 } },
+          "consecuencia": "Alguien te agradece con la mano."
+        },
+        {
+          "label": "Regresas al punto de encuentro.",
+          "deltas": { "CF": 2 },
+          "requiere": "sigue-multitud",
+          "consecuencia": "Vuelves sobre tus pasos antes de que cierre la noche."
+        }
+      ]
+    }
+  ],
+  "consecuenciaComun": "Las dos rondas terminan y el teléfono sigue vibrando.",
+  "fuentes": [
+    { "fuente": "Testimonio recogido en Caracas (ficción de fixture)", "certeza": "testimonio-no-verificado" }
+  ],
+  "notaDiseno": "FIXTURE — reemplazar en cambio #2"
+}

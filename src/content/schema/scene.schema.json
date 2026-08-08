@@ -1,0 +1,345 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "scene.schema.json",
+  "title": "Escena — Esto no es un panfleto",
+  "description": "Contrato de contenido de escena (GS-001..GS-004). Fuente única del schema; la usa scripts/validate-content.mjs (Ajv) en CI. El contenido real llegará en el cambio #2 sin tocar el motor.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "acto", "modo", "fecha", "lugar", "bloques", "grupos"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^(?:[A-Z]|FIX)-\\d{2,3}$",
+      "description": "Identificador único de la escena (GS-001)."
+    },
+    "acto": {
+      "enum": [1, 2, 3],
+      "description": "Acto al que pertenece la escena."
+    },
+    "modo": {
+      "enum": ["FEED", "ZINE", "RADIO"],
+      "description": "Modo de render de la escena (GS-020)."
+    },
+    "fecha": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Fecha legible, p. ej. \"4 de febrero de 2014\"."
+    },
+    "lugar": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Ciudad / lugar de la escena."
+    },
+    "epigrafe": {
+      "type": "string",
+      "description": "Epígrafe de la escena (opcional)."
+    },
+    "modoFinal": {
+      "type": "string",
+      "description": "Modo al que transiciona la escena al cerrarse (GS-004)."
+    },
+    "fechaIso": {
+      "type": "string",
+      "format": "date",
+      "description": "Fecha en ISO 8601 (orden cronológico y mapa final)."
+    },
+    "desbloquea": {
+      "type": "string",
+      "description": "Id de material que esta escena desbloquea (GS-012)."
+    },
+    "ambiente": {
+      "enum": ["bullicio", "aire", "lluvia", "cuarto", "silencio"],
+      "description": "Ambiente sonoro sintetizado de la escena (GS-033). Si falta, se deduce del modo. Apagado por defecto: solo suena si el jugador enciende el sonido en el menú."
+    },
+    "ilustracion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["capas", "alt"],
+      "description": "Ilustración propia de la escena: banda superior por capas (R2/R3 prioridad b). Los archivos viven en src/assets/ilustracion/ y su ficha en ILUSTRACION.md.",
+      "properties": {
+        "capas": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 4,
+          "description": "Planos de fondo a frente. Con una sola capa hay deriva; con dos o más, parallax.",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "alt": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Descripción de lo que se ve, para lectores de pantalla (R2 / a11y)."
+        },
+        "niebla": {
+          "type": "boolean",
+          "description": "Fuerza la niebla animada. Por defecto la llevan las escenas RADIO, que son las nocturnas."
+        }
+      }
+    },
+    "foto": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["src", "opacidad", "alt"],
+      "description": "Foto de archivo; el archivo debe vivir en src/assets/archive/ (GS-050).",
+      "properties": {
+        "src": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Ruta relativa dentro de src/assets/archive/ (GS-050; nunca hotlink)."
+        },
+        "opacidad": {
+          "type": "number",
+          "minimum": 0.01,
+          "maximum": 0.35,
+          "description": "Opacidad de la foto; ≤ 0.35 para no competir con la legibilidad (GS-050)."
+        },
+        "alt": {
+          "type": "string",
+          "description": "Texto alternativo (R2 / a11y)."
+        }
+      }
+    },
+    "fuentes": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Fuentes de la escena con su nivel de certeza (GS-093).",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["fuente", "certeza"],
+        "properties": {
+          "fuente": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Descripción de la fuente (medio, archivo, testimonio)."
+          },
+          "certeza": {
+            "enum": ["confirmado", "fuente-unica", "testimonio-no-verificado"],
+            "description": "Nivel de certeza de la fuente (GS-093)."
+          }
+        }
+      }
+    },
+    "notaDiseno": {
+      "type": "string",
+      "description": "Nota interna de diseño; SOLO revisión, nunca se renderiza."
+    },
+    "consecuenciaComun": {
+      "type": "string",
+      "description": "Desenlace de la escena al cerrar todos los grupos (GS-002)."
+    },
+    "autoDeltas": {
+      "$ref": "#/definitions/deltas",
+      "description": "Deltas que se suman a TODAS las opciones de la escena (GS-010)."
+    },
+    "inventarioInicial": {
+      "$ref": "#/definitions/inventarioItems",
+      "description": "Inventario inicial del acto; el Zulia puede arrancar con logística (GS-011)."
+    },
+    "bloques": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Bloques de contenido de la escena (GS-003).",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["tipo", "texto"],
+            "properties": {
+              "tipo": { "const": "narracion" },
+              "texto": { "type": "string", "minLength": 1 },
+              "literal": { "type": "boolean", "description": "true = texto exacto del cliente, exento de R1 (GS-003)." }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["tipo", "texto", "autor"],
+            "properties": {
+              "tipo": { "const": "tweet" },
+              "texto": { "type": "string", "minLength": 1 },
+              "literal": { "type": "boolean", "description": "true = texto exacto del cliente, exento de R1 (GS-003)." },
+              "autor": { "type": "string", "description": "Cuenta que publica el tweet." },
+              "handle": { "type": "string" },
+              "tiempo": { "type": "string" },
+              "hashtags": { "type": "array", "items": { "type": "string" } },
+              "metricas": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "rt": { "type": "number" },
+                  "fav": { "type": "number" },
+                  "replies": { "type": "number" }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["tipo", "texto", "tiempo"],
+            "properties": {
+              "tipo": { "const": "radio" },
+              "texto": { "type": "string", "minLength": 1 },
+              "literal": { "type": "boolean", "description": "true = texto exacto del cliente, exento de R1 (GS-003)." },
+              "tiempo": { "type": "string", "description": "Marca horaria de la transmisión." },
+              "hora": { "type": "string" },
+              "emisor": { "type": "string" },
+              "cambio": { "type": "boolean" }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["tipo", "texto"],
+            "properties": {
+              "tipo": { "const": "zineTitulo" },
+              "texto": { "type": "string", "minLength": 1 },
+              "literal": { "type": "boolean", "description": "true = texto exacto del cliente, exento de R1 (GS-003)." },
+              "sub": { "type": "string" }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["tipo", "texto"],
+            "properties": {
+              "tipo": { "const": "dialogo" },
+              "texto": { "type": "string", "minLength": 1 },
+              "literal": { "type": "boolean", "description": "true = texto exacto del cliente, exento de R1 (GS-003)." },
+              "hablante": { "type": "string" }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["tipo", "texto"],
+            "properties": {
+              "tipo": { "const": "cita" },
+              "texto": { "type": "string", "minLength": 1 },
+              "literal": { "type": "boolean", "description": "true = texto exacto del cliente, exento de R1 (GS-003)." },
+              "autor": { "type": "string" },
+              "fuente": { "type": "string" }
+            }
+          }
+        ]
+      }
+    },
+    "grupos": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "description": "Grupos de decisión secuenciales, UNO visible a la vez (GS-002, GS-021).",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "opciones"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Identificador único del grupo dentro de la escena (GS-002)."
+          },
+          "titulo": {
+            "type": ["string", "null"],
+            "description": "Prompt opcional del grupo (null permitido)."
+          },
+          "condicion": {
+            "type": "string",
+            "description": "Expresión evaluada contra el estado post-decisión del grupo anterior; si no se cumple, el grupo no se renderiza (GS-002)."
+          },
+          "opciones": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 4,
+            "description": "Entre 2 y 4 opciones (GS-060).",
+            "items": { "$ref": "#/definitions/opcion" }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "eje": {
+      "type": "string",
+      "enum": ["CO", "RI", "RE", "CF", "PP"],
+      "description": "Eje de estadística (GS-010)."
+    },
+    "deltas": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Delta por eje; ejes ausentes = 0.",
+      "properties": {
+        "CO": { "type": "number" },
+        "RI": { "type": "number" },
+        "RE": { "type": "number" },
+        "CF": { "type": "number" },
+        "PP": { "type": "number" }
+      }
+    },
+    "inventarioItems": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Ítems de inventario por acto (GS-011).",
+      "properties": {
+        "mascaras": { "type": "number", "minimum": 0 },
+        "agua": { "type": "number", "minimum": 0 },
+        "gasa": { "type": "number", "minimum": 0 },
+        "contactos": { "type": "number", "minimum": 0 }
+      }
+    },
+    "opcion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label"],
+      "description": "Opción de un grupo de decisión (GS-002).",
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Texto del botón de la opción (≥56px, GS-021)."
+        },
+        "deltas": { "$ref": "#/definitions/deltas" },
+        "inventario": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Coste / ganancia de inventario de la opción (GS-011).",
+          "properties": {
+            "costo": { "$ref": "#/definitions/inventarioItems" },
+            "ganancia": { "$ref": "#/definitions/inventarioItems" }
+          }
+        },
+        "flags": {
+          "type": "object",
+          "additionalProperties": { "type": "boolean" },
+          "description": "Flags que la opción setea (GS-012)."
+        },
+        "requiere": {
+          "type": "string",
+          "description": "Referencia a un flag declarado; la opción queda oculta si no se cumple (GS-012)."
+        },
+        "consecuencia": {
+          "type": "string",
+          "description": "Resultado de la opción (aria-live polite, GS-022)."
+        },
+        "evento": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["tipo"],
+          "description": "Evento especial al elegir la opción (GS-016).",
+          "properties": {
+            "tipo": { "enum": ["infiltracion"] },
+            "siCFBajo": {
+              "type": "number",
+              "description": "Si CF < siCFBajo tras aplicar deltas, se aplican deltas extra y un flag de rumor no borrable (GS-016)."
+            }
+          }
+        },
+        "desbloquea": {
+          "type": "string",
+          "description": "Id de material que esta opción desbloquea (GS-012)."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+[
+  {
+    "id": "A1-BAD",
+    "acto": 1,
+    "modo": "FEED",
+    "epigrafe": "Prueba del gate de locale.",
+    "bloques": [
+      {
+        "tipo": "narracion",
+        "texto": "Tenés que venir. Sos el único que podés hacerlo, querés decir algo y sabés que no vas a poder."
+      },
+      {
+        "tipo": "dialogo",
+        "hablante": "Profe",
+        "texto": "Vení acá y contá qué viste."
+      }
+    ]
+  }
+]

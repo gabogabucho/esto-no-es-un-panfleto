@@ -1,0 +1,152 @@
+/* ==========================================================================
+   signal.css — La Señal (GS-030/031/032, R2).
+   Glitch de texto 100% CSS (color-split + jitter + slices), canvas decorativo
+   y rasgado ZINE por textura. Con prefers-reduced-motion NO anima nada: el
+   color-split y las texturas permanecen (mismo mensaje, sin movimiento).
+   ========================================================================== */
+
+@import './tokens.css';
+
+/* --------------------------------------------------------------------------
+   Canvas decorativo de fondo (GS-030). El posicionamiento fijo/inset/z-index
+   de base.css #senal se complementa aquí para la clase .senal-canvas.
+   -------------------------------------------------------------------------- */
+.senal-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.25s linear;
+}
+
+.senal-canvas.activo {
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Glitch de texto CSS puro (GS-031): escalada 1 → 2 → 3.
+   Color-split con text-shadow de tokens (rojo #8c2f1f y señal #5b7a63) a baja
+   opacidad; nivel 2 añade jitter de transform; nivel 3 añade slice clip-path
+   ocasional. El texto del DOM nunca se toca.
+   -------------------------------------------------------------------------- */
+.glitch-1,
+.glitch-2,
+.glitch-3 {
+  position: relative;
+}
+
+.glitch-1 {
+  text-shadow:
+    1px 0 0 rgba(140, 47, 31, 0.3),
+    -1px 0 0 rgba(91, 122, 99, 0.3);
+}
+
+.glitch-2 {
+  text-shadow:
+    2px 0 0 rgba(140, 47, 31, 0.4),
+    -2px 0 0 rgba(91, 122, 99, 0.4),
+    0 0 6px rgba(201, 162, 39, 0.12);
+  animation: enp-jitter 1.6s linear infinite;
+}
+
+.glitch-3 {
+  text-shadow:
+    3px 0 0 rgba(140, 47, 31, 0.55),
+    -3px 0 0 rgba(91, 122, 99, 0.55),
+    1px 1px 0 rgba(201, 162, 39, 0.25),
+    -1px -1px 0 rgba(44, 74, 82, 0.35);
+  animation:
+    enp-jitter 0.8s linear infinite,
+    enp-slice 5s linear infinite;
+}
+
+@keyframes enp-jitter {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-1px, 0);
+  }
+  50% {
+    transform: translate(1px, 0);
+  }
+  75% {
+    transform: translate(-1px, 0);
+  }
+}
+
+/* Slice ocasional: casi siempre invisible (inset 0), ráfagas breves. */
+@keyframes enp-slice {
+  0%,
+  91%,
+  100% {
+    clip-path: inset(0);
+  }
+  93% {
+    clip-path: inset(12% 0 58% 0);
+  }
+  96% {
+    clip-path: inset(62% 0 6% 0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Rasgado ZINE (GS-030): degradación por textura, sin bucle rAF.
+   .modo-zine.tear-1/2/3 intensifican el daño de borde sobre el papel
+   (.zine-hoja::after), con más manchas a mayor nivel.
+   -------------------------------------------------------------------------- */
+.zine-hoja::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s linear;
+  background:
+    radial-gradient(120% 90% at 100% 0%, rgba(18, 19, 15, 0.3), transparent 55%),
+    radial-gradient(90% 70% at 0% 100%, rgba(140, 47, 31, 0.16), transparent 60%);
+}
+
+.modo-zine.tear-1 .zine-hoja::after {
+  opacity: 0.35;
+}
+
+.modo-zine.tear-2 .zine-hoja::after {
+  opacity: 0.6;
+  background:
+    radial-gradient(120% 90% at 100% 0%, rgba(18, 19, 15, 0.42), transparent 55%),
+    radial-gradient(90% 70% at 0% 100%, rgba(140, 47, 31, 0.22), transparent 60%),
+    radial-gradient(60% 40% at 75% 60%, rgba(18, 19, 15, 0.14), transparent 70%);
+}
+
+.modo-zine.tear-3 .zine-hoja::after {
+  opacity: 0.85;
+  background:
+    radial-gradient(130% 100% at 100% 0%, rgba(18, 19, 15, 0.5), transparent 55%),
+    radial-gradient(100% 80% at 0% 100%, rgba(140, 47, 31, 0.26), transparent 60%),
+    radial-gradient(50% 30% at 60% 30%, rgba(18, 19, 15, 0.16), transparent 70%),
+    radial-gradient(45% 28% at 85% 75%, rgba(140, 47, 31, 0.18), transparent 70%),
+    repeating-linear-gradient(115deg, rgba(18, 19, 15, 0.06) 0 2px, transparent 2px 5px);
+}
+
+/* --------------------------------------------------------------------------
+   prefers-reduced-motion (GS-032): sin movimiento, mismo mensaje.
+   El glitch queda como color-split estático; el rasgado ZINE conserva la
+   textura sin transición.
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .glitch-1,
+  .glitch-2,
+  .glitch-3 {
+    animation: none;
+  }
+
+  .zine-hoja::after,
+  .senal-canvas {
+    transition: none;
+  }
+}

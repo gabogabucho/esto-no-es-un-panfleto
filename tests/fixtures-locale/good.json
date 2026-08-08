@@ -1,0 +1,36 @@
+[
+  {
+    "id": "A1-GOOD",
+    "acto": 1,
+    "modo": "FEED",
+    "epigrafe": "Prueba del gate de locale.",
+    "bloques": [
+      {
+        "tipo": "narracion",
+        "texto": "Estás en la calle. Después de la protesta, además de todo, el país hierve. Y nomás queda seguir; el autobús pasa de largo."
+      },
+      {
+        "tipo": "dialogo",
+        "hablante": "Profe",
+        "texto": "Usted no puede pasar por aquí."
+      }
+    ]
+  },
+  {
+    "id": "Z-GOOD",
+    "acto": 3,
+    "modo": "RADIO",
+    "epigrafe": "Prueba del gate de locale.",
+    "bloques": [
+      {
+        "tipo": "narracion",
+        "texto": "El caminito polvoriento cruza la ranchería."
+      },
+      {
+        "tipo": "dialogo",
+        "hablante": "Primo",
+        "texto": "Vos tenéis razón, primo. Aquí nadie habla."
+      }
+    ]
+  }
+]

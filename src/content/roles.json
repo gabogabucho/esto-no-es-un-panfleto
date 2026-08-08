@@ -1,0 +1,39 @@
+{
+  "roles": [
+    {
+      "id": "vocero",
+      "nombre": "Vocero/a estudiantil",
+      "descripcion": "La voz que convoca a la asamblea y sostiene la palabra cuando el micrófono falla. Su red de contactos repite su nombre y su coraje abre la ronda.",
+      "statsIniciales": { "CO": 60, "RI": 40, "RE": 65, "CF": 50, "PP": 55 },
+      "notaDiseno": "FIXTURE — números inventados para el esqueleto; revisar en cambio #2"
+    },
+    {
+      "id": "brigadista-salud",
+      "nombre": "Brigadista de salud",
+      "descripcion": "Prepara la gasa, el agua y la calma en medio del humo. Su confianza no se negocia: cura primero y organiza después.",
+      "statsIniciales": { "CO": 45, "RI": 35, "RE": 55, "CF": 70, "PP": 50 },
+      "notaDiseno": "FIXTURE — números inventados para el esqueleto; revisar en cambio #2"
+    },
+    {
+      "id": "derecho",
+      "nombre": "Estudiante de derecho",
+      "descripcion": "Conoce las leyes y el peso de una firma. Su red de abogados y su confianza abren puertas que la calle no ve.",
+      "statsIniciales": { "CO": 40, "RI": 30, "RE": 60, "CF": 65, "PP": 55 },
+      "notaDiseno": "FIXTURE — números inventados para el esqueleto; revisar en cambio #2"
+    },
+    {
+      "id": "comunicador-redes",
+      "nombre": "Comunicador/a de redes",
+      "descripcion": "Vive en la frecuencia del teléfono y del rumor. Su red es amplia y su riesgo constante: sabe cuándo compartir y cuándo callar.",
+      "statsIniciales": { "CO": 45, "RI": 55, "RE": 70, "CF": 30, "PP": 50 },
+      "notaDiseno": "FIXTURE — números inventados para el esqueleto; revisar en cambio #2"
+    },
+    {
+      "id": "artista-muralista",
+      "nombre": "Artista muralista",
+      "descripcion": "Pinta la noche para que la memoria no se apague. Su percepción pública es su lienzo y su confianza, su andamio.",
+      "statsIniciales": { "CO": 50, "RI": 40, "RE": 45, "CF": 60, "PP": 70 },
+      "notaDiseno": "FIXTURE — números inventados para el esqueleto; revisar en cambio #2"
+    }
+  ]
+}

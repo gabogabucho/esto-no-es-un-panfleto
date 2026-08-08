@@ -1,0 +1,71 @@
+{
+  "titulo": "La cifra",
+  "desgaste": [
+    {
+      "fecha": "7 de julio",
+      "texto": "Quince jóvenes levantan un ayuno de diecisiete días en la iglesia La Chiquinquirá. Deshidratación severa."
+    },
+    {
+      "fecha": "16 de julio",
+      "texto": "Entregan un documento en doce embajadas. Lo rechazan Brasil y Cuba."
+    },
+    {
+      "fecha": "22 al 28 de julio",
+      "texto": "Los padres de los detenidos duermen a la intemperie frente al PNUD. Siete días. No les permiten poner un toldo. Llueve."
+    },
+    {
+      "fecha": "21 de agosto",
+      "texto": "Gerardo Carrero inicia una huelga de hambre en el SEBIN. Es torturado. La denuncia se presenta el 26 de agosto y se ratifica el 19 de noviembre. La jueza no la notifica a la Defensoría del Pueblo."
+    },
+    {
+      "fecha": "20 de diciembre",
+      "texto": "Un grupo se encadena en la Plaza Francia de Altamira hasta fin de año. Hay más de cien presos políticos."
+    },
+    {
+      "fecha": "31 de diciembre",
+      "texto": "Gerardo Carrero sigue aislado en una celda que sus custodios llaman \"la tumba\". Manda un mensaje de fin de año."
+    }
+  ],
+  "fraseCierreDesgaste": "En estos seis meses no murió ningún manifestante.",
+  "ovcs": {
+    "lineas": [
+      "Entre enero y diciembre de 2014",
+      "se registraron 9.286 protestas en Venezuela.",
+      "26 por día.",
+      "",
+      "El gobierno sostuvo que todas eran violentas",
+      "y tenían un objetivo insurreccional.",
+      "",
+      "El Observatorio Venezolano de Conflictividad Social",
+      "contó las violentas.",
+      "",
+      "Fueron 510.",
+      "El ocho por ciento."
+    ]
+  },
+  "creditos": {
+    "nota": [
+      "Los personajes de este juego son ficticios.",
+      "Los hechos, las fechas, los lugares y las cifras no lo son.",
+      "",
+      "Las personas que murieron no son personajes.",
+      "No tienen diálogo en este juego",
+      "porque nadie tiene derecho a ponerles palabras.",
+      "",
+      "La trazabilidad completa de cada dato",
+      "está disponible en [enlace]."
+    ],
+    "cierre": "para los que no aparecen en ninguna lista",
+    "fuentes": [
+      { "medio": "Blog Jóvenes Venezolanos / CalleSinRetorno — archivo 2014", "url": "https://callesinretorno.blogspot.com/2014/" },
+      { "medio": "Gerardo Carrero envía mensaje a todos los venezolanos, 31 dic 2014", "url": "https://callesinretorno.blogspot.com/2014/12/gerardo-carrero-envia-mensaje-todos-los.html" },
+      { "medio": "Encadenados por la libertad en Plaza Altamira, 20 dic 2014", "url": "https://callesinretorno.blogspot.com/2014/12/ultima-hora-encadenados-por-la-libertad.html" },
+      { "medio": "Heridas que no se borran — Foro Penal", "url": "https://foropenal.com/articulo/heridas-que-no-se-borran" },
+      { "medio": "Conflictividad en Venezuela 2014 — OVCS", "url": "https://www.observatoriodeconflictos.org.ve/oc/wp-content/uploads/2015/01/Conflictividad-en-Venezuela-2014.pdf" },
+      { "medio": "Jóvenes y electores ausentes: el impacto demográfico del éxodo venezolano — The Conversation", "url": "https://theconversation.com/jovenes-y-electores-ausentes-el-impacto-demografico-del-exodo-masivo-venezolano-234984" },
+      { "medio": "Esto no es un panfleto, Gabriel Urrutia — poema \"Panfleto\"" },
+      { "medio": "Cronología del ciclo 2014 — archivo de investigación (Foro Penal; PROVEA; Runrun.es; Infobae)" }
+    ]
+  },
+  "notaDiseno": "Datos de la secuencia final (entregable-H §2 y §5; GS-092.2/GS-092.5, GS-093). Las tarjetas del desgaste y las líneas de OVCS son texto del cliente, sin comentario ni énfasis. Toda cita de persona real (Gerardo Carrero) solo como dato documentado."
+}

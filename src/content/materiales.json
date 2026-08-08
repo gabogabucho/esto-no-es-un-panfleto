@@ -1,0 +1,31 @@
+{
+  "titulo": "Materiales",
+  "vacio": "Todavía no guardaste nada. Los materiales aparecen cuando una decisión produce algo que se puede conservar: un video, un número de teléfono, una lista de nombres.",
+  "materiales": [
+    {
+      "id": "material-candelaria",
+      "acto": 2,
+      "escena": "C-01",
+      "titulo": "Dos minutos y medio desde un murito",
+      "descripcion": "Grabado el 12 de febrero a seis cuadras del Ministerio Público. Se ve una avenida corriendo en dirección contraria y no se ve quién dispara. Sirve para fechar y ubicar. No sirve para atribuir.",
+      "fuente": "Material propio del personaje. Ficción sobre un hecho documentado (entregable D fichas 1 y 2)."
+    },
+    {
+      "id": "material-otro-angulo",
+      "acto": 1,
+      "escena": "T-06",
+      "titulo": "Cuarenta segundos desde el edificio de enfrente",
+      "descripcion": "La caída del segundo piso del 24 de febrero, grabada desde arriba por un vecino. Confirma la caída, que ya estaba confirmada. No resuelve la disputa sobre la causa, que el Ministerio Público cerró como accidental.",
+      "fuente": "Material propio del personaje. Ficción sobre un hecho documentado (entregable D ficha 14)."
+    },
+    {
+      "id": "material-contacto-pedro",
+      "acto": 3,
+      "escena": "Z-02",
+      "titulo": "El número de Pedro",
+      "descripcion": "Un abogado que conoce cómo funcionan los cuarteles. Anotado en la cancha una noche de febrero, antes de que hiciera falta. Ese orden es el punto.",
+      "fuente": "Personaje ficticio. El circuito de emergencia para ubicar detenidos existía y era Foro Penal (entregable B §1.3)."
+    }
+  ],
+  "notaDiseno": "Catálogo de lo que `desbloquea` puede entregar (GS-012). El shell junta los ids que sueltan las escenas y las opciones, y muestra aquí los que tienen ficha. Un id sin ficha se ignora en silencio: el contenido puede ir por delante del catálogo."
+}

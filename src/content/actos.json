@@ -1,0 +1,31 @@
+{
+  "actos": [
+    {
+      "id": 1,
+      "nombre": "La Chispa",
+      "ciudad": "San Cristóbal",
+      "estado": "Táchira",
+      "epigrafe": "Enero de 2014: San Cristóbal aprende que la montaña también protesta.",
+      "registro": "usted",
+      "inventarioInicial": { "mascaras": 0, "agua": 0, "gasa": 0, "contactos": 0 }
+    },
+    {
+      "id": 2,
+      "nombre": "El Frente",
+      "ciudad": "Caracas",
+      "estado": "Distrito Capital",
+      "epigrafe": "Febrero de 2014: la avenida Libertador arde de preguntas.",
+      "registro": "tuteo neutro",
+      "inventarioInicial": { "mascaras": 0, "agua": 1, "gasa": 0, "contactos": 0 }
+    },
+    {
+      "id": 3,
+      "nombre": "Viento Norte",
+      "ciudad": "Maracaibo",
+      "estado": "Zulia",
+      "epigrafe": "La pregunta baja al lago y Maracaibo la recibe con la radio encendida.",
+      "registro": "voseo maracucho",
+      "inventarioInicial": { "mascaras": 2, "agua": 3, "gasa": 1, "contactos": 1 }
+    }
+  ]
+}

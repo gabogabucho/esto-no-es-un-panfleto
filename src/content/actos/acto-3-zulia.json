@@ -1,0 +1,1143 @@
+[
+  {
+    "id": "Z-01",
+    "acto": 3,
+    "modo": "FEED",
+    "fecha": "5 al 10 de febrero de 2014",
+    "fechaIso": "2014-02-05",
+    "lugar": "Universidad del Zulia, Maracaibo",
+    "epigrafe": "Táchira está a mil kilómetros y de golpe es lo único que importa.",
+    "ilustracion": {
+      "capas": [
+        "z01-cecilio-acosta.webp"
+      ],
+      "alt": "Mediodía en una avenida junto a un campus universitario, cortada. Unas cuarenta personas de espaldas atravesadas en la calle, algunas sentadas en el borde. Luz dura y sombras cortas. Al fondo, edificios bajos de techo plano y palmeras."
+    },
+    "bloques": [
+      {
+        "tipo": "narracion",
+        "texto": "Estás en LUZ, entre clases, y el teléfono no para. Se llevaron a unos estudiantes en San Cristóbal y hay otros presos en Coro."
+      },
+      {
+        "tipo": "tweet",
+        "autor": "@fcu_luz",
+        "handle": "@fcu_luz",
+        "tiempo": "09:14",
+        "texto": "Lunes 10, 9 a.m. Cierre de Cecilio Acosta y avenida Guajira. Liberación de los detenidos de Táchira y de Coro. Cese de la represión.",
+        "hashtags": [
+          "#LUZ"
+        ],
+        "metricas": {
+          "rt": 310,
+          "fav": 190,
+          "replies": 55
+        }
+      },
+      {
+        "tipo": "narracion",
+        "texto": "La FCU convocó con tarima y sonido. Alguien del grupo de la facultad pregunta si vamos a ir a eso o si vamos a hacer algo."
+      },
+      {
+        "tipo": "tweet",
+        "autor": "@guajira_1010",
+        "handle": "@guajira_1010",
+        "tiempo": "10:41",
+        "texto": "La FAPUV convoca paro universitario nacional de 24 horas. En la rectoral nueva hay concentración pacífica desde temprano.",
+        "metricas": {
+          "rt": 88,
+          "fav": 42
+        }
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — la primera es política.",
+        "opciones": [
+          {
+            "label": "Tuiteas la convocatoria de la FCU con tu nombre y tu cara.",
+            "deltas": {
+              "RE": 2,
+              "RI": 1,
+              "PP": 1
+            },
+            "flags": {
+              "cara-visible": true
+            },
+            "consecuencia": "Tu cara empieza a circular hoy. Eso no se deshace después."
+          },
+          {
+            "label": "Lo reenvías por privado a los que conoces, para juntarse aparte.",
+            "deltas": {
+              "RE": 1,
+              "CF": 1
+            },
+            "flags": {
+              "grupo-propio": true
+            },
+            "consecuencia": "Nueve respuestas en dos horas. Nadie de la FCU está en esa conversación."
+          },
+          {
+            "label": "Vas a la concentración, pero no publicas nada.",
+            "deltas": {
+              "CO": 1,
+              "RI": -1,
+              "RE": -1
+            },
+            "consecuencia": "Estuviste. No hay una sola foto en la que salgas."
+          },
+          {
+            "label": "Todavía no es aquí.",
+            "consecuencia": "No es cobardía y nadie te lo va a reprochar. Simplemente el Flaco conoce a otro antes que a ti."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "El 11 hay protestas al mismo tiempo en Táchira, Zulia, Caracas y Coro, por lo mismo. Maracaibo entró al ciclo una semana antes del 12F, y entró por gente de otro estado.",
+    "fuentes": [
+      {
+        "fuente": "La Patilla, 10 de febrero de 2014 — cierre de Cecilio Acosta y avenida Guajira por estudiantes de LUZ",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "PROVEA; Cronología del ciclo 2014 — protestas universitarias del 5 al 11 de febrero",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Testimonio primario: distancia deliberada de partidos y organizaciones tradicionales",
+        "certeza": "testimonio-no-verificado"
+      }
+    ],
+    "notaDiseno": "Z-01 del entregable C. Red y Riesgo son ejes independientes: la opción 1 sube los dos, la 2 sube Red sin subir Riesgo. La fricción con la FCU es la primera decisión política del acto."
+  },
+  {
+    "id": "Z-02",
+    "acto": 3,
+    "modo": "ZINE",
+    "fecha": "Mediados de febrero de 2014",
+    "fechaIso": "2014-02-15",
+    "lugar": "Urbanización Viento Norte, Maracaibo",
+    "epigrafe": "Catorce personas sentadas en el piso, porque las gradas se ven desde la calle.",
+    "ilustracion": {
+      "capas": [
+        "z02-la-cancha.webp"
+      ],
+      "alt": "Una cancha de cemento entre bloques de edificios, a las nueve de la noche. Catorce personas sentadas en el piso formando un círculo flojo, nadie de pie. En el medio del círculo, una libreta cerrada."
+    },
+    "bloques": [
+      {
+        "tipo": "zineTitulo",
+        "texto": "La cancha",
+        "sub": "Nueve de la noche · sin tarima, sin acta, sin nadie que presida"
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Dos de los catorce no son de LUZ. Uno estudia en URBE, otra ya no estudia. Viven aquí, y eso alcanza. La unidad no es la universidad: es la cuadra."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Cruzaste la ciudad dos veces hoy. En 2014 Maracaibo es zona militar y el trayecto tiene alcabalas; hay noches en que si estás en la universidad cuando avisan, no llegas."
+      },
+      {
+        "tipo": "dialogo",
+        "hablante": "El Flaco",
+        "texto": "Vos sabéis que aquí nadie es presidente de nada. Si mañana no servís para lo que dijiste, lo hace otro y ya."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Alguien trajo una libreta. Está sobre el piso de cemento, cerrada, y nadie sabe si eso es buena idea."
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — en qué quedas.",
+        "opciones": [
+          {
+            "label": "Vocería y redes.",
+            "deltas": {
+              "RE": 2,
+              "RI": 1
+            },
+            "flags": {
+              "rol-voceria": true
+            },
+            "consecuencia": "Nadie te eligió. Es un rol emergente y el grupo te lo puede quitar."
+          },
+          {
+            "label": "Logística: conseguir, guardar, repartir.",
+            "inventario": {
+              "ganancia": {
+                "contactos": 1,
+                "mascaras": 2
+              }
+            },
+            "flags": {
+              "rol-logistica": true
+            },
+            "consecuencia": "Te llega una caja de Miami con máscaras, guantes y linternas. La guardas en tu cuarto."
+          },
+          {
+            "label": "Enlace legal: que alguien tenga el número de un abogado antes de necesitarlo.",
+            "deltas": {
+              "CF": 2
+            },
+            "flags": {
+              "rol-legal": true,
+              "pedro": true
+            },
+            "desbloquea": "material-contacto-pedro",
+            "consecuencia": "Pedro anota tu número y te anota el suyo. Todavía no sabes para qué va a servir."
+          },
+          {
+            "label": "Vigía y primeros auxilios.",
+            "deltas": {
+              "CF": 1
+            },
+            "inventario": {
+              "ganancia": {
+                "gasa": 2
+              }
+            },
+            "flags": {
+              "rol-vigia": true
+            },
+            "consecuencia": "Aprendes a lavar un ojo con suero en dos minutos. Vas a usarlo."
+          }
+        ]
+      },
+      {
+        "id": "g2",
+        "titulo": "La libreta. ¿La usamos?",
+        "opciones": [
+          {
+            "label": "Sí, con nombres.",
+            "deltas": {
+              "RE": 1,
+              "CF": -2
+            },
+            "flags": {
+              "libreta-nombres": true
+            },
+            "consecuencia": "Catorce nombres en una hoja cuadriculada. Si cae la libreta, cae todo."
+          },
+          {
+            "label": "Sí, solo apodos.",
+            "deltas": {
+              "RE": 1,
+              "CF": -1
+            },
+            "flags": {
+              "libreta-apodos": true
+            },
+            "consecuencia": "El Flaco, la Negra, el de Medicina. Sirve para casi todo y no sirve para el hospital."
+          },
+          {
+            "label": "No hay libreta.",
+            "deltas": {
+              "CF": 1,
+              "RE": -1
+            },
+            "consecuencia": "Nadie sabe quién falta cuando falta. Eso también se paga."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "Sin institución que verifique, la confianza es la única infraestructura que hay. Registrar es organizarse y exponerse al mismo tiempo, y no se puede hacer solo una de las dos cosas.",
+    "fuentes": [
+      {
+        "fuente": "Testimonio primario (brief §6.5 puntos 2, 4 y 11): estructura por residencia, estado → ciudad → barrio",
+        "certeza": "testimonio-no-verificado"
+      },
+      {
+        "fuente": "Relato «La patrulla» — punto de encuentro en la cancha, reparto de tareas por carrera",
+        "certeza": "testimonio-no-verificado"
+      },
+      {
+        "fuente": "Organización sin carnet, sin federación y sin partido — modelo organizativo del movimiento",
+        "certeza": "confirmado"
+      }
+    ],
+    "notaDiseno": "Z-02 del entregable C. Ningún cargo, nadie preside: la vocería es emergente y se puede perder. La distancia LUZ–Viento Norte es material, no decorado. El enlace legal habilita a Pedro para Z-07."
+  },
+  {
+    "id": "Z-03",
+    "acto": 3,
+    "modo": "FEED",
+    "modoFinal": "RADIO",
+    "fecha": "Tercera semana de febrero de 2014",
+    "fechaIso": "2014-02-19",
+    "lugar": "Cercanías de la Casa de Gobierno, Maracaibo",
+    "epigrafe": "Treinta personas discutiendo qué hacer con un autobús cruzado, y ninguna manda.",
+    "ilustracion": {
+      "capas": [
+        "z03-el-bus.webp"
+      ],
+      "alt": "Un autobús urbano atravesado en una intersección, vacío y con las puertas abiertas. Unas treinta personas alrededor, dispersas y discutiendo, sin nadie en el centro. Dos cuadras más atrás, una fila de vehículos cruzando la calle."
+    },
+    "bloques": [
+      {
+        "tipo": "narracion",
+        "texto": "Llegaste con una cámara prestada que no sabes usar. Hay caras que no esperabas: gente que jamás imaginaste metida en esto."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Interceptaron un autobús de PDVSA cerca de la Plaza de la República, bajaron a los pasajeros y lo atravesaron en la intersección. A dos cuadras está la casa del gobernador y hay cordón militar."
+      },
+      {
+        "tipo": "tweet",
+        "autor": "@zulia_encalle",
+        "handle": "@zulia_encalle",
+        "tiempo": "16:52",
+        "texto": "Bus cruzado en la intersección. Unos dicen que lo prendan, otros que lo empujen contra el cordón. Nadie decide nada.",
+        "metricas": {
+          "rt": 120,
+          "fav": 60,
+          "replies": 88
+        }
+      },
+      {
+        "tipo": "tweet",
+        "autor": "@juana_luz",
+        "handle": "@juana_luz",
+        "tiempo": "16:58",
+        "texto": "El que lo quiera quemar que lo queme y que después responda con su nombre. Yo no vine para esto.",
+        "metricas": {
+          "rt": 33,
+          "fav": 210,
+          "replies": 140
+        }
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — el bus.",
+        "opciones": [
+          {
+            "label": "Grabas y no opinas.",
+            "deltas": {
+              "PP": 2,
+              "RE": 1,
+              "CO": -1
+            },
+            "flags": {
+              "grabo-el-bus": true
+            },
+            "consecuencia": "El material existe. También existe la versión de que estuviste mirando."
+          },
+          {
+            "label": "Hablas contra quemarlo.",
+            "deltas": {
+              "CF": 2,
+              "PP": 1,
+              "CO": -1
+            },
+            "consecuencia": "El grupo se parte en dos y el bus no arde. Las dos cosas son culpa tuya."
+          },
+          {
+            "label": "Te sumas a empujar el bus contra el cordón.",
+            "deltas": {
+              "CO": 3,
+              "RI": 3,
+              "PP": -3
+            },
+            "consecuencia": "Es lo que la prensa va a contar mañana, y lo va a contar sin tu contexto."
+          },
+          {
+            "label": "Señalas a los que quieren quemarlo: esos no son de aquí.",
+            "deltas": {
+              "CF": 1,
+              "PP": -1
+            },
+            "evento": {
+              "tipo": "infiltracion",
+              "siCFBajo": 45
+            },
+            "consecuencia": "Treinta personas voltean a mirar al que señalaste."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "El policía municipal se acerca, pide disculpas y se lleva a su gente: ante el rumor de hacer estallar el bus, el asunto pasa a ser vandálico y ya no pueden dar protección. Perdiste la única cobertura que tenías por un rumor que nadie confirmó.",
+    "autoDeltas": {
+      "PP": -1
+    },
+    "fuentes": [
+      {
+        "fuente": "Relato «¿De Diesel o Gasolina?» — fuente primaria del cliente",
+        "certeza": "testimonio-no-verificado"
+      },
+      {
+        "fuente": "Contexto de archivo del ciclo 2014 — primera protesta grande de Maracaibo después del 14 de febrero",
+        "certeza": "confirmado"
+      }
+    ],
+    "notaDiseno": "Z-03 del entregable C, escena tesis del acto: ni siquiera en la protesta se pudieron organizar. No hay opción buena; la 2 es la más sensata y también rompe al grupo. El policía que se disculpa no es chiste ni villano: la protección era condicional y la condición era un rumor. La opción 4 dispara el evento de infiltración si CF quedó bajo."
+  },
+  {
+    "id": "Z-04",
+    "acto": 3,
+    "modo": "FEED",
+    "fecha": "21 de febrero de 2014",
+    "fechaIso": "2014-02-21",
+    "lugar": "Maracaibo, Zulia",
+    "epigrafe": "Cuarenta personas esperando instrucciones en un canal que ya no existe.",
+    "ambiente": "aire",
+    "ilustracion": {
+      "capas": [
+        "z04-buscando-senal.webp"
+      ],
+      "alt": "Un techo de cemento al atardecer, con tanques de agua y tendederos. Cinco o seis personas separadas entre sí, cada una con el teléfono levantado buscando señal. Al fondo, la ciudad baja y el lago."
+    },
+    "bloques": [
+      {
+        "tipo": "narracion",
+        "texto": "Ayer el presidente dijo en cadena que interceptan las comunicaciones enviadas por Zello para monitorear manifestantes. Hoy Zello no abre."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "El bloqueo es desde CANTV y Movilnet. Sigue funcionando por la 3G de Movistar, que es servicio medido, y casi todos la usaban por WiFi de CANTV."
+      },
+      {
+        "tipo": "tweet",
+        "autor": "@advox_ve",
+        "handle": "@advox_ve",
+        "tiempo": "13:10",
+        "texto": "El 12 CONATEL sacó a NTN24 del cable. El 13 dejaron de cargar las imágenes de Twitter. Hoy, 21, no abre Zello. Nueve días.",
+        "metricas": {
+          "rt": 640,
+          "fav": 300
+        }
+      },
+      {
+        "tipo": "narracion",
+        "texto": "No es una barra que baja. Son tres cosas concretas con nombre y fecha, y ninguna vuelve."
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — cuarenta personas sin canal.",
+        "opciones": [
+          {
+            "label": "Pasas todo a mensajes de texto, uno por uno.",
+            "deltas": {
+              "CF": 2,
+              "RE": -2
+            },
+            "consecuencia": "Lento, seguro y pequeño. Es lo correcto y se siente como un retroceso, porque lo es."
+          },
+          {
+            "label": "Buscas la VPN y avisas cómo instalarla.",
+            "deltas": {
+              "RE": 1,
+              "RI": 1
+            },
+            "inventario": {
+              "costo": {
+                "contactos": 1
+              }
+            },
+            "consecuencia": "TunnelBear está regalando VPN a Venezuela. La mitad del grupo no entiende las instrucciones."
+          },
+          {
+            "label": "Abres un grupo nuevo y lo compartes público para no perder a nadie.",
+            "deltas": {
+              "RE": 3,
+              "CF": -3
+            },
+            "flags": {
+              "grupo-publico": true
+            },
+            "consecuencia": "Recuperas la red completa en una tarde. Cualquiera puede entrar, y cualquiera entra."
+          },
+          {
+            "label": "Que cada uno se las arregle.",
+            "deltas": {
+              "RE": -3,
+              "CF": 1
+            },
+            "consecuencia": "Se arreglan doce de cuarenta. Los otros veintiocho no vuelven a aparecer."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "NTN24 no está en el cable. Las fotos no cargan. Zello no abre. Tres fechas reales en nueve días.",
+    "fuentes": [
+      {
+        "fuente": "Global Voices Advox, 23 de febrero de 2014 — bloqueo de Zello con traceroutes públicos",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Cronología de la censura de canales — NTN24, Twitter y Zello (12 al 21 de febrero)",
+        "certeza": "confirmado"
+      }
+    ],
+    "notaDiseno": "Z-04 del entregable C. La Señal no baja como barra: muere por partes y con nombre propio. La opción 3 es la trampa del acto: recupera la Red y firma la sentencia, porque es el ingreso limpio para la infiltración de Z-07."
+  },
+  {
+    "id": "Z-05",
+    "acto": 3,
+    "modo": "RADIO",
+    "fecha": "Madrugada de finales de febrero de 2014",
+    "fechaIso": "2014-02-26",
+    "lugar": "Cancha de Viento Norte, Maracaibo",
+    "epigrafe": "Cuatro de la mañana. Linternas haciendo señas porque las voces se oyen desde los balcones.",
+    "ilustracion": {
+      "capas": [
+        "z05-patrulla-madrugada.webp"
+      ],
+      "alt": "Una calle residencial de madrugada. En primer plano, ramas cortadas atravesadas en el asfalto. Una figura agachada de espaldas alumbra el piso con una linterna. Al fondo, edificios con pocas ventanas encendidas y un carro parado con las luces apagadas."
+    },
+    "bloques": [
+      {
+        "tipo": "radio",
+        "tiempo": "04:07",
+        "emisor": "Cancha",
+        "texto": "Viento Norte, estamos en la cancha.",
+        "cambio": true
+      },
+      {
+        "tipo": "radio",
+        "tiempo": "04:09",
+        "emisor": "Cancha",
+        "texto": "El serrucho no corta un carajo.",
+        "cambio": true
+      },
+      {
+        "tipo": "radio",
+        "tiempo": "04:14",
+        "emisor": "Vigía",
+        "texto": "Hay una patrulla a dos cuadras. Parada. Luces apagadas.",
+        "cambio": true
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Los portones de los edificios quedaron abiertos por si hay que correr. En los mismos edificios hay vecinos que llaman a la policía cuando ven linternas."
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — la patrulla está parada a dos cuadras.",
+        "opciones": [
+          {
+            "label": "Seguimos. Está parada, no viene.",
+            "deltas": {
+              "CO": 2,
+              "RI": 2
+            },
+            "consecuencia": "Dos minutos después arranca con las sirenas y hay que correr."
+          },
+          {
+            "label": "Alguien va a abrir un portón por las dudas.",
+            "deltas": {
+              "RI": -1
+            },
+            "flags": {
+              "porton-abierto": true
+            },
+            "consecuencia": "Se pierde una persona del trabajo y llegan todos. El cambio vale la pena y aun así duele."
+          },
+          {
+            "label": "Cortamos y volvemos mañana.",
+            "deltas": {
+              "CO": -2,
+              "RE": -1,
+              "RI": -2
+            },
+            "consecuencia": "Nadie corre esta noche. La tranca sigue sin hacerse y mañana la calle está igual."
+          },
+          {
+            "label": "Mandas a las muchachas a vigilar y los demás cargan.",
+            "deltas": {
+              "CO": 1
+            },
+            "flags": {
+              "reparto-por-genero": true
+            },
+            "consecuencia": "La radio se queda callada tres segundos antes de que alguien conteste."
+          }
+        ]
+      },
+      {
+        "id": "g2",
+        "titulo": "Juana contesta por radio que ella corta mejor que tú.",
+        "condicion": "flags['reparto-por-genero'] === true",
+        "opciones": [
+          {
+            "label": "Le pasas el serrucho.",
+            "deltas": {
+              "CF": 1,
+              "CO": 1
+            },
+            "consecuencia": "Corta dos ramas en el tiempo que tú cortaste media. Nadie hace ningún comentario."
+          },
+          {
+            "label": "Insistes en que se quede vigilando.",
+            "deltas": {
+              "CF": -1
+            },
+            "consecuencia": "Se queda vigilando. No hay sermón: se nota en el grupo y ya."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "Terminas con raspones, callos y la tranca sin hacer. Es un sabor temprano de la derrota y todavía es febrero.",
+    "fuentes": [
+      {
+        "fuente": "Relato «La patrulla» — abastecimiento desde Miami, ramas cortadas con serrucho, vigía en alto, portones abiertos",
+        "certeza": "testimonio-no-verificado"
+      },
+      {
+        "fuente": "OVCS informe anual 2014 — operativos concentrados después de las 6 de la tarde; Zulia tercero con 49 ataques a 22 residencias y barrios entre febrero y mayo",
+        "certeza": "confirmado"
+      }
+    ],
+    "notaDiseno": "Z-05 del entregable C. En el relato original los hombres movían las ramas y las mujeres vigilaban: es un hecho del testimonio, no una recomendación, y el juego permite romperlo. El g2 es la respuesta de Juana que pide el entregable."
+  },
+  {
+    "id": "Z-06",
+    "acto": 3,
+    "modo": "ZINE",
+    "fecha": "24 de febrero de 2014",
+    "fechaIso": "2014-02-24",
+    "lugar": "Viento Norte y barrio Francisco de Miranda, Maracaibo",
+    "epigrafe": "Hay un mototaxista muerto a doce cuadras y la vecina del 4-B te para en la escalera.",
+    "ilustracion": {
+      "capas": [
+        "z06-la-escalera.webp"
+      ],
+      "alt": "El descanso de una escalera de edificio, con luz entrando por una reja. Dos figuras se cruzan: una sube con un morral, la otra baja con dos bolsas pesadas de mercado."
+    },
+    "bloques": [
+      {
+        "tipo": "zineTitulo",
+        "texto": "El que quitaba los escombros",
+        "sub": "Calle 79 · barrio Francisco de Miranda · 24 de febrero"
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Antonio José Valbuena Morales, 32 años, mototaxista, salió con unos ochenta motorizados a retirar barricadas. Un encapuchado le disparó en la cabeza y le robó la moto. Murió ahí."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "El mismo día, cuatro alcaldes de la propia oposición rechazan públicamente las barricadas como forma de protesta."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Mirna, la del 4-B, no es chavista. Tampoco es de ustedes. Trabaja en el centro y hace tres días que no puede llegar."
+      },
+      {
+        "tipo": "dialogo",
+        "hablante": "Mirna",
+        "texto": "A ese muchacho lo mataron quitando piedras. Piedras que pusisteis vos y los demás."
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — qué le contestas a Mirna.",
+        "opciones": [
+          {
+            "label": "«No fuimos nosotros. Fue el que disparó.»",
+            "deltas": {
+              "CF": 1,
+              "PP": -1
+            },
+            "consecuencia": "Es cierto y no la convence. Las dos cosas a la vez."
+          },
+          {
+            "label": "«Tiene razón.» Y no agregas nada.",
+            "deltas": {
+              "PP": 2,
+              "CO": -1
+            },
+            "consecuencia": "Se queda un segundo más de lo que esperabas antes de subir."
+          },
+          {
+            "label": "Le explicas por qué se tranca.",
+            "deltas": {
+              "RE": 1,
+              "PP": -2
+            },
+            "consecuencia": "Te escucha entera la explicación. Al final dice que igual no puede llegar al trabajo."
+          },
+          {
+            "label": "No dices nada y subes.",
+            "deltas": {
+              "PP": -1,
+              "CF": -1
+            },
+            "flags": {
+              "mirna-sin-respuesta": true
+            },
+            "consecuencia": "Los dos suben la misma escalera en silencio hasta el cuarto piso."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "A Valbuena lo mató un hombre armado, no una barricada. Mirna tiene razón en lo que le pasa a ella y tú tienes razón en lo tuyo, y eso no se resuelve.",
+    "fuentes": [
+      {
+        "fuente": "Runrun.es; Infobae; Foro Penal — Antonio José Valbuena Morales (24 de febrero)",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Cronología del ciclo 2014 — rechazo público de las barricadas por alcaldes opositores (24 de febrero)",
+        "certeza": "confirmado"
+      }
+    ],
+    "notaDiseno": "Z-06 del entregable C. No hace falta inventar al vecino molesto: la fractura sobre las trancas está documentada y ocurre dentro del propio bando opositor el mismo día. Si PP cae aquí, Mirna deja de abrir el portón de noche y eso se cobra en Z-07."
+  },
+  {
+    "id": "Z-07",
+    "acto": 3,
+    "modo": "RADIO",
+    "modoFinal": "ZINE",
+    "fecha": "Marzo de 2014, tres días",
+    "fechaIso": "2014-03-12",
+    "lugar": "Avenida Delicias y Viento Norte, Maracaibo",
+    "epigrafe": "Tres días sin información. A la familia solo le dicen que está detenido.",
+    "ilustracion": {
+      "capas": [
+        "z07-linternas.webp"
+      ],
+      "alt": "La misma cancha, otra noche. Solo seis personas en un círculo mucho más chico, cada una con una linterna apuntada al piso para que la luz no se vea. El resto de la cancha está vacío y a oscuras."
+    },
+    "bloques": [
+      {
+        "tipo": "narracion",
+        "texto": "Se llevaron a Deivis cargando sacos de piedra en la avenida Delicias. Juan lo vio y después no lo vio más."
+      },
+      {
+        "tipo": "radio",
+        "tiempo": "23:50",
+        "emisor": "Cancha",
+        "texto": "¿Alguna noticia?",
+        "cambio": true
+      },
+      {
+        "tipo": "radio",
+        "tiempo": "23:52",
+        "emisor": "Pedro",
+        "texto": "Nada. En la barraca dicen que no tienen información, y que si no está ahí no está en ningún lado.",
+        "cambio": true
+      },
+      {
+        "tipo": "dialogo",
+        "hablante": "Pedro",
+        "texto": "Vos tenéis que anotar la hora exacta y quién lo vio. Sin eso no podéis hacer nada mañana en la mañana."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Las reuniones se hacen en la cancha con linternas de pilas doble A, para que no se vean desde los balcones."
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Día 1 — nadie sabe dónde está.",
+        "opciones": [
+          {
+            "label": "Recorrer cuarteles y comisarías uno por uno.",
+            "deltas": {
+              "RI": 2
+            },
+            "inventario": {
+              "costo": {
+                "contactos": 1
+              }
+            },
+            "consecuencia": "Seis puertas, seis veces la misma respuesta. En la última ni siquiera abren."
+          },
+          {
+            "label": "Presión pública: tuitear el nombre y la cara.",
+            "deltas": {
+              "RE": 2,
+              "PP": 1,
+              "RI": 2
+            },
+            "flags": {
+              "deivis-publico": true
+            },
+            "consecuencia": "El nombre circula. La familia se entera por Twitter antes que por ti."
+          },
+          {
+            "label": "Esperar. Presionar en el ministerio atrasa los procesos de los otros.",
+            "deltas": {
+              "CF": 1,
+              "CO": -1
+            },
+            "consecuencia": "Es lo que el abogado recomienda y lo que peor se siente."
+          },
+          {
+            "label": "Que la familia lo haga sola.",
+            "deltas": {
+              "CF": -3,
+              "RE": -2
+            },
+            "consecuencia": "La mamá de Deivis va sola a la barraca el martes. Alguien lo cuenta en la cancha y nadie contesta."
+          }
+        ]
+      },
+      {
+        "id": "g2",
+        "titulo": "Día 3 — el gobernador sale en la cadena regional a celebrar una noche de éxito contra los guarimberos.",
+        "opciones": [
+          {
+            "label": "Grabas la cadena y armas el hilo con las contradicciones.",
+            "deltas": {
+              "PP": 2,
+              "RI": 1
+            },
+            "consecuencia": "Nueve minutos de cadena y tres cifras que no coinciden con las de ayer."
+          },
+          {
+            "label": "No respondes. No es el momento.",
+            "deltas": {
+              "CF": 1
+            },
+            "consecuencia": "El momento tampoco llega después."
+          },
+          {
+            "label": "Sales a trancar esa misma noche, con rabia.",
+            "deltas": {
+              "CO": 3,
+              "RI": 3,
+              "CF": -2
+            },
+            "consecuencia": "Salen once. A las dos de la mañana quedan cuatro y ninguno se acuerda de para qué salieron."
+          }
+        ]
+      },
+      {
+        "id": "g3",
+        "titulo": "Deivis vuelve. Está flaco, no cuenta nada y no vuelve a la cancha. Alguien dice en voz baja que a lo mejor habló.",
+        "condicion": "stats.CF < 45",
+        "opciones": [
+          {
+            "label": "Cortas el rumor delante de todos.",
+            "deltas": {
+              "CF": -2,
+              "CO": 1
+            },
+            "flags": {
+              "rumor-infiltracion": true
+            },
+            "consecuencia": "Se callan mientras estás ahí. El rumor ya no se va a poder borrar en lo que queda del acto."
+          },
+          {
+            "label": "No dices nada y dejas que se hable.",
+            "deltas": {
+              "CF": -2,
+              "PP": -1
+            },
+            "flags": {
+              "rumor-infiltracion": true
+            },
+            "consecuencia": "Nadie lo acusa de nada y nadie lo llama tampoco."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "Deivis vuelve. Nadie sabe dónde estuvo ni qué le pasó. El grupo pierde una persona sin que nadie muera y sin que quede registro de nada.",
+    "fuentes": [
+      {
+        "fuente": "Relato «A Deivis lo desaparecieron» — detención en la avenida Delicias, tres días sin información, búsqueda por abogado de confianza",
+        "certeza": "testimonio-no-verificado"
+      },
+      {
+        "fuente": "OVCS; Foro Penal — patrón de detenciones arbitrarias y allanamientos sin orden judicial",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Foro Penal — informe de casos de tortura (ONU, 2015); Jóvenes Venezolanos — cifras de represión del 16 de julio de 2014",
+        "certeza": "confirmado"
+      }
+    ],
+    "notaDiseno": "Z-07 del entregable C y regla de la tortura del entregable G §3.2: el juego nunca muestra la tortura, muestra el después. No hay escena de calabozo. Lo que el Estado producía activamente era la ausencia de evidencia, y eso es lo que se juega."
+  },
+  {
+    "id": "Z-08",
+    "acto": 3,
+    "modo": "FEED",
+    "fecha": "25 de marzo de 2014",
+    "fechaIso": "2014-03-25",
+    "lugar": "Sede del CNE-Zulia, avenida El Milagro, Maracaibo",
+    "epigrafe": "La noche estaba tranquila. Justo esa noche no salieron.",
+    "ilustracion": {
+      "capas": [
+        "z08-cne-humo.webp"
+      ],
+      "alt": "Las tres de la mañana vistas desde un balcón. A una cuadra, un edificio público con humo saliendo de la planta baja y un resplandor adentro. En los balcones vecinos, figuras de espaldas mirando. La calle entre medio está vacía."
+    },
+    "bloques": [
+      {
+        "tipo": "narracion",
+        "texto": "Uno de los puestos principales de la resistencia está en una residencia justo detrás del CNE, en una zona muy vigilada donde las barricadas se arman fuera de horario de oficina. Esta noche no se hizo barricada."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "A las tres de la mañana la gente sale a los balcones a mirar el humo salir del edificio de al lado. Puerta principal forzada, ventanas rotas, fuego en la planta baja."
+      },
+      {
+        "tipo": "tweet",
+        "autor": "@bomberos_mcbo",
+        "handle": "@bomberos_mcbo",
+        "tiempo": "05:20",
+        "texto": "Cerca del 60% de las instalaciones del CNE-Zulia afectadas. Reporte de saqueo de equipos informáticos. Sin heridos.",
+        "metricas": {
+          "rt": 900,
+          "fav": 210,
+          "replies": 340
+        }
+      },
+      {
+        "tipo": "narracion",
+        "texto": "La versión oficial dice vandalismo. La prensa opositora titula señalando la ausencia inexplicable de custodia en un edificio público estratégico."
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — tres de la mañana, desde el balcón.",
+        "opciones": [
+          {
+            "label": "Grabas desde el balcón.",
+            "deltas": {
+              "PP": 1
+            },
+            "flags": {
+              "grabo-cne": true
+            },
+            "consecuencia": "Cuarenta segundos temblorosos con el zoom digital al máximo. El video existe."
+          },
+          {
+            "label": "Bajas a ver.",
+            "deltas": {
+              "RI": 3,
+              "CO": 1
+            },
+            "consecuencia": "Llegas hasta la esquina. Hay más gente mirando que apagando."
+          },
+          {
+            "label": "Cierras la ventana y apagas la luz.",
+            "deltas": {
+              "RI": -2,
+              "CO": -2
+            },
+            "consecuencia": "Desde adentro se oye igual. No ver es una decisión y esta noche la tomaste."
+          }
+        ]
+      },
+      {
+        "id": "g2",
+        "titulo": "A la mañana siguiente el gobernador sale en cadena regional a repudiar el vandalismo.",
+        "opciones": [
+          {
+            "label": "Publicas el video de lo que viste salir del recinto en llamas.",
+            "deltas": {
+              "PP": 3,
+              "RI": 3,
+              "CF": -1
+            },
+            "requiere": "grabo-cne",
+            "consecuencia": "Cuarenta segundos que no prueban nada y que igual te ponen en una lista."
+          },
+          {
+            "label": "Publicas solo el incendio, sin la interpretación.",
+            "deltas": {
+              "PP": 1,
+              "RI": 1
+            },
+            "consecuencia": "El hecho, la hora y el lugar. Nada más, y eso es lo único que va a envejecer bien."
+          },
+          {
+            "label": "Haces mea culpa: nosotros repudiamos esto.",
+            "deltas": {
+              "PP": 2,
+              "CF": -2,
+              "CO": -2
+            },
+            "consecuencia": "Te lo agradecen en el noticiero y no te lo perdonan en la cancha."
+          },
+          {
+            "label": "No publicas nada. Nadie te va a creer.",
+            "deltas": {
+              "PP": -1,
+              "CO": -1
+            },
+            "consecuencia": "Puedes haber visto algo y no tener nada. Es casi lo mismo que no haber visto."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "El CNE-Zulia ardió, eso está verificado. Lo demás son vecinos contando lo que dicen haber visto, y ningún archivo lo registra.",
+    "fuentes": [
+      {
+        "fuente": "Panorama, 25 de marzo de 2014 — incendio en la sede del CNE-Zulia, avenida El Milagro, ~3:00 am",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Alba Ciudad — versión oficial de vandalismo",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Relato «Armas de difusión masiva» — puesto de resistencia detrás del CNE y convoy saliendo del recinto",
+        "certeza": "testimonio-no-verificado"
+      }
+    ],
+    "notaDiseno": "Z-08 del entregable C. Si el jugador no grabó la noche anterior, la primera opción de la mañana no existe: queda oculta por `requiere`, y esa ausencia es la escena. El gobernador es persona real y viva: se narra que salió en cadena y habló de vandalismo, que está documentado, y no se le pone una sola línea de diálogo inventado."
+  },
+  {
+    "id": "Z-09",
+    "acto": 3,
+    "modo": "ZINE",
+    "fecha": "21 de junio de 2014",
+    "fechaIso": "2014-06-21",
+    "lugar": "Maracaibo, Zulia",
+    "epigrafe": "Hace semanas que no hay tranca. La gente volvió a clase, o se fue.",
+    "ambiente": "aire",
+    "ilustracion": {
+      "capas": [
+        "z09-pasillo-vacio.webp"
+      ],
+      "alt": "Un pasillo universitario de día, abierto al exterior por una celosía de concreto. Casi vacío: una sola figura caminando de espaldas, lejos. Bandas largas de luz y sombra cruzan el piso."
+    },
+    "bloques": [
+      {
+        "tipo": "zineTitulo",
+        "texto": "El 21 de junio",
+        "sub": "La última víctima fatal registrada del ciclo"
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Josué Enmanuel Farías Sánchez, 19 años, estudiante de la URBE. Le dispararon en el abdomen el 29 de mayo, mientras se retiraba de clases buscando a un compañero para volver a casa. El disparo perforó estómago, hígado y páncreas."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Murió el 21 de junio de un paro respiratorio, después de casi un mes en terapia intensiva. El movimiento estudiantil de la URBE responsabilizó a la policía del Zulia; Foro Penal señaló a la PNB. Nadie fue detenido."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "No era de LUZ. Era de URBE, del otro lado de la ciudad. No lo conocías. Nadie de la cancha lo conocía."
+      },
+      {
+        "tipo": "dialogo",
+        "hablante": "El Flaco",
+        "texto": "Vos no lo conocíais y yo tampoco. Y aquí estamos los dos sin saber qué decir."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "El 26 los estudiantes zulianos se movilizan bajo una consigna: no se borra la verdad matando estudiantes."
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — la última del acto.",
+        "opciones": [
+          {
+            "label": "Vas a la movilización del 26.",
+            "deltas": {
+              "CO": 2,
+              "RE": 2,
+              "RI": 2
+            },
+            "consecuencia": "Son menos de los que esperabas y más de los que había en mayo."
+          },
+          {
+            "label": "Escribes lo que pasó, con fecha, hora y nombre. Y lo guardas.",
+            "deltas": {
+              "CF": 2,
+              "PP": 1
+            },
+            "flags": {
+              "cronologia-guardada": true
+            },
+            "consecuencia": "Cuatro meses en catorce páginas. Nadie te lo pidió."
+          },
+          {
+            "label": "Llamas a Deivis.",
+            "flags": {
+              "llame-a-deivis": true
+            },
+            "consecuencia": "El teléfono suena cinco veces."
+          },
+          {
+            "label": "Empiezas a averiguar cómo se saca el pasaporte.",
+            "deltas": {
+              "PP": -1
+            },
+            "flags": {
+              "pasaporte": true
+            },
+            "consecuencia": "Prórroga, apostilla, antecedentes. La cola del SAIME empieza a las cuatro de la mañana."
+          }
+        ]
+      },
+      {
+        "id": "g2",
+        "titulo": "Deivis atiende.",
+        "condicion": "flags['llame-a-deivis'] === true && stats.CF >= 50",
+        "opciones": [
+          {
+            "label": "Le preguntas cómo está y nada más.",
+            "deltas": {
+              "CF": 2,
+              "PP": 1
+            },
+            "consecuencia": "Hablan once minutos de béisbol. En ningún momento hablan de marzo."
+          },
+          {
+            "label": "Le preguntas si va el 26.",
+            "deltas": {
+              "CO": 1,
+              "CF": -1
+            },
+            "consecuencia": "Dice que va a ver. Los dos saben que no va a ir."
+          }
+        ]
+      },
+      {
+        "id": "g3",
+        "titulo": "Deivis no atiende.",
+        "condicion": "flags['llame-a-deivis'] === true && stats.CF < 50",
+        "opciones": [
+          {
+            "label": "Le dejas un mensaje.",
+            "deltas": {
+              "PP": 1
+            },
+            "consecuencia": "Lo escucha. No contesta. Eso lo vas a saber recién en septiembre."
+          },
+          {
+            "label": "No insistes.",
+            "deltas": {
+              "CF": -1
+            },
+            "consecuencia": "Es la última vez que marcas ese número."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "Josué Farías es la última muerte documentada del ciclo. El acto termina donde el archivo deja de registrar muertos, y eso no quiere decir que la pérdida se haya detenido.",
+    "fuentes": [
+      {
+        "fuente": "Runrun.es — Josué Enmanuel Farías Sánchez (21 de junio)",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "La Patilla, 26 de junio de 2014 — movilización estudiantil zuliana",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "JEP Venezuela — Museo de la Memoria y la Represión: ficha de Josué Enmanuel Farías Sánchez",
+        "certeza": "confirmado"
+      }
+    ],
+    "notaDiseno": "Z-09 del entregable C. Josué Farías no es personaje: no tiene diálogo, no aparece en escena, no se dramatiza su muerte. Con el protagonista en LUZ, es alguien que no conocías y su muerte igual cierra tu acto. El juego no los hace amigos porque sería inventar una relación con una persona real muerta (brief §4.3)."
+  }
+]

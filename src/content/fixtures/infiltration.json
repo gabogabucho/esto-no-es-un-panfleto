@@ -1,0 +1,48 @@
+{
+  "id": "FIX-05",
+  "acto": 2,
+  "modo": "FEED",
+  "epigrafe": "Alguien en la frecuencia escucha más de lo que dice.",
+  "fecha": "14 de febrero de 2014",
+  "fechaIso": "2014-02-14",
+  "lugar": "Caracas, Distrito Capital",
+  "bloques": [
+    {
+      "tipo": "narracion",
+      "texto": "Un contacto nuevo aparece en el grupo con el nombre de un caído. Nadie lo conoce en persona, pero todos lo saludan."
+    },
+    {
+      "tipo": "narracion",
+      "texto": "La noche reparte las dudas: quién es este muchacho y por qué sabe tanto."
+    }
+  ],
+  "grupos": [
+    {
+      "id": "g1",
+      "titulo": "Decisión — el contacto nuevo.",
+      "opciones": [
+        {
+          "label": "Le compartes la información de la próxima marcha.",
+          "deltas": { "CO": 1, "RI": 1 },
+          "evento": { "tipo": "infiltracion", "siCFBajo": 40 },
+          "consecuencia": "El rumor se cuela en la conversación como un cuchillo."
+        },
+        {
+          "label": "Le pides que demuestre quién es.",
+          "deltas": { "CF": 1, "RE": 1 },
+          "consecuencia": "El contacto sonríe y cambia de tema."
+        },
+        {
+          "label": "Lo dejas fuera del grupo por esta noche.",
+          "deltas": { "PP": 1, "CF": 1 },
+          "consecuencia": "La desconfianza tiene su costo, pero el grupo se protege."
+        }
+      ]
+    }
+  ],
+  "consecuenciaComun": "La noche se guarda el nombre del contacto y las dudas quedan abiertas.",
+  "fuentes": [
+    { "fuente": "Referencia de mecánica de infiltración (ficción de fixture)", "certeza": "testimonio-no-verificado" }
+  ],
+  "notaDiseno": "FIXTURE — reemplazar en cambio #2"
+}

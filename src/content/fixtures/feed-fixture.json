@@ -1,0 +1,67 @@
+{
+  "id": "FIX-01",
+  "acto": 2,
+  "modo": "FEED",
+  "epigrafe": "Caracas, febrero de 2014. El aire huele a gasolina.",
+  "fecha": "12 de febrero de 2014",
+  "fechaIso": "2014-02-12",
+  "lugar": "Caracas, Distrito Capital",
+  "bloques": [
+    {
+      "tipo": "narracion",
+      "texto": "Estás en la avenida Libertador y el teléfono vibra sin parar. En Caracas la tarde avanza entre cacerolas y gritos; aquí no hay silencio desde el mediodía."
+    },
+    {
+      "tipo": "tweet",
+      "autor": "@resiste_caracas",
+      "handle": "@resiste_caracas",
+      "tiempo": "14:02",
+      "texto": "Cacerola en Chacao desde las dos. Las ventanas de los edificios cantan contra la noche que viene.",
+      "hashtags": ["#CaracasResiste"],
+      "metricas": { "rt": 230, "fav": 118, "replies": 42 }
+    },
+    {
+      "tipo": "tweet",
+      "autor": "@prensa_u",
+      "handle": "@prensa_u",
+      "tiempo": "14:10",
+      "texto": "Servicio del Metro suspendido entre Plaza Venezuela y La Hoyada. Muchachos, busquen rutas alternas.",
+      "hashtags": ["#14F"]
+    },
+    {
+      "tipo": "narracion",
+      "texto": "El segundo tweet no lo escribe una cuenta real: es un rumor que alguien repite. Aun así, la calle lo cree."
+    }
+  ],
+  "grupos": [
+    {
+      "id": "g1",
+      "titulo": "Decisión — la plaza.",
+      "opciones": [
+        {
+          "label": "Te sumas a la cacerola desde la ventana.",
+          "deltas": { "RI": 2, "PP": 1 },
+          "consecuencia": "El ruido crece y alguien te saluda desde el edificio de enfrente."
+        },
+        {
+          "label": "Bajas a la calle y caminas hasta la plaza.",
+          "deltas": { "CO": 2, "RI": 1 },
+          "inventario": { "ganancia": { "agua": 1 } },
+          "consecuencia": "Caminas entre la multitud y una mano te ofrece agua."
+        },
+        {
+          "label": "Sigues de largo y te guardas el teléfono.",
+          "deltas": { "CF": 2 },
+          "consecuencia": "La distancia te protege, pero la conversación sigue vibrando en tu bolsillo."
+        }
+      ]
+    }
+  ],
+  "consecuenciaComun": "La noche cae sobre Caracas y la decisión queda tomada.",
+  "autoDeltas": { "RI": 1 },
+  "desbloquea": "FIX-02",
+  "fuentes": [
+    { "fuente": "OVCS — Observatorio Venezolano de Conflictividad Social", "certeza": "testimonio-no-verificado" }
+  ],
+  "notaDiseno": "FIXTURE — reemplazar en cambio #2"
+}

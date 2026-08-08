@@ -1,0 +1,11 @@
+node_modules/
+dist/
+dev-dist/
+coverage/
+.DS_Store
+*.log
+
+# PNG originales de trabajo (~85 MB) que duplican los .webp finales ya
+# optimizados en src/assets/ilustracion/. Si algún día se necesitan en el repo,
+# forzar con: git add -f assets-wip/
+assets-wip/

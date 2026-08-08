@@ -1,0 +1,1510 @@
+/* ==========================================================================
+   pantallas.css — Shell del juego (M4): portada, rol, HUD de escena, final de
+   acto y las cinco secuencias del cierre (entregable H) + memorial y menú.
+
+   Reglas de color heredadas de contrast.test.js: papel y ocre son los únicos
+   colores de TEXTO sobre negro; señal se reserva para bordes, reglas y texto
+   grande; rojo y verde-noche son decorativos y nunca llevan texto encima.
+   ========================================================================== */
+
+.zona-pantalla {
+  display: block;
+}
+
+/* Botón del menú en la cabecera sticky. 44px y no 56 como las decisiones: es
+   cromo, no una elección de la partida, y una cabecera de 72px se come el
+   móvil. Sigue por encima del mínimo de WCAG 2.5.5. */
+.boton-menu {
+  min-height: 44px;
+  padding: var(--espacio-1) var(--espacio-2);
+  font-family: var(--font-cuerpo);
+  font-size: var(--step-0);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: transparent;
+  color: var(--ocre-bandera);
+  border: 2px solid var(--ocre-bandera);
+  border-radius: var(--radio);
+  cursor: pointer;
+}
+
+.boton-menu:hover,
+.boton-menu:focus-visible,
+.boton-menu[aria-expanded='true'] {
+  background: var(--ocre-bandera);
+  color: var(--negro-concreto);
+}
+
+/* El pie lleva texto pequeño desde M4: papel sobre negro para cumplir AA
+   (verde señal se reserva para UI y texto grande, ver contrast.test.js). */
+#pie-texto {
+  color: var(--papel-viejo);
+}
+
+.pantalla {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-3);
+}
+
+/* Título que existe para lectores de pantalla pero no ocupa la vista. */
+.oculto-visual {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.acciones {
+  display: grid;
+  gap: var(--espacio-2);
+  margin-top: var(--espacio-2);
+}
+
+.kicker {
+  font-size: var(--step-0);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ocre-bandera);
+}
+
+.subtitulo {
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ocre-bandera);
+}
+
+.remate {
+  font-family: var(--font-display);
+  font-size: var(--step-3);
+  line-height: 1.25;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--papel-viejo);
+  margin-block: var(--espacio-4);
+}
+
+/* La frase que cae sin énfasis (entregable H §2): cuerpo, no display. */
+.remate--seco {
+  font-family: var(--font-cuerpo);
+  font-size: var(--step-2);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Portada — es la tapa del juego, no un formulario
+   -------------------------------------------------------------------------- */
+
+.pantalla--inicio {
+  position: relative;
+  min-height: 100dvh;
+  justify-content: flex-end;
+  gap: 0;
+  margin-inline: calc(50% - 50vw);
+  width: 100vw;
+  padding: 0;
+  overflow: hidden;
+}
+
+.portada-fondo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.portada-fondo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 40%;
+}
+
+/* La imagen se hunde en el negro para que el título tenga dónde apoyarse. */
+.portada-fondo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, color-mix(in srgb, var(--negro-concreto) 55%, transparent) 0%, transparent 22%,
+      color-mix(in srgb, var(--negro-concreto) 82%, transparent) 62%, var(--negro-concreto) 100%),
+    linear-gradient(160deg, color-mix(in srgb, var(--verde-noche) 45%, transparent), transparent 60%);
+}
+
+.portada-cuerpo {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: var(--espacio-2);
+  max-width: 40rem;
+  margin-inline: auto;
+  width: 100%;
+  padding: var(--espacio-4) var(--espacio-2) calc(var(--espacio-3) + env(safe-area-inset-bottom));
+}
+
+.portada-kicker {
+  font-size: var(--step-0);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  color: var(--ocre-bandera);
+}
+
+.portada-pie {
+  display: grid;
+  gap: var(--espacio-2);
+  margin-top: var(--espacio-1);
+}
+
+.boton--discreto {
+  border-color: color-mix(in srgb, var(--verde-senal) 70%, transparent);
+  color: var(--papel-viejo);
+  background: color-mix(in srgb, var(--negro-concreto) 82%, transparent);
+  text-transform: none;
+  letter-spacing: 0.02em;
+  min-height: 48px;
+}
+
+@media (min-width: 900px) {
+  .portada-cuerpo {
+    max-width: 46rem;
+    padding-bottom: var(--espacio-4);
+  }
+
+  .titulo-portada {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Cómo se juega
+   -------------------------------------------------------------------------- */
+
+.titulo-tutorial {
+  font-family: var(--font-display);
+  font-size: var(--step-4);
+  font-weight: 400;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: var(--papel-viejo);
+}
+
+.tutorial {
+  list-style: none;
+  display: grid;
+  gap: var(--espacio-2);
+  counter-reset: paso;
+}
+
+.tutorial-paso {
+  display: grid;
+  gap: 0.3em;
+  padding: var(--espacio-2);
+  border: 1px solid color-mix(in srgb, var(--verde-senal) 70%, transparent);
+  border-radius: var(--radio);
+  background: color-mix(in srgb, var(--papel-viejo) 4%, transparent);
+}
+
+.tutorial-numero {
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  color: var(--ocre-bandera);
+  line-height: 1;
+}
+
+.tutorial-titulo {
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--papel-viejo);
+}
+
+.tutorial-texto {
+  font-size: var(--step-0);
+  line-height: 1.55;
+  color: var(--papel-viejo);
+}
+
+@media (min-width: 900px) {
+  .tutorial {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.titulo-portada {
+  font-family: var(--font-display);
+  font-size: var(--step-4);
+  font-weight: 400;
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--papel-viejo);
+}
+
+.entradilla {
+  font-size: var(--step-2);
+  color: var(--ocre-bandera);
+}
+
+.entradilla-2 {
+  color: var(--papel-viejo);
+}
+
+/* Banda sonora sugerida: presente pero sin competir con Empezar. */
+.banda-sonora {
+  display: grid;
+  gap: var(--espacio-1);
+  padding: var(--espacio-2);
+  border: 1px dashed var(--verde-senal);
+  border-radius: var(--radio);
+}
+
+.banda-sonora-kicker {
+  font-size: var(--step-0);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ocre-bandera);
+}
+
+.banda-sonora-disco {
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--papel-viejo);
+}
+
+.banda-sonora-enlace {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: var(--step-1);
+  color: var(--papel-viejo);
+  text-decoration-thickness: 2px;
+}
+
+.banda-sonora-enlace:hover,
+.banda-sonora-enlace:focus-visible {
+  color: var(--ocre-bandera);
+}
+
+.banda-sonora-nota {
+  font-size: var(--step-0);
+  color: var(--papel-viejo);
+}
+
+.nota-portada {
+  font-size: var(--step-0);
+  color: var(--papel-viejo);
+  border-top: 1px solid var(--verde-senal);
+  padding-top: var(--espacio-2);
+}
+
+/* Conteo de partidas jugadas en este navegador: discreto, al pie. */
+.conteo-juego {
+  font-size: var(--step-0);
+  color: color-mix(in srgb, var(--papel-viejo) 55%, transparent);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Selección de rol
+   -------------------------------------------------------------------------- */
+
+.titulo-acto {
+  font-family: var(--font-display);
+  font-size: var(--step-4);
+  font-weight: 400;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: var(--papel-viejo);
+}
+
+.acto-lugar {
+  font-size: var(--step-0);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ocre-bandera);
+}
+
+.acto-epigrafe {
+  font-size: var(--step-1);
+  color: var(--papel-viejo);
+  border-left: 3px solid var(--verde-senal);
+  padding-left: var(--espacio-2);
+}
+
+.pregunta-rol {
+  font-family: var(--font-display);
+  font-size: var(--step-3);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--ocre-bandera);
+}
+
+/* Las tarjetas de personaje se reparten en un grid que llena el ancho y el
+   alto: en escritorio los cinco roles se ven de una ojeada, sin scroll. */
+.pantalla--rol {
+  min-height: 100dvh;
+  justify-content: center;
+}
+
+.opciones--roles {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  align-items: stretch;
+  width: 100%;
+}
+
+.opcion--rol {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: var(--espacio-1);
+  align-content: start;
+  min-height: 0;
+}
+
+.rol-nombre {
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--ocre-bandera);
+}
+
+.rol-descripcion {
+  font-size: var(--step-0);
+  line-height: 1.5;
+  color: var(--papel-viejo);
+}
+
+.stats-compacto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-2);
+  font-size: var(--step-0);
+  padding-top: var(--espacio-1);
+  border-top: 1px solid var(--verde-senal);
+}
+
+/* --------------------------------------------------------------------------
+   Stats e inventario
+   -------------------------------------------------------------------------- */
+
+.stats {
+  list-style: none;
+  display: grid;
+  gap: var(--espacio-1);
+  margin-top: var(--espacio-1);
+}
+
+.stat {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: baseline;
+  gap: var(--espacio-1);
+  font-size: var(--step-0);
+}
+
+.stat-nombre {
+  color: var(--papel-viejo);
+}
+
+.stat-valor {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--ocre-bandera);
+}
+
+.stat-delta {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--ocre-bandera);
+}
+
+.stat-delta--baja {
+  color: var(--papel-viejo);
+}
+
+/* Barra: refuerzo visual del número, nunca su reemplazo (el valor va en DOM). */
+.stat-barra {
+  grid-column: 1 / -1;
+  display: block;
+  height: 3px;
+  background: color-mix(in srgb, var(--verde-senal) 35%, transparent);
+}
+
+.stat-barra::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: calc(var(--valor, 0) * 1%);
+  background: var(--ocre-bandera);
+}
+
+.inventario {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-2);
+  font-size: var(--step-0);
+  padding-top: var(--espacio-1);
+  border-top: 1px solid var(--verde-senal);
+}
+
+.inventario-nombre {
+  color: var(--papel-viejo);
+}
+
+.inventario-valor {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--ocre-bandera);
+  margin-left: 0.35em;
+}
+
+/* --------------------------------------------------------------------------
+   Escena — el escenario manda
+
+   Una escena ocupa la pantalla y NO se scrollea entera: la ilustración queda
+   fija, el relato tiene su propio scroll y la decisión está siempre a la vista.
+   El muro de texto que se llevaba la imagen hacia arriba era exactamente lo
+   que R2 prohíbe: mobile-first no es texto-first.
+   -------------------------------------------------------------------------- */
+
+/* Mientras se juega, el marco de página se aparta. */
+body.en-escena main {
+  max-width: none;
+  padding: 0;
+}
+
+body.en-escena .encabezado {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: auto;
+  width: auto;
+  background: none;
+  backdrop-filter: none;
+  padding: var(--espacio-2);
+}
+
+body.en-escena .pie {
+  display: none;
+}
+
+.pantalla--escena {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  gap: 0;
+}
+
+.escena-escenario {
+  position: relative;
+  overflow: hidden;
+  height: 32dvh;
+  min-height: 12rem;
+  background: var(--negro-concreto);
+}
+
+/* Dentro del escenario la banda deja de ser banda y llena el hueco. */
+.escena-escenario .ilustracion {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  transform: none;
+  aspect-ratio: auto;
+  max-height: none;
+}
+
+.escena-escenario .ilustracion-fundido {
+  height: 55%;
+}
+
+/* Rótulo sobre la imagen: sitio y fecha, como el encabezado de una lámina. */
+.escena-rotulo {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: var(--espacio-2);
+  display: grid;
+  gap: 0.15em;
+  pointer-events: none;
+}
+
+.escena-acto {
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  font-weight: 400;
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--papel-viejo);
+  text-shadow: 0 2px 12px var(--negro-concreto);
+}
+
+.escena-lugar {
+  font-size: 0.8rem;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ocre-bandera);
+  text-shadow: 0 2px 10px var(--negro-concreto);
+}
+
+.escena-panel {
+  background: var(--negro-concreto);
+}
+
+/* ---- Barra de estado ---- */
+
+/* Una sola línea. Tres filas de fichas empujaban el relato fuera de la
+   pantalla, que es el problema que veníamos a resolver. */
+.hud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--espacio-1);
+  padding: var(--espacio-1) var(--espacio-2);
+  border-bottom: 1px solid color-mix(in srgb, var(--verde-senal) 55%, transparent);
+  font-size: var(--step-0);
+  row-gap: 0.3em;
+}
+
+.hud-ejes,
+.hud-inventario {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3em;
+  margin: 0;
+}
+
+/* El inventario se separa de los ejes con una regla, no con un salto de fila. */
+.hud-inventario {
+  padding-left: var(--espacio-1);
+  border-left: 1px solid color-mix(in srgb, var(--verde-senal) 45%, transparent);
+}
+
+.hud-eje,
+.hud-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3em;
+  padding: 0.1em 0.5em;
+  border: 1px solid color-mix(in srgb, var(--verde-senal) 60%, transparent);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.hud-eje-nombre,
+.hud-item-nombre {
+  color: color-mix(in srgb, var(--papel-viejo) 80%, transparent);
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.hud-eje-valor,
+.hud-item-valor {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--ocre-bandera);
+}
+
+.hud-item--vacio {
+  opacity: 0.4;
+}
+
+/* El eje que se acaba de mover se enciende un momento. */
+.hud-eje--sube,
+.hud-eje--baja {
+  border-color: var(--ocre-bandera);
+  animation: eje-golpe 0.9s ease-out;
+}
+
+.hud-eje-delta {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--ocre-bandera);
+}
+
+.hud-eje--baja .hud-eje-delta {
+  color: var(--papel-viejo);
+}
+
+@keyframes eje-golpe {
+  from { background: color-mix(in srgb, var(--ocre-bandera) 45%, transparent); }
+  to { background: transparent; }
+}
+
+/* El ítem que acaba de cambiar se enciende como los ejes (FG-05): la compra o
+   la pérdida se ve de un vistazo, en el mismo lugar donde se lee el número. */
+.hud-item--sube,
+.hud-item--baja {
+  border-color: var(--ocre-bandera);
+  animation: item-golpe 0.9s ease-out;
+}
+
+.hud-item-delta {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--ocre-bandera);
+}
+
+.hud-item--baja .hud-item-delta {
+  color: var(--papel-viejo);
+}
+
+@keyframes item-golpe {
+  from { background: color-mix(in srgb, var(--ocre-bandera) 45%, transparent); }
+  to { background: transparent; }
+}
+
+.hud .senal-indicador {
+  margin-left: auto;
+}
+
+/* ---- Relato: fluye con la página, sin scroll interno ---- */
+
+.escena-relato {
+  padding: var(--espacio-2);
+  display: grid;
+  gap: var(--espacio-1);
+  align-content: start;
+}
+
+/* Con una decisión sobre la mesa el relato cede sitio: lo último dicho sigue a
+   la vista y las cartas dejan de pelear por la pantalla. */
+.escena-panel--decidiendo .escena-relato {
+  font-size: 0.95em;
+}
+
+.escena-epigrafe {
+  font-size: var(--step-0);
+  font-style: italic;
+  color: var(--ocre-bandera);
+}
+
+.eco {
+  display: grid;
+  gap: 0.25em;
+}
+
+.eco-eleccion {
+  font-size: var(--step-0);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ocre-bandera);
+}
+
+.consecuencia {
+  font-size: var(--step-1);
+  line-height: 1.45;
+  color: var(--papel-viejo);
+  border-left: 3px solid var(--ocre-bandera);
+  padding-left: var(--espacio-2);
+  animation: consecuencia-entra 0.45s ease-out;
+}
+
+.consecuencia--comun {
+  border-left-color: var(--papel-viejo);
+  font-size: var(--step-2);
+}
+
+@keyframes consecuencia-entra {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+.fuentes {
+  font-size: var(--step-0);
+  border-top: 1px solid color-mix(in srgb, var(--verde-senal) 45%, transparent);
+  padding-top: var(--espacio-1);
+}
+
+.fuentes summary {
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ocre-bandera);
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.fuentes-lista {
+  list-style: none;
+  display: grid;
+  gap: var(--espacio-1);
+  margin-top: var(--espacio-1);
+  color: var(--papel-viejo);
+}
+
+.fuente-certeza {
+  color: var(--ocre-bandera);
+}
+
+/* ---- Acción: sticky abajo, siempre a la vista, nunca hay que buscarla ---- */
+
+.escena-accion {
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  padding: var(--espacio-2);
+  border-top: 2px solid color-mix(in srgb, var(--verde-senal) 70%, transparent);
+  background: var(--negro-concreto);
+}
+
+.boton--seguir {
+  width: 100%;
+  min-height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--espacio-2);
+  font-family: var(--font-cuerpo);
+  font-size: var(--step-1);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--papel-viejo);
+  background: transparent;
+  border: 2px solid var(--verde-senal);
+  border-radius: var(--radio);
+  cursor: pointer;
+}
+
+.boton--seguir:hover,
+.boton--seguir:focus-visible {
+  border-color: var(--ocre-bandera);
+  color: var(--ocre-bandera);
+}
+
+.seguir-cuenta {
+  font-variant-numeric: tabular-nums;
+  opacity: 0.6;
+}
+
+/* ---- Cartas de decisión ---- */
+
+.escena-accion .decision-group .grupo-titulo {
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--ocre-bandera);
+  margin-bottom: var(--espacio-1);
+}
+
+.escena-accion .opciones {
+  display: grid;
+  gap: var(--espacio-1);
+  grid-template-columns: 1fr;
+}
+
+.escena-accion .decision {
+  display: grid;
+  gap: 0.5em;
+  align-content: start;
+  min-height: 0;
+  padding: var(--espacio-2);
+  text-align: left;
+  color: var(--papel-viejo);
+  background: color-mix(in srgb, var(--papel-viejo) 6%, var(--negro-concreto));
+  border: 2px solid color-mix(in srgb, var(--verde-senal) 70%, transparent);
+  border-radius: var(--radio);
+  cursor: pointer;
+  transition: transform 0.1s ease, border-color 0.12s ease, background-color 0.12s ease;
+}
+
+.escena-accion .decision:hover:not(:disabled),
+.escena-accion .decision:focus-visible:not(:disabled) {
+  border-color: var(--ocre-bandera);
+  background: color-mix(in srgb, var(--ocre-bandera) 12%, var(--negro-concreto));
+  transform: translateY(-2px);
+}
+
+.escena-accion .decision:active:not(:disabled) {
+  transform: translateY(0) scale(0.99);
+}
+
+.decision-label {
+  font-size: var(--step-1);
+  line-height: 1.3;
+}
+
+.decision-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35em;
+}
+
+.chip {
+  font-size: var(--step-0);
+  line-height: 1.6;
+  padding: 0 0.6em;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+}
+
+.chip--sube {
+  color: var(--ocre-bandera);
+}
+
+.chip--baja {
+  color: color-mix(in srgb, var(--papel-viejo) 75%, transparent);
+}
+
+.costos {
+  list-style: none;
+  display: grid;
+  gap: 0.2em;
+  font-size: var(--step-0);
+  color: var(--papel-viejo);
+  margin-top: var(--espacio-1);
+  opacity: 0.8;
+}
+
+/* ---- Escritorio: escenario y panel lado a lado, como una lámina ---- */
+
+@media (min-width: 900px) {
+  .pantalla--escena {
+    flex-direction: row;
+    /* La lámina cede ancho a las mecánicas y se funde en el panel. */
+    align-items: stretch;
+  }
+
+  .escena-escenario {
+    position: sticky;
+    top: 0;
+    height: 100dvh;
+    flex: 0 0 44%;
+    align-self: start;
+  }
+
+  .escena-panel {
+    flex: 1 1 56%;
+    min-width: 0;
+  }
+
+  /* Difuminado lateral: la ilustración no termina en un corte seco. */
+  .escena-escenario::after {
+    content: '';
+    position: absolute;
+    inset: 0 0 0 auto;
+    width: 22%;
+    background: linear-gradient(to right, transparent, var(--negro-concreto));
+    pointer-events: none;
+  }
+
+  .escena-escenario .ilustracion-fundido {
+    height: 32%;
+  }
+
+  .escena-accion .opciones {
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  }
+
+  .escena-rotulo {
+    padding: var(--espacio-3);
+  }
+
+  .escena-acto {
+    font-size: var(--step-4);
+  }
+
+  .escena-lugar {
+    font-size: var(--step-0);
+  }
+
+  /* En escritorio el panel llega hasta arriba: el menú se corre sobre la
+     ilustración para no caer encima de la barra de estado. */
+  body.en-escena .encabezado {
+    left: 0;
+    right: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .consecuencia,
+  .hud-eje--sube,
+  .hud-eje--baja,
+  .hud-item--sube,
+  .hud-item--baja {
+    animation: none;
+  }
+
+  .escena-accion .decision {
+    transition: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Final de acto
+   -------------------------------------------------------------------------- */
+
+.titulo-final {
+  font-family: var(--font-display);
+  font-size: var(--step-4);
+  font-weight: 400;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: var(--papel-viejo);
+}
+
+.final-descripcion {
+  font-size: var(--step-2);
+  line-height: 1.4;
+  color: var(--papel-viejo);
+}
+
+/* --------------------------------------------------------------------------
+   Cierre §1 — El pulso
+   -------------------------------------------------------------------------- */
+
+.pantalla--pulso {
+  min-height: 70vh;
+  justify-content: center;
+}
+
+.pulso-mapa {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  max-height: 42vh;
+  background: var(--negro-concreto);
+}
+
+.pulso-punto {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--papel-viejo);
+  opacity: calc(0.15 + 0.85 * var(--intensidad, 0));
+  animation: latido 2.6s ease-in-out infinite;
+}
+
+/* Posición relativa de las tres ciudades: Maracaibo y San Cristóbal al oeste,
+   Caracas al norte-centro. Sin fronteras, sin nombres (entregable H §1). */
+.pulso-punto--acto-1 { left: 18%; top: 68%; }
+.pulso-punto--acto-2 { left: 52%; top: 26%; }
+.pulso-punto--acto-3 { left: 14%; top: 20%; }
+
+.pulso-punto--CO { background: var(--ocre-bandera); }
+.pulso-punto--RI { background: var(--rojo-ladrillo); }
+.pulso-punto--RE { background: var(--verde-senal); }
+.pulso-punto--CF { background: var(--verde-noche); }
+.pulso-punto--PP { background: var(--papel-viejo); }
+
+.pulso-punto--apagado {
+  animation: none;
+  opacity: 0.12;
+}
+
+@keyframes latido {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.45); }
+}
+
+.pulso-lista {
+  list-style: none;
+  display: grid;
+  gap: var(--espacio-2);
+}
+
+.pulso-linea {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.15em;
+  font-size: var(--step-0);
+}
+
+.pulso-ciudad {
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ocre-bandera);
+}
+
+.pulso-final {
+  color: var(--papel-viejo);
+}
+
+.pulso-linea--apagada .pulso-ciudad {
+  color: var(--papel-viejo);
+  opacity: 0.45;
+}
+
+/* --------------------------------------------------------------------------
+   Cierre §2 — El desgaste
+   -------------------------------------------------------------------------- */
+
+.desgaste-tarjetas {
+  list-style: none;
+  display: grid;
+  gap: var(--espacio-3);
+}
+
+/* La interfaz se degrada tarjeta a tarjeta: la última llega sin marco. */
+.desgaste-tarjeta {
+  display: grid;
+  gap: var(--espacio-1);
+  padding: var(--espacio-2);
+  border: 1px solid var(--verde-senal);
+}
+
+.desgaste-tarjeta--2 { border-color: color-mix(in srgb, var(--verde-senal) 75%, transparent); }
+.desgaste-tarjeta--3 { border-color: color-mix(in srgb, var(--verde-senal) 55%, transparent); }
+.desgaste-tarjeta--4 { border-color: color-mix(in srgb, var(--verde-senal) 35%, transparent); }
+.desgaste-tarjeta--5 { border-color: color-mix(in srgb, var(--verde-senal) 18%, transparent); }
+.desgaste-tarjeta--6 { border-color: transparent; padding-inline: 0; }
+
+.desgaste-fecha {
+  font-size: var(--step-0);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ocre-bandera);
+}
+
+.desgaste-texto {
+  color: var(--papel-viejo);
+}
+
+/* --------------------------------------------------------------------------
+   Cierre §3 — El vaciado / memorial
+   -------------------------------------------------------------------------- */
+
+.titulo-memorial {
+  font-family: var(--font-display);
+  font-size: var(--step-4);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--papel-viejo);
+}
+
+.capa {
+  display: grid;
+  gap: var(--espacio-2);
+  padding-block: var(--espacio-3);
+  border-top: 1px solid var(--verde-senal);
+}
+
+.capa-titulo {
+  font-family: var(--font-display);
+  font-size: var(--step-4);
+  font-weight: 400;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: var(--ocre-bandera);
+}
+
+.capa-subtitulo {
+  font-size: var(--step-0);
+  letter-spacing: 0.04em;
+  color: var(--papel-viejo);
+}
+
+.fichas {
+  list-style: none;
+  display: grid;
+  gap: var(--espacio-3);
+}
+
+.ficha {
+  display: grid;
+  gap: 0.2em;
+  font-size: var(--step-0);
+  color: var(--papel-viejo);
+}
+
+.ficha-nombre {
+  font-size: var(--step-1);
+  font-weight: 700;
+  color: var(--papel-viejo);
+}
+
+.ficha-datos {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ocre-bandera);
+}
+
+.categorias {
+  list-style: none;
+  display: grid;
+  gap: var(--espacio-1);
+  color: var(--papel-viejo);
+}
+
+.categorias li::before {
+  content: '— ';
+}
+
+.capa-nota,
+.capa-linea {
+  color: var(--papel-viejo);
+}
+
+/* Capa 4: la pantalla se queda sin datos y ese vacío es el argumento. */
+.capa--capa-4 {
+  min-height: 60vh;
+  align-content: center;
+}
+
+/* --------------------------------------------------------------------------
+   Cierre §4 — Panfleto
+   -------------------------------------------------------------------------- */
+
+.pantalla--panfleto {
+  min-height: 70vh;
+  justify-content: center;
+}
+
+.versos {
+  display: grid;
+  gap: var(--espacio-2);
+}
+
+.verso {
+  font-size: var(--step-2);
+  line-height: 1.35;
+  color: var(--papel-viejo);
+}
+
+.atribucion {
+  font-size: var(--step-0);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ocre-bandera);
+  border-top: 1px solid var(--verde-senal);
+  padding-top: var(--espacio-2);
+}
+
+/* --------------------------------------------------------------------------
+   Cierre §5 y §6 — La cifra y los créditos
+   -------------------------------------------------------------------------- */
+
+.pantalla--cifra {
+  min-height: 70vh;
+  justify-content: center;
+}
+
+.cifra-bloque,
+.creditos-nota {
+  display: grid;
+  gap: 0.35em;
+}
+
+.cifra-linea {
+  font-size: var(--step-2);
+  line-height: 1.35;
+  color: var(--papel-viejo);
+}
+
+/* Los blancos del original son estructura, no contenido: fuera de SR. */
+.cifra-espacio {
+  visibility: hidden;
+  height: var(--espacio-2);
+}
+
+.titulo-creditos {
+  font-family: var(--font-display);
+  font-size: var(--step-3);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--papel-viejo);
+}
+
+.creditos-nota p {
+  color: var(--papel-viejo);
+}
+
+.creditos-fuentes {
+  list-style: none;
+  display: grid;
+  gap: var(--espacio-2);
+  font-size: var(--step-0);
+}
+
+.creditos-fuentes a {
+  overflow-wrap: anywhere;
+}
+
+/* --------------------------------------------------------------------------
+   Banda ilustrada de la escena
+
+   Los archivos son grises. El color lo pone el degradado del acto por debajo y
+   la mezcla `luminosity`, que conserva la luz de la ilustración y le presta el
+   tono al degradado. Resultado: las 29 escenas comparten paleta exacta, y
+   cambiarla no obliga a regenerar ninguna imagen.
+   -------------------------------------------------------------------------- */
+
+.ilustracion {
+  position: relative;
+  isolation: isolate;
+  /* A sangre: rompe el ancho de main y llega a los dos bordes. */
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  aspect-ratio: 5 / 3;
+  max-height: 38vh;
+  overflow: hidden;
+  background: var(--negro-concreto);
+  --parallax: 0px;
+}
+
+/* Firma cromática por acto (R2.1: identidad visual por acto y por modo).
+   El tinte se aplica con mezcla `color`: toma el tono del degradado y respeta
+   la luz de la ilustración, así que el contraste del dibujo llega entero. */
+.ilustracion--acto-1 { --ilu-arriba: #e8ddc4; --ilu-abajo: #5b7a63; } /* mediodía andino */
+.ilustracion--acto-2 { --ilu-arriba: #c9a227; --ilu-abajo: #8c2f1f; } /* humo y gasolina */
+.ilustracion--acto-3 { --ilu-arriba: #2c4a52; --ilu-abajo: #12130f; } /* noche del lago */
+
+.ilustracion-tinte {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(175deg, var(--ilu-arriba) 0%, var(--ilu-abajo) 100%);
+  mix-blend-mode: color;
+}
+
+.ilustracion-capa {
+  position: absolute;
+  /* Sobra por arriba y abajo para que el parallax no descubra el borde. */
+  inset: -8% 0;
+  transform: translate3d(0, calc(var(--parallax) * var(--factor, 0.4)), 0);
+  will-change: transform;
+}
+
+.ilustracion-capa img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Encuadra la franja media: arriba suele haber cielo y abajo, el fundido. */
+  object-position: 50% 45%;
+}
+
+/* El texto arranca limpio: la banda se hunde en el negro de la página. */
+.ilustracion-fundido {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 30%;
+  background: linear-gradient(to bottom, transparent 0%, var(--negro-concreto) 92%);
+  pointer-events: none;
+}
+
+/* Niebla: dos frentes a distinta velocidad, para que también tenga profundidad.
+   Firma del modo RADIO, que es donde pasan todas las madrugadas del juego. */
+.ilustracion-niebla {
+  position: absolute;
+  inset: -20%;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0.22;
+  background:
+    radial-gradient(60% 40% at 20% 70%, color-mix(in srgb, var(--papel-viejo) 42%, transparent), transparent 70%),
+    radial-gradient(70% 45% at 75% 60%, color-mix(in srgb, var(--verde-senal) 55%, transparent), transparent 72%);
+  animation: niebla-lenta 71s ease-in-out infinite alternate;
+}
+
+.ilustracion-niebla::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(50% 35% at 60% 80%, color-mix(in srgb, var(--papel-viejo) 30%, transparent), transparent 68%),
+    radial-gradient(45% 30% at 30% 55%, color-mix(in srgb, var(--papel-viejo) 22%, transparent), transparent 70%);
+  animation: niebla-rapida 43s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes niebla-lenta {
+  from { transform: translate3d(-6%, 2%, 0) scale(1.05); }
+  to   { transform: translate3d(7%, -3%, 0) scale(1.12); }
+}
+
+@keyframes niebla-rapida {
+  from { transform: translate3d(5%, -2%, 0) scale(1.1); }
+  to   { transform: translate3d(-8%, 3%, 0) scale(1.02); }
+}
+
+/* --------------------------------------------------------------------------
+   Foto de archivo (R3 / GS-050)
+   -------------------------------------------------------------------------- */
+
+/* Capa de fondo detrás del texto de la escena. La opacidad la fija la escena
+   con --opacidad-foto y el shell la topea en 0.35: nunca compite con la
+   legibilidad. */
+.foto-archivo {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.foto-archivo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: var(--opacidad-foto, 0);
+  filter: grayscale(0.6) contrast(1.1);
+}
+
+.pantalla--escena {
+  position: relative;
+}
+
+/* --------------------------------------------------------------------------
+   Materiales
+   -------------------------------------------------------------------------- */
+
+.titulo-materiales {
+  font-family: var(--font-display);
+  font-size: var(--step-4);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--papel-viejo);
+}
+
+.materiales-vacio {
+  color: var(--papel-viejo);
+  border-left: 3px solid var(--verde-senal);
+  padding-left: var(--espacio-2);
+}
+
+.materiales {
+  list-style: none;
+  display: grid;
+  gap: var(--espacio-3);
+}
+
+.material {
+  display: grid;
+  gap: var(--espacio-1);
+  padding: var(--espacio-2);
+  border: 1px solid var(--verde-senal);
+}
+
+.material-titulo {
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--ocre-bandera);
+}
+
+.material-origen {
+  font-size: var(--step-0);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ocre-bandera);
+}
+
+.material-descripcion,
+.material-fuente {
+  color: var(--papel-viejo);
+}
+
+.material-fuente {
+  font-size: var(--step-0);
+  border-top: 1px solid var(--verde-senal);
+  padding-top: var(--espacio-1);
+}
+
+/* --------------------------------------------------------------------------
+   El autor, en los créditos
+   -------------------------------------------------------------------------- */
+
+.autor {
+  display: grid;
+  gap: var(--espacio-1);
+  padding: var(--espacio-2);
+  border: 1px dashed var(--verde-senal);
+  border-radius: var(--radio);
+}
+
+.autor-libro {
+  font-size: var(--step-1);
+  color: var(--papel-viejo);
+}
+
+.autor-enlaces {
+  display: grid;
+  gap: var(--espacio-1);
+  margin-top: var(--espacio-1);
+}
+
+.autor-enlace {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--papel-viejo);
+  text-decoration-thickness: 2px;
+}
+
+.autor-enlace:hover,
+.autor-enlace:focus-visible {
+  color: var(--ocre-bandera);
+}
+
+/* --------------------------------------------------------------------------
+   Menú
+   -------------------------------------------------------------------------- */
+
+.menu {
+  display: grid;
+  gap: var(--espacio-2);
+  padding: var(--espacio-2);
+  margin-bottom: var(--espacio-3);
+  border: 2px solid var(--ocre-bandera);
+  background: var(--negro-concreto);
+}
+
+.menu-titulo {
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ocre-bandera);
+}
+
+.menu-acciones {
+  display: grid;
+  gap: var(--espacio-2);
+}
+
+/* --------------------------------------------------------------------------
+   prefers-reduced-motion (GS-032 / entregable H §7): el latido del mapa pasa a
+   intensidad estática por opacidad; nada se mueve.
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .pulso-punto {
+    animation: none;
+    transform: scale(calc(1 + 0.35 * var(--intensidad, 0)));
+  }
+
+  /* La niebla se queda: deja de moverse y pasa a ser textura, que es la misma
+     regla que ya sigue La Señal (GS-032: mismo mensaje, sin movimiento). */
+  .ilustracion-niebla,
+  .ilustracion-niebla::after {
+    animation: none;
+    transform: none;
+  }
+
+  .ilustracion-capa {
+    transform: none;
+  }
+}

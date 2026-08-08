@@ -1,0 +1,1125 @@
+[
+  {
+    "id": "T-01",
+    "acto": 1,
+    "modo": "FEED",
+    "fecha": "4 de febrero de 2014",
+    "fechaIso": "2014-02-04",
+    "lugar": "Parque Botánico, ULA núcleo Táchira, San Cristóbal",
+    "epigrafe": "Ochenta personas y unas cartulinas. Nadie sabe todavía que esto es el principio.",
+    "ilustracion": {
+      "capas": [
+        "t01-botanico.webp"
+      ],
+      "alt": "Unas ochenta personas de pie en el jardín de una universidad, casi todas de espaldas, con carteles de cartulina en blanco. En primer plano, una mesa con más cartulinas y una silla plástica vacía que nadie ocupa. Al fondo, la montaña."
+    },
+    "bloques": [
+      {
+        "tipo": "narracion",
+        "texto": "Son las diez de la mañana. Estás parado en el Botánico porque intentaron abusar de una compañera al entrar a la universidad, porque no es la primera vez y porque la universidad no ha dicho nada."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Nadie dice su nombre. Nadie lo va a decir en todo el día. Hay una silla plástica vacía junto a la mesa de los carteles y nadie se sienta en ella."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Las cartulinas las compraron esta mañana en la papelería de la esquina. Eres uno de unos ochenta."
+      },
+      {
+        "tipo": "tweet",
+        "autor": "@ulatachira_est",
+        "handle": "@ulatachira_est",
+        "tiempo": "10:22",
+        "texto": "Estamos en el Botánico. No es una marcha. Es que ya van tres casos este semestre y el rectorado no responde.",
+        "hashtags": [
+          "#ULATáchira"
+        ],
+        "metricas": {
+          "rt": 41,
+          "fav": 68
+        }
+      },
+      {
+        "tipo": "tweet",
+        "autor": "@yajaira_unet",
+        "handle": "@yajaira_unet",
+        "tiempo": "11:05",
+        "texto": "Ochenta personas paradas al sol esperando que alguien baje de las oficinas. Llevamos una hora.",
+        "metricas": {
+          "rt": 12,
+          "fav": 30
+        }
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — qué pides.",
+        "opciones": [
+          {
+            "label": "Pides que venga la prensa local.",
+            "deltas": {
+              "PP": 2,
+              "RE": 1
+            },
+            "inventario": {
+              "ganancia": {
+                "contactos": 1
+              }
+            },
+            "consecuencia": "Un periodista de la fuente universitaria anota tu número y dice que ve qué puede hacer."
+          },
+          {
+            "label": "Exiges que salga el rector a dar la cara.",
+            "deltas": {
+              "CO": 2,
+              "RE": 1
+            },
+            "consecuencia": "Baja un vicerrector. Habla cuatro minutos y no dice nada que no supieras."
+          },
+          {
+            "label": "Propones cerrar la entrada al campus hasta que respondan.",
+            "deltas": {
+              "CO": 2,
+              "RI": 2,
+              "PP": -1
+            },
+            "consecuencia": "La entrada queda cerrada con dos pupitres. Los que llegan tarde a clase te miran mal."
+          },
+          {
+            "label": "Te quedas. No hablas. Estás.",
+            "deltas": {
+              "CF": 1
+            },
+            "consecuencia": "Nadie registra que estuviste. Los que estaban al lado, sí."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "A las cuatro de la tarde aparece la Policía del Táchira. Nadie la llamó y nadie sabe quién la llamó. Lo que era un reclamo a un rector se convierte, en veinte minutos, en un enfrentamiento con el Estado.",
+    "autoDeltas": {
+      "RI": 2
+    },
+    "fuentes": [
+      {
+        "fuente": "PROVEA — andamiaje anti-protestas desde el 12 de febrero de 2014",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Manifestar.org — Manifestaciones Públicas 2014",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Cronología del ciclo 2014 — San Cristóbal",
+        "certeza": "confirmado"
+      }
+    ],
+    "notaDiseno": "A1-01 del entregable C. La compañera del 4F es persona real no nombrada: no aparece, no tiene diálogo, no se dramatiza lo que le pasó (regla dura del acto). La escena tiene que sentirse pequeña: sin épica, sin bandera. El RI +2 automático es la llegada de la policía, no una elección del jugador."
+  },
+  {
+    "id": "T-02",
+    "acto": 1,
+    "modo": "ZINE",
+    "fecha": "6 al 9 de febrero de 2014",
+    "fechaIso": "2014-02-06",
+    "lugar": "San Cristóbal, Táchira",
+    "epigrafe": "El motivo se mueve un escalón y nadie lo decide.",
+    "ilustracion": {
+      "capas": [
+        "t02-salon-prestado.webp"
+      ],
+      "alt": "Un salón prestado de noche, con treinta sillas plásticas en herradura y veinte personas sentadas de espaldas. Al frente, una pizarra llena de marcas de tiza ilegibles."
+    },
+    "bloques": [
+      {
+        "tipo": "zineTitulo",
+        "texto": "Ahora es por ellos",
+        "sub": "Salón prestado · treinta sillas · veinte personas"
+      },
+      {
+        "tipo": "narracion",
+        "texto": "En la pizarra alguien escribió cuatro nombres. Al lado, con otro marcador y otra letra, dice: ¿y la comerciante? Nadie la conoce. Estaba en su local."
+      },
+      {
+        "tipo": "dialogo",
+        "hablante": "Yajaira",
+        "texto": "Si seguimos hablando de la muchacha del Botánico, parece que esto es un tema de la ULA nomás."
+      },
+      {
+        "tipo": "dialogo",
+        "hablante": "Kevin",
+        "texto": "Es que es un tema de la ULA."
+      },
+      {
+        "tipo": "dialogo",
+        "hablante": "Yajaira",
+        "texto": "Ya no. Usted vio la pizarra: hay cuatro nombres y ninguno estudia con nosotros."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "El cartel del lunes sigue pegado en la pared, con la consigna vieja tachada y la nueva escrita encima. La cartulina es la misma."
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — qué se pide mañana.",
+        "opciones": [
+          {
+            "label": "Solo la libertad de los cuatro.",
+            "deltas": {
+              "CF": 2,
+              "PP": 1,
+              "RE": -1
+            },
+            "consecuencia": "Un reclamo pequeño y difícil de discutir. Es lo más parecido a lo que de verdad pasó esos días."
+          },
+          {
+            "label": "La libertad de los cuatro y seguridad en el campus.",
+            "deltas": {
+              "RE": 1
+            },
+            "inventario": {
+              "ganancia": {
+                "contactos": 1
+              }
+            },
+            "consecuencia": "Dos consignas en el mismo cartel. Se suma gente de la UCAT que hasta ayer miraba de lejos."
+          },
+          {
+            "label": "Que renuncie el gobernador.",
+            "deltas": {
+              "RE": 2,
+              "CO": 2,
+              "PP": -2,
+              "CF": -1
+            },
+            "flags": {
+              "pide-renuncia": true
+            },
+            "consecuencia": "Ganas calle y pierdes ciudad en la misma tarde. La consigna ya no cabe en la cartulina vieja."
+          },
+          {
+            "label": "Que decida quien tenga más gente en la calle.",
+            "deltas": {
+              "RE": 1,
+              "CF": -2
+            },
+            "consecuencia": "Nadie queda a cargo de nada, que es otra forma de decidir."
+          }
+        ]
+      },
+      {
+        "id": "g2",
+        "titulo": "La comerciante no es estudiante y no la conoce nadie. ¿Va en el cartel?",
+        "opciones": [
+          {
+            "label": "Sí. Va en el cartel con los otros cuatro.",
+            "deltas": {
+              "PP": 2,
+              "CF": 1
+            },
+            "flags": {
+              "cartel-abierto": true
+            },
+            "consecuencia": "El cartel deja de ser un asunto de la universidad y empieza a ser un asunto de la ciudad."
+          },
+          {
+            "label": "No. Esto es estudiantil.",
+            "deltas": {
+              "PP": -2,
+              "RE": -1
+            },
+            "consecuencia": "Su familia va sola al tribunal el lunes. Alguien lo comenta en el salón y nadie contesta."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "El 9 de febrero ya nadie protesta por lo del Botánico. Protestan por los que se llevaron el 6. Ningún dirigente convocó ese cambio: lo movió la represión, escalón por escalón.",
+    "fuentes": [
+      {
+        "fuente": "Cronología del ciclo 2014 — detención de tres estudiantes y una comerciante el 6 de febrero",
+        "certeza": "fuente-unica"
+      },
+      {
+        "fuente": "Patrón general de detenciones del 5 al 9 de febrero en San Cristóbal, Mérida y Maracaibo",
+        "certeza": "confirmado"
+      }
+    ],
+    "notaDiseno": "A1-02 del entregable C. Aquí el jugador debería notar el desplazamiento del motivo sin que nadie se lo explique. El detalle de la comerciante es fuente única (pendiente 1 del entregable): si no se confirma en prensa de época, funciona igual con 'varios detenidos'. Diálogo en andino tachirense: usted constante."
+  },
+  {
+    "id": "T-03",
+    "acto": 1,
+    "modo": "FEED",
+    "fecha": "12 de febrero de 2014",
+    "fechaIso": "2014-02-12",
+    "lugar": "San Cristóbal, Táchira",
+    "epigrafe": "El primer día que el país mira, y no te está mirando a ti.",
+    "ilustracion": {
+      "capas": [
+        "t03-el-12.webp"
+      ],
+      "alt": "Cinco personas juntas en una esquina al atardecer, todas mirando sus teléfonos. Las pantallas les iluminan las manos desde abajo. Detrás, una avenida vacía y la montaña oscureciéndose."
+    },
+    "bloques": [
+      {
+        "tipo": "narracion",
+        "texto": "Llevas ocho días en la calle. Hoy es el Día de la Juventud y hay marchas en decenas de ciudades."
+      },
+      {
+        "tipo": "tweet",
+        "autor": "@yajaira_unet",
+        "handle": "@yajaira_unet",
+        "tiempo": "11:40",
+        "texto": "San Cristóbal lleva ocho días. Hoy salimos otra vez desde la redoma.",
+        "hashtags": [
+          "#12F"
+        ],
+        "metricas": {
+          "rt": 9,
+          "fav": 22
+        }
+      },
+      {
+        "tipo": "narracion",
+        "texto": "A las cinco de la tarde el teléfono deja de hablar de Táchira. En Caracas mataron a Bassil Da Costa en La Candelaria. Después a Juan Montoya. Esa noche, a Robert Redman. Ninguno de los tres aparece en esta ciudad ni en esta pantalla: llegan como llegaron, por el teléfono."
+      },
+      {
+        "tipo": "tweet",
+        "autor": "@prensa_andes",
+        "handle": "@prensa_andes",
+        "tiempo": "17:36",
+        "texto": "La GNB impide el paso de estudiantes a la subestación San Cristóbal I de Corpoelec.",
+        "metricas": {
+          "rt": 58,
+          "fav": 40
+        }
+      },
+      {
+        "tipo": "narracion",
+        "texto": "CONATEL saca a NTN24 del cable. Alguien en el grupo propone ir a la subestación eléctrica: si se apaga San Cristóbal, nos ven."
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — el día en que el país mira a otro lado.",
+        "opciones": [
+          {
+            "label": "Vas a la subestación.",
+            "deltas": {
+              "CO": 3,
+              "RI": 3,
+              "PP": -3
+            },
+            "consecuencia": "La Guardia ya está ahí desde el mediodía. No llegas ni a la reja."
+          },
+          {
+            "label": "Te opones en voz alta.",
+            "deltas": {
+              "CF": 2,
+              "PP": 1,
+              "RE": -1
+            },
+            "consecuencia": "Cuatro personas te dan la razón en privado y ninguna en el grupo."
+          },
+          {
+            "label": "Armas el hilo con todo lo que pasó aquí desde el 4 de febrero.",
+            "deltas": {
+              "RE": 2,
+              "PP": 2
+            },
+            "inventario": {
+              "ganancia": {
+                "contactos": 1
+              }
+            },
+            "consecuencia": "El hilo tiene once fechas y ninguna es de Caracas. Lo comparte gente que no conoces."
+          },
+          {
+            "label": "Retuiteas Caracas todo el día.",
+            "deltas": {
+              "RE": 1,
+              "PP": 1,
+              "CO": -1
+            },
+            "consecuencia": "Es lo que hace casi todo el mundo. Nadie te lo va a reprochar y nadie lo va a recordar."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "El ciclo empezó en esta ciudad hace ocho días. A partir de hoy, la memoria pública se lo atribuye a Caracas.",
+    "fuentes": [
+      {
+        "fuente": "Cronología del ciclo 2014 — 12 de febrero",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Bloqueo de NTN24 por CONATEL — cobertura internacional de prensa",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Memorial de víctimas del 12F — Runrun.es; Infobae; Foro Penal",
+        "certeza": "confirmado"
+      }
+    ],
+    "notaDiseno": "A1-03 del entregable C. Las tres muertes del 12F no ocurren en pantalla ni en esta ciudad. Los muertos no son personajes: nombre, hecho y fuente, nada más."
+  },
+  {
+    "id": "T-04",
+    "acto": 1,
+    "modo": "RADIO",
+    "fecha": "17 de febrero de 2014",
+    "fechaIso": "2014-02-17",
+    "lugar": "San Cristóbal y Rubio, Táchira",
+    "epigrafe": "La primera noche en que no son solo estudiantes.",
+    "ilustracion": {
+      "capas": [
+        "t04-esquina-humo.webp"
+      ],
+      "alt": "Una esquina de noche con basura ardiendo en medio de la calle y humo bajo. Alrededor, siluetas a distancia. Arriba, ventanas abiertas con gente golpeando ollas."
+    },
+    "bloques": [
+      {
+        "tipo": "narracion",
+        "texto": "Hay vecinos quemando basura en las esquinas y señoras con ollas en las ventanas. La radio no para desde las seis."
+      },
+      {
+        "tipo": "radio",
+        "tiempo": "18:40",
+        "emisor": "Esquina 5",
+        "texto": "Están tirando perdigón. No es lacrimógena, es perdigón.",
+        "cambio": true
+      },
+      {
+        "tipo": "radio",
+        "tiempo": "18:41",
+        "emisor": "Base",
+        "texto": "En Rubio agarraron a seis. Dos son profesores.",
+        "cambio": true
+      },
+      {
+        "tipo": "dialogo",
+        "hablante": "Kevin",
+        "texto": "Usted no salga para allá sin saber quién le abre la puerta en Rubio. Se lo estoy pidiendo."
+      },
+      {
+        "tipo": "radio",
+        "tiempo": "18:52",
+        "emisor": "Esquina 5",
+        "texto": "Los del camión de gas dicen que fue aquí. Nadie vio nada."
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — seis detenidos en Rubio.",
+        "opciones": [
+          {
+            "label": "Sales hacia Rubio.",
+            "deltas": {
+              "CO": 3,
+              "RI": 3
+            },
+            "inventario": {
+              "costo": {
+                "contactos": 1
+              }
+            },
+            "consecuencia": "Llegas a las once. El contacto que te abrió la puerta no vuelve a contestarte el teléfono."
+          },
+          {
+            "label": "Te quedas y armas la lista de detenidos con nombres y horas.",
+            "deltas": {
+              "CF": 3,
+              "PP": 1
+            },
+            "flags": {
+              "lista-detenidos": true
+            },
+            "consecuencia": "Seis nombres, seis horas, dos comisarías. Es la cosa menos heroica de la noche y la única que va a servir."
+          },
+          {
+            "label": "Buscas a los profesores del gremio para que reclamen.",
+            "deltas": {
+              "RE": 2,
+              "PP": 2
+            },
+            "inventario": {
+              "ganancia": {
+                "contactos": 1
+              }
+            },
+            "consecuencia": "El gremio saca un comunicado a las dos de la mañana. Sirve más de lo que parece."
+          },
+          {
+            "label": "Que salga cada uno como pueda.",
+            "deltas": {
+              "CF": -2
+            },
+            "consecuencia": "Nadie sale. La frecuencia queda encendida y vacía hasta el amanecer."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "Que hayan detenido a dos profesores cambia el acto. Hasta hoy los que caían tenían veinte años.",
+    "fuentes": [
+      {
+        "fuente": "Cronología del ciclo 2014 — detención de cuatro estudiantes y dos profesores de la UPEL-Rubio",
+        "certeza": "fuente-unica"
+      },
+      {
+        "fuente": "Foro Penal y Amnistía Internacional — uso de perdigones a corta distancia",
+        "certeza": "confirmado"
+      }
+    ],
+    "notaDiseno": "A1-04 del entregable C. Primera aparición de los perdigones, el arma que define el período. En RADIO el detalle importa: la gente aprendía a distinguir el sonido. La lista de detenidos habilita el material de T-06."
+  },
+  {
+    "id": "T-05",
+    "acto": 1,
+    "modo": "ZINE",
+    "modoFinal": "FEED",
+    "fecha": "20 y 21 de febrero de 2014",
+    "fechaIso": "2014-02-20",
+    "lugar": "San Cristóbal, Táchira",
+    "epigrafe": "Incomunicado en la ciudad donde empezó todo.",
+    "ilustracion": {
+      "capas": [
+        "t05-fotocopias.webp"
+      ],
+      "alt": "Un cuarto pequeño de noche con una sola lámpara. Una fotocopiadora, pilas desparejas de papel en blanco y dos figuras de espaldas trabajando. Por la ventana, la ciudad completamente a oscuras."
+    },
+    "bloques": [
+      {
+        "tipo": "zineTitulo",
+        "texto": "La ciudad a oscuras",
+        "sub": "Primero el decreto. Después los paracaidistas. Después nada."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "El 20 se suspende por decreto el porte de armas en todo el estado. El ministro Rodríguez Torres informa que se moviliza un batallón de paracaidistas al Táchira."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "A media tarde del 21 el internet se cae en toda la ciudad y no vuelve. Cortes en la fibra óptica, dice CANTV, y lo atribuye a vandalismo. Ese mismo día bloquean Zello en todo el país."
+      },
+      {
+        "tipo": "dialogo",
+        "hablante": "Profe Ramírez",
+        "texto": "Usted tiene la llave del aula. Si hay que sacar cien copias antes de que amanezca, se sacan aquí."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "El resto del país está mirando otra cosa y tú no tienes cómo decirle que aquí sigue pasando."
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — se cayó la red.",
+        "opciones": [
+          {
+            "label": "Buscas quién tenga señal de Movistar y armas una cadena de mensajes.",
+            "deltas": {
+              "RE": 1,
+              "CF": 1
+            },
+            "inventario": {
+              "costo": {
+                "contactos": 1
+              }
+            },
+            "consecuencia": "Treinta mensajes que tardan cuarenta minutos en llegar. Llegan."
+          },
+          {
+            "label": "Vuelves al papel: fotocopias, volantes, carteles en los postes.",
+            "deltas": {
+              "PP": 2,
+              "RE": 1,
+              "RI": 1
+            },
+            "flags": {
+              "volvio-el-papel": true
+            },
+            "consecuencia": "Doscientas copias con la lista de detenidos y las fechas. El papel no depende de CANTV."
+          },
+          {
+            "label": "Vas casa por casa del edificio a avisar.",
+            "deltas": {
+              "CF": 2,
+              "RE": 1,
+              "PP": 1
+            },
+            "flags": {
+              "red-de-edificio": true
+            },
+            "inventario": {
+              "ganancia": {
+                "agua": 1,
+                "gasa": 1
+              }
+            },
+            "consecuencia": "Del quinto piso te bajan agua y gasa. La señora del 3-B pregunta a qué hora es mañana."
+          },
+          {
+            "label": "Sin internet no hay nada que hacer.",
+            "deltas": {
+              "RE": -3
+            },
+            "consecuencia": "Dos días en blanco. Cuando vuelve la señal, la conversación se mudó a otra parte."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "Cuando cae la red vuelve el zine. No es nostalgia: es lo que haces cuando te cortan la fibra.",
+    "fuentes": [
+      {
+        "fuente": "Cronología del ciclo 2014 — decreto de suspensión del porte de armas y movilización de paracaidistas",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Global Voices Advox — bloqueo de Zello y cortes de ABA en el Táchira",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Censura y rutas alternas de comunicación — Global Voices Advox; CNN",
+        "certeza": "confirmado"
+      }
+    ],
+    "notaDiseno": "A1-05 del entregable C. Punto más bajo del acto: no se comunica con una barra vacía sino con silencio. El modo se degrada a ZINE y el FEED vuelve recién al cerrar la escena (modoFinal). La organización por edificio es lo que en el Acto 3 ya existía; aquí el jugador la inventa por necesidad."
+  },
+  {
+    "id": "T-06",
+    "acto": 1,
+    "modo": "RADIO",
+    "fecha": "24 de febrero de 2014",
+    "fechaIso": "2014-02-24",
+    "lugar": "San Cristóbal, Táchira",
+    "epigrafe": "Dos versiones, las dos con video, ninguna alcanza.",
+    "ambiente": "aire",
+    "ilustracion": {
+      "capas": [
+        "t06-segundo-piso.webp"
+      ],
+      "alt": "Una calle angosta de noche vista desde la acera. La fachada lisa de un edificio de dos pisos, con una ventana abierta arriba y un bombillo pelado detrás. En primer plano, un muro bajo y una moto estacionada. La calle está completamente vacía."
+    },
+    "bloques": [
+      {
+        "tipo": "narracion",
+        "texto": "Jimmy Vargas, 34 años, murió al caer desde un segundo piso, unos cinco metros. Hay un video que confirma la caída."
+      },
+      {
+        "tipo": "radio",
+        "tiempo": "19:12",
+        "emisor": "Base",
+        "texto": "La mamá y la hermana dicen que el cuerpo tenía marcas de perdigón.",
+        "cambio": true
+      },
+      {
+        "tipo": "radio",
+        "tiempo": "19:20",
+        "emisor": "Esquina 5",
+        "texto": "PROVEA dice que venía huyendo de los perdigones de la Guardia.",
+        "cambio": true
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Meses después el Ministerio Público desestima las heridas de perdigón y cierra el caso como caída accidental. Eso todavía no lo sabes."
+      },
+      {
+        "tipo": "dialogo",
+        "hablante": "Yajaira",
+        "texto": "Usted va a tener que publicar algo antes de saber. Aquí siempre es así y nunca deja de ser feo."
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — hay que publicar antes de saber.",
+        "opciones": [
+          {
+            "label": "Publicas que lo mató la Guardia.",
+            "deltas": {
+              "RE": 2,
+              "CO": 2,
+              "PP": -2,
+              "RI": 2
+            },
+            "flags": {
+              "publico-autoria": true
+            },
+            "consecuencia": "Es lo que sientes y es más de lo que sabes. Se comparte mil veces antes de medianoche."
+          },
+          {
+            "label": "Publicas lo que viste, y solo eso.",
+            "deltas": {
+              "PP": 2,
+              "CF": 2,
+              "RE": -1
+            },
+            "consecuencia": "No lo comparte casi nadie. Dentro de un año va a ser lo único que siga en pie."
+          },
+          {
+            "label": "Buscas a quien haya grabado desde otro ángulo.",
+            "deltas": {
+              "CF": 2,
+              "PP": 1
+            },
+            "flags": {
+              "video-otro-angulo": true
+            },
+            "desbloquea": "material-otro-angulo",
+            "consecuencia": "Un muchacho del edificio de enfrente tiene cuarenta segundos desde arriba. Te los pasa por bluetooth.",
+            "inventario": {
+              "ganancia": {
+                "contactos": 1
+              }
+            }
+          },
+          {
+            "label": "No publicas. Esto no es tuyo para contarlo.",
+            "deltas": {
+              "CF": 1,
+              "PP": 1,
+              "RE": -2
+            },
+            "consecuencia": "El silencio también es una versión, y esta noche hay tres."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "La verdad de esta noche no se decide por evidencia. Se decide por quién tiene la potestad de archivar el caso.",
+    "fuentes": [
+      {
+        "fuente": "CNN en Español — video de la caída desde el segundo piso, 24 feb 2014",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Ministerio Público — cierre del caso como caída accidental",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "PROVEA y Foro Penal — huida de disparos de perdigones de la GNB",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Familia de la víctima — marcas de perdigón en el cuerpo",
+        "certeza": "testimonio-no-verificado"
+      }
+    ],
+    "notaDiseno": "A1-06 del entregable C. Jimmy Vargas no es personaje: no aparece, no habla, no se dramatiza su caída. Es una noticia y un nombre en el memorial (entregable D, ficha 14). La caída está confirmada; la causa, en disputa, y el juego no la resuelve."
+  },
+  {
+    "id": "T-07",
+    "acto": 1,
+    "modo": "ZINE",
+    "fecha": "8 de marzo de 2014",
+    "fechaIso": "2014-03-08",
+    "lugar": "Avenida cortada, San Cristóbal",
+    "epigrafe": "Día treinta y tres. No pasa nada. Hace calor.",
+    "ilustracion": {
+      "capas": [
+        "t07-barricada-futbol.webp"
+      ],
+      "alt": "Una calle bloqueada por una barricada de escombros, cauchos y láminas de zinc. Del otro lado, cuatro muchachos juegan fútbol sobre el asfalto vacío con los morrales de arco. Al fondo, casas bajas y la montaña."
+    },
+    "bloques": [
+      {
+        "tipo": "zineTitulo",
+        "texto": "Un partido",
+        "sub": "Cuatro contra cuatro, con los morrales de arco"
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Alguien trajo una pelota. Hay un partido en la avenida cortada y el arco de la izquierda es un morral y una piedra."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "La señora Nelly cruza la barricada con las bolsas del mercado. Hace treinta y tres días que cruza por el mismo hueco."
+      },
+      {
+        "tipo": "dialogo",
+        "hablante": "Señora Nelly",
+        "texto": "Mijo, ¿hasta cuándo?"
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — qué le contestas.",
+        "opciones": [
+          {
+            "label": "«Hasta que suelten a todos.»",
+            "deltas": {
+              "CO": 1,
+              "PP": -1
+            },
+            "consecuencia": "Ella asiente con la cabeza y no dice nada más. Sigue caminando de medio lado."
+          },
+          {
+            "label": "«No sé.»",
+            "deltas": {
+              "PP": 2,
+              "CO": -1
+            },
+            "consecuencia": "Es la primera respuesta honesta que recibe en treinta y tres días."
+          },
+          {
+            "label": "Le ayudas con las bolsas y no contestas.",
+            "deltas": {
+              "PP": 3,
+              "CF": 1
+            },
+            "inventario": {
+              "costo": {
+                "agua": 1
+              }
+            },
+            "consecuencia": "Cargas las bolsas hasta el portón. Ninguno de los dos habla y los dos entienden."
+          },
+          {
+            "label": "«Usted también puede venir a la esquina, señora Nelly.»",
+            "deltas": {
+              "RE": 1
+            },
+            "flags": {
+              "invite-nelly": true
+            },
+            "consecuencia": "Se queda callada un momento, como si de verdad lo estuviera pensando."
+          }
+        ]
+      },
+      {
+        "id": "g2",
+        "titulo": "Nelly lo trae a colación: el Ministerio Público cerró el caso del muchacho del segundo piso.",
+        "condicion": "flags['publico-autoria'] === true",
+        "opciones": [
+          {
+            "label": "«Publiqué lo que sentía, no lo que sabía.»",
+            "deltas": {
+              "CF": 1,
+              "PP": 1
+            },
+            "consecuencia": "Ella no te lo discute. Que no te lo discuta es peor."
+          },
+          {
+            "label": "«Que lo cierren no lo vuelve verdad, señora Nelly.»",
+            "deltas": {
+              "CO": 1,
+              "PP": -2
+            },
+            "consecuencia": "Tiene razón usted y tengo razón yo, dice ella, y eso no nos sirve de nada a ninguno de los dos."
+          }
+        ]
+      },
+      {
+        "id": "g3",
+        "titulo": "Nelly aparece el jueves en la esquina con un termo de café.",
+        "condicion": "flags['invite-nelly'] === true && stats.PP >= 55",
+        "opciones": [
+          {
+            "label": "Le haces sitio en el turno de la noche.",
+            "deltas": {
+              "RE": 2,
+              "PP": 2,
+              "CF": 1
+            },
+            "consecuencia": "A la semana hay tres señoras más. La barricada deja de ser cosa de muchachos."
+          },
+          {
+            "label": "Le agradeces el café y le pides que se vaya antes de que oscurezca.",
+            "deltas": {
+              "PP": 1,
+              "CF": 2,
+              "RE": -1
+            },
+            "consecuencia": "Se va a las siete. Vuelve el jueves siguiente igual."
+          }
+        ]
+      },
+      {
+        "id": "g4",
+        "titulo": "Nelly deja de saludarte cuando cruza.",
+        "condicion": "flags['invite-nelly'] === true && stats.PP < 55",
+        "opciones": [
+          {
+            "label": "La saludas igual todos los días.",
+            "deltas": {
+              "PP": 1,
+              "CF": 1
+            },
+            "consecuencia": "Al noveno día contesta con la cabeza. No es mucho, pero es."
+          },
+          {
+            "label": "Lo dejas estar.",
+            "deltas": {
+              "PP": -1
+            },
+            "consecuencia": "Empieza a dar la vuelta por la calle 16 para no pasar por la esquina."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "Treinta y tres días sosteniendo una calle es aburrido, incómodo y agotador. Es el noventa por ciento de lo que fue estar ahí y el cero por ciento de lo que se cuenta después.",
+    "fuentes": [
+      {
+        "fuente": "BBC / Getty Images — estudiantes jugando fútbol mientras custodian las barricadas, San Cristóbal, 8 mar 2014",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Cronología del ciclo 2014 — rechazo público de cuatro alcaldes opositores a las trancas (24 de febrero)",
+        "certeza": "confirmado"
+      }
+    ],
+    "notaDiseno": "A1-07 del entregable C, la escena que más importa del acto. Nelly no es chavista ni obstáculo: es una señora con bolsas que hace un mes que no camina derecho hasta su casa, y tiene razón, y el jugador también. La fractura sobre las trancas está documentada y viene de adentro del propio bando. Los grupos g3 y g4 son las dos ramas del final de la opción 4 según PP, que el entregable pide explícitamente."
+  },
+  {
+    "id": "T-08",
+    "acto": 1,
+    "modo": "RADIO",
+    "fecha": "10 de marzo de 2014",
+    "fechaIso": "2014-03-10",
+    "lugar": "Carrera 17 entre avenida Carabobo y calle 16, San Cristóbal",
+    "epigrafe": "Once de la noche. Dos camionetas blancas subiendo por la 17.",
+    "ambiente": "aire",
+    "ilustracion": {
+      "capas": [
+        "t08-carrera-17.webp"
+      ],
+      "alt": "Una esquina residencial a primera hora de la mañana, vacía. Sobre el asfalto quedan piedras sueltas y dos marcas largas de neumático. Las santamarías de los locales están abajo. No hay nadie."
+    },
+    "bloques": [
+      {
+        "tipo": "radio",
+        "tiempo": "22:31",
+        "emisor": "Esquina 5",
+        "texto": "Tiraron piedras abajo y se fueron.",
+        "cambio": true
+      },
+      {
+        "tipo": "radio",
+        "tiempo": "22:33",
+        "emisor": "Base",
+        "texto": "Ya está. Se fueron.",
+        "cambio": true
+      },
+      {
+        "tipo": "radio",
+        "tiempo": "23:02",
+        "emisor": "Esquina 5",
+        "texto": "Dos camionetas blancas subiendo por la 17. Son como diez. Traen armas largas.",
+        "cambio": true
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Media hora antes los de abajo se habían ido. Nadie contaba con que volvieran, y menos así."
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — tienes veinte segundos de radio.",
+        "opciones": [
+          {
+            "label": "«Todos adentro, ya.»",
+            "deltas": {
+              "CF": 2
+            },
+            "consecuencia": "Se salva gente y se pierde la barricada. Mañana no hay nada que sostener."
+          },
+          {
+            "label": "«Aguanten, son cuatro gatos.»",
+            "deltas": {
+              "CO": 2,
+              "RI": 3
+            },
+            "inventario": {
+              "costo": {
+                "gasa": 1
+              }
+            },
+            "consecuencia": "No son cuatro gatos. Quedan once personas en la calle cuando empiezan los tiros."
+          },
+          {
+            "label": "«Grábenlos. Placas, caras, lo que puedan.»",
+            "deltas": {
+              "PP": 2,
+              "RI": 2
+            },
+            "flags": {
+              "grabaron-camionetas": true
+            },
+            "consecuencia": "Tres teléfonos grabando desde tres ángulos. En dos no se ve nada."
+          },
+          {
+            "label": "Silencio de radio.",
+            "deltas": {
+              "RI": -2,
+              "RE": -2
+            },
+            "consecuencia": "Nadie avisa a nadie. Cada quien se entera cuando escucha el primer disparo."
+          }
+        ]
+      },
+      {
+        "id": "g2",
+        "titulo": "Al día siguiente: los vecinos dicen que eran funcionarios, la versión oficial dice colectivos. Tienes el video de la 17 y los cuarenta segundos del otro ángulo.",
+        "condicion": "flags['grabaron-camionetas'] === true && flags['video-otro-angulo'] === true",
+        "opciones": [
+          {
+            "label": "Lo entregas a Foro Penal con la lista de horas.",
+            "deltas": {
+              "CF": 3,
+              "PP": 2,
+              "RE": 1
+            },
+            "consecuencia": "Queda asentado en un expediente. No prueba nada todavía y aun así queda."
+          },
+          {
+            "label": "Lo publicas completo esta misma mañana.",
+            "deltas": {
+              "PP": 3,
+              "RI": 3,
+              "CF": -1
+            },
+            "consecuencia": "Lo ve mucha gente y también lo ven ellos. Dos de los que grabaron cambian de casa esa semana."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "Muere alguien igual. Daniel Tinoco, 24 años, un disparo en el pecho, minutos después. No había manera de evitarlo. Lo único que cambió es cuánta gente más quedó expuesta y si mañana existe alguna imagen.",
+    "fuentes": [
+      {
+        "fuente": "CNN en Español — reconstrucción del hecho, 11 mar 2014",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Foro Penal — Daniel Tinoco (10 de marzo)",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Vecinos de la carrera 17 — descripción de los atacantes como funcionarios de seguridad",
+        "certeza": "testimonio-no-verificado"
+      }
+    ],
+    "notaDiseno": "A1-08 del entregable C. Punto de quiebre del acto y el eje que colapsa es Confianza: no por infiltración, sino porque dejó de poder saberse quién dispara. Daniel Tinoco no es personaje: nombre y fecha en el memorial. El g2 solo existe si el jugador juntó las dos piezas, y aun así no alcanza para probar nada."
+  },
+  {
+    "id": "T-09",
+    "acto": 1,
+    "modo": "FEED",
+    "modoFinal": "ZINE",
+    "fecha": "19 de marzo al 2 de abril de 2014",
+    "fechaIso": "2014-03-19",
+    "lugar": "San Cristóbal, Táchira",
+    "epigrafe": "Cincuenta y siete días.",
+    "ambiente": "aire",
+    "ilustracion": {
+      "capas": [
+        "t09-avenida-limpia.webp"
+      ],
+      "alt": "Una avenida ancha al amanecer, completamente vacía y limpia. Sobre el asfalto quedan las marcas de lo que estuvo ahí semanas: raspones, manchas de quemado, restos de grava. No hay nadie."
+    },
+    "bloques": [
+      {
+        "tipo": "narracion",
+        "texto": "El 19 de marzo a las seis y media de la tarde el SEBIN detiene a Daniel Ceballos, alcalde de San Cristóbal, en El Rosal. Lo recluyen en la prisión militar de Ramo Verde. El TSJ lo destituye y lo condena a doce meses por no haber ordenado el retiro de las barricadas. El testigo estrella del caso es el gobernador."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Dos semanas después llegan las máquinas y la Guardia. En una mañana las avenidas Carabobo, Ferrero Tamayo y España están limpias. No hay enfrentamiento. No hay nadie."
+      },
+      {
+        "tipo": "cita",
+        "literal": true,
+        "texto": "terminaron con el toque de queda impuesto por terroristas",
+        "autor": "General Vladimir Padrino López, jefe del CEOFANB",
+        "fuente": "BBC News, abril de 2014"
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Padrino declara además que nadie resultó herido en el operativo, y es verdad. No hacía falta: ya no había nadie en la calle."
+      },
+      {
+        "tipo": "cita",
+        "literal": true,
+        "texto": "el mejor regalo que le podemos dar a San Cristóbal es el regreso de nuestros hijos a la escuela y de nuestra buena gente al trabajo",
+        "autor": "José Vielma Mora, gobernador del Táchira",
+        "fuente": "BBC Mundo, abril de 2014"
+      },
+      {
+        "tipo": "narracion",
+        "texto": "El mismo mes, la fiscal general informa que su despacho investiga 81 casos de presuntas violaciones de derechos humanos, con 17 policías y militares detenidos."
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — la última del acto.",
+        "opciones": [
+          {
+            "label": "Vuelves a salir esa misma tarde, con lo que quede.",
+            "deltas": {
+              "CO": 3,
+              "RI": 3,
+              "RE": -1
+            },
+            "consecuencia": "Salen nueve personas. A las siete ya no queda ninguna en la avenida."
+          },
+          {
+            "label": "Escribes todo lo que pasó desde el 4 de febrero, con fechas, y lo guardas.",
+            "deltas": {
+              "CF": 2,
+              "PP": 1
+            },
+            "flags": {
+              "cronologia-guardada": true
+            },
+            "consecuencia": "Cincuenta y siete días en once páginas. Nadie te lo pidió y nadie lo va a leer todavía."
+          },
+          {
+            "label": "Vuelves a clase.",
+            "deltas": {
+              "RE": -3,
+              "PP": 2
+            },
+            "consecuencia": "El lunes hay clase de estadística a las siete de la mañana, como si nada."
+          },
+          {
+            "label": "Averiguas qué se necesita para irte.",
+            "deltas": {
+              "PP": -1
+            },
+            "flags": {
+              "pasaporte": true
+            },
+            "consecuencia": "Prórroga, apostilla, antecedentes. La cola del SAIME empieza a las cuatro de la mañana."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "La ciudad quedó limpia. El alcalde electo está en una cárcel militar y hay 81 casos de presuntas violaciones de derechos humanos bajo investigación. Las dos cosas son ciertas al mismo tiempo y nadie te va a decir cómo se acomodan.",
+    "fuentes": [
+      {
+        "fuente": "BBC News / BBC Mundo, abril de 2014 — citas textuales de Padrino López y Vielma Mora",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Acceso a la Justicia — cronología del caso Daniel Ceballos",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Efecto Cocuyo; Runrun.es — detención y condena del alcalde de San Cristóbal",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Amnistía Internacional AMR 53/1036/2015",
+        "certeza": "confirmado"
+      }
+    ],
+    "notaDiseno": "A1-09 del entregable C. El acto cierra con una frase razonable del gobernador y no se refuta: se deja dicha, con su fuente, al lado del dato del alcalde preso y los 81 casos. La opción 4 setea el flag pasaporte, que habilita el final de emigración de la matriz (GS-015)."
+  }
+]

@@ -1,0 +1,39 @@
+name: CI
+
+# Pipeline de "Esto no es un panfleto": cualquier gate con exit != 0 detiene
+# el pipeline (spec S5/S6). Orden: install → gates R1/R3/validación → tests →
+# build. Ver design §8.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Gate R1 — locale venezolano (GS-040/041)
+        run: npm run check:locale
+
+      - name: Gate R3 — atribución de archivos (GS-050)
+        run: npm run check:attribution
+
+      - name: Validación de contenido (GS-060)
+        run: npm run validate:content
+
+      - name: Tests
+        run: npm test
+
+      - name: Build de producción
+        run: npm run build

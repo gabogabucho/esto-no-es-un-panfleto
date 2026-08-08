@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es-VE">
+  <head>
+    <meta charset="utf-8" />
+    <title>Esto no es un panfleto</title>
+    <meta
+      name="description"
+      content="Un juego de decisiones sobre la resistencia estudiantil venezolana de 2014."
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#12130f" />
+
+    <!-- Tarjeta de compartir. Las rutas son absolutas desde la raíz: cuando el
+         dominio esté decidido conviene pasarlas a URL completa, que es lo que
+         algunos rastreadores exigen. La imagen es una ilustración del juego con
+         el duotono del acto 1, sin texto encima: el título lo pone og:title. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Esto no es un panfleto" />
+    <meta property="og:locale" content="es_VE" />
+    <meta property="og:title" content="Esto no es un panfleto" />
+    <meta
+      property="og:description"
+      content="Venezuela, 2014. Tres ciudades, tres personas, el mismo semestre. Un juego de decisiones sobre la resistencia estudiantil. Los personajes son ficticios; los hechos, las fechas y las cifras no."
+    />
+    <meta property="og:image" content="/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Ilustración de una calle bloqueada por una barricada, con gente jugando fútbol al lado."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Panfleto" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="/" />
+    <!-- Splash screens iOS (fondo oscuro #12130f) -->
+    <link
+      rel="apple-touch-startup-image"
+      href="/apple-splash/apple-splash-1290x2796.png"
+      media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="/apple-splash/apple-splash-1170x2532.png"
+      media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="/apple-splash/apple-splash-1125x2436.png"
+      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="/apple-splash/apple-splash-750x1334.png"
+      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="/apple-splash/apple-splash-2048x2732.png"
+      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <header class="encabezado">
+      <nav aria-label="Principal">
+        <button type="button" class="boton-menu" id="boton-menu" hidden>
+          Menú
+        </button>
+      </nav>
+    </header>
+    <main id="main" tabindex="-1"></main>
+    <footer class="pie">
+      <p id="pie-texto"></p>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

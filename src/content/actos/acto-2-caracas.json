@@ -1,0 +1,1311 @@
+[
+  {
+    "id": "C-01",
+    "acto": 2,
+    "modo": "FEED",
+    "fecha": "12 de febrero de 2014",
+    "fechaIso": "2014-02-12",
+    "lugar": "Ministerio Público, La Candelaria, Caracas",
+    "epigrafe": "Estás a seis cuadras y la avenida entera empieza a correr hacia donde estás tú.",
+    "ambiente": "aire",
+    "ilustracion": {
+      "capas": [
+        "c01-seis-cuadras.webp"
+      ],
+      "alt": "Una avenida larga vista desde muy lejos, a seis cuadras. Al fondo, un movimiento borroso y polvo pálido: marcas mínimas, nada legible. En primer plano, un kiosco con botellas de agua. La mitad cercana de la avenida está vacía."
+    },
+    "bloques": [
+      {
+        "tipo": "narracion",
+        "texto": "La marcha del Día de la Juventud se está disolviendo. Hay gente comprando agua en la esquina. Son las tres y algo de la tarde."
+      },
+      {
+        "tipo": "tweet",
+        "autor": "@ucv_alerta",
+        "handle": "@ucv_alerta",
+        "tiempo": "15:41",
+        "texto": "Dispararon en La Candelaria.",
+        "metricas": {
+          "rt": 2100,
+          "fav": 400,
+          "replies": 900
+        }
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Nada más. Ni quién, ni a quién."
+      },
+      {
+        "tipo": "tweet",
+        "autor": "@caracas_minuto",
+        "handle": "@caracas_minuto",
+        "tiempo": "15:44",
+        "texto": "Reportan heridos en Tracabordo. Otros dicen que fue en la avenida Sur 11. No hay confirmación de nada.",
+        "metricas": {
+          "rt": 880,
+          "fav": 120,
+          "replies": 610
+        }
+      },
+      {
+        "tipo": "tweet",
+        "autor": "@el_gordo_graba",
+        "handle": "@el_gordo_graba",
+        "tiempo": "15:47",
+        "texto": "Cinco versiones distintas en diez minutos. Nadie de los que las repite estaba ahí.",
+        "metricas": {
+          "rt": 240,
+          "fav": 90
+        }
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — la avenida corre hacia ti.",
+        "opciones": [
+          {
+            "label": "Vas hacia allá.",
+            "deltas": {
+              "CO": 2,
+              "RI": 3
+            },
+            "consecuencia": "Llegas a dos cuadras. La calle ya está cortada por el SEBIN y no ves nada."
+          },
+          {
+            "label": "Corres con la gente y ayudas a sacar a los que se caen.",
+            "deltas": {
+              "CF": 2,
+              "PP": 1
+            },
+            "consecuencia": "Levantas a una señora que perdió un zapato. Ninguno de los dos sabe qué pasó adelante."
+          },
+          {
+            "label": "Te subes a algo y grabas.",
+            "deltas": {
+              "PP": 2,
+              "RI": 1
+            },
+            "flags": {
+              "grabo-candelaria": true
+            },
+            "desbloquea": "material-candelaria",
+            "consecuencia": "Dos minutos y medio desde un murito. Se ve gente corriendo y no se ve quién dispara."
+          },
+          {
+            "label": "Sales de la zona.",
+            "deltas": {
+              "RI": -2,
+              "CO": -1
+            },
+            "consecuencia": "Caminas veinte cuadras hasta el metro. El teléfono no para en todo el trayecto."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "No ves nada. Nadie ve nada. A las siete de la tarde el teléfono dice que murió Bassil Da Costa, estudiante de 23 años, de un disparo en la cabeza mientras huía. A las nueve dice que también murió Juan Carlos Montoya, 50 años, dirigente comunitario chavista del 23 de Enero, de un disparo en la cara. Los dos en La Candelaria, con minutos de diferencia.",
+    "autoDeltas": {
+      "RI": 2
+    },
+    "fuentes": [
+      {
+        "fuente": "Runrun.es; Infobae; Foro Penal — Bassil Da Costa y Juan Carlos Montoya (12 de febrero)",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Cronología del ciclo 2014 — 12 de febrero",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Autoría de los disparos: versiones contradictorias entre las partes",
+        "certeza": "testimonio-no-verificado"
+      }
+    ],
+    "notaDiseno": "C-01 del entregable C. Regla central del acto: ninguna muerte ocurre en pantalla, todas llegan como información. Ni Da Costa ni Montoya aparecen: no hay cuerpo, no hay diálogo, no hay cámara lenta. La escena tiene que ser confusa, corta y sin información, porque eso es lo que le pasó a la gente que estuvo ahí."
+  },
+  {
+    "id": "C-02",
+    "acto": 2,
+    "modo": "RADIO",
+    "fecha": "Noche del 12 de febrero de 2014",
+    "fechaIso": "2014-02-12",
+    "lugar": "Avenida Uslar Pietri, Chacao, Caracas",
+    "epigrafe": "Once de la noche. La ciudad prendida en el este y apagada en la televisión.",
+    "ambiente": "aire",
+    "ilustracion": {
+      "capas": [
+        "c02-chacao-vacia.webp"
+      ],
+      "alt": "Una avenida ancha de noche, completamente vacía. Faroles encendidos y la vidriera iluminada de un centro comercial a una cuadra, sin nadie adentro. Sobre el asfalto, escombros dispersos y un cono volteado. No hay nadie."
+    },
+    "bloques": [
+      {
+        "tipo": "narracion",
+        "texto": "Nadie durmió. Después de lo de la tarde hay disturbios en Caracas y en otras ciudades."
+      },
+      {
+        "tipo": "radio",
+        "tiempo": "23:04",
+        "emisor": "San Ignacio",
+        "texto": "Hay motos subiendo por Uslar Pietri.",
+        "cambio": true
+      },
+      {
+        "tipo": "radio",
+        "tiempo": "23:05",
+        "emisor": "San Ignacio",
+        "texto": "No son de nosotros.",
+        "cambio": true
+      },
+      {
+        "tipo": "dialogo",
+        "hablante": "Andreína",
+        "texto": "Tú decides ahora, porque en dos minutos ya no hay nada que decidir."
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — tienes la radio en la mano.",
+        "opciones": [
+          {
+            "label": "«Todos adentro.»",
+            "deltas": {
+              "CF": 2
+            },
+            "consecuencia": "Se pierde la calle en once minutos. Nadie de los tuyos queda afuera."
+          },
+          {
+            "label": "«Aguanten, somos más.»",
+            "deltas": {
+              "CO": 3,
+              "RI": 3
+            },
+            "consecuencia": "Ser más no sirve de nada contra una moto que pasa a sesenta."
+          },
+          {
+            "label": "«Que nadie se quede solo. De a dos, mínimo.»",
+            "deltas": {
+              "CF": 3,
+              "RE": 1
+            },
+            "consecuencia": "Se arman parejas en treinta segundos. Es lo único útil que dijiste en toda la noche."
+          },
+          {
+            "label": "Cortas la radio.",
+            "deltas": {
+              "RI": -2,
+              "RE": -3
+            },
+            "consecuencia": "Cada quien se entera de lo que pasó por su cuenta y a su hora."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "Muere alguien igual. A la una de la mañana el teléfono trae el nombre: Robert Redman, 31 años, alcanzado por el disparo del parrillero de una moto cerca del San Ignacio. Es el mismo que unas horas antes ayudó a cargar al muchacho de La Candelaria, y que volvió a la calle esa misma noche. A las once CONATEL sacó a NTN24 del cable: mañana lo que pasó lo va a contar quien quedó transmitiendo.",
+    "autoDeltas": {
+      "PP": -1
+    },
+    "fuentes": [
+      {
+        "fuente": "Runrun.es; Infobae — Robert Redman (12 de febrero)",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "El Nacional — declaración del padre, Derek Redman",
+        "certeza": "testimonio-no-verificado"
+      },
+      {
+        "fuente": "Cronología del ciclo 2014 — salida de NTN24 del cable por orden de CONATEL",
+        "certeza": "confirmado"
+      }
+    ],
+    "notaDiseno": "C-02 del entregable C. Tres muertos en un día es el máximo del juego y ocurre en la primera hora del acto. A partir de aquí el acto no escala en violencia: escala en cansancio, en confusión y en cerco. Si intenta superar el 12F se convierte en el espectáculo que el proyecto rechaza."
+  },
+  {
+    "id": "C-03",
+    "acto": 2,
+    "modo": "FEED",
+    "fecha": "13 y 14 de febrero de 2014",
+    "fechaIso": "2014-02-13",
+    "lugar": "Caracas, Distrito Capital",
+    "epigrafe": "No es un apagón. Es peor: todo funciona menos lo que sirve.",
+    "ambiente": "cuarto",
+    "ilustracion": {
+      "capas": [
+        "c03-no-cargan.webp"
+      ],
+      "alt": "Un apartamento a oscuras de noche. Una persona sentada en el piso, de espaldas, con un teléfono cuya pantalla en blanco es la única luz del cuarto. Por la ventana, las torres de la ciudad encendidas."
+    },
+    "bloques": [
+      {
+        "tipo": "narracion",
+        "texto": "A las 22:08, hora de Caracas, los usuarios de Twitter en Venezuela dejan de ver imágenes. El texto sigue funcionando. Puedes escribir que mataron a tres personas y se lee perfecto. Puedes subir la foto y no carga."
+      },
+      {
+        "tipo": "tweet",
+        "autor": "@cantv_ve",
+        "handle": "@cantv_ve",
+        "tiempo": "23:40",
+        "texto": "La empresa niega estar involucrada en cualquier restricción del servicio.",
+        "metricas": {
+          "rt": 1400,
+          "fav": 60,
+          "replies": 3100
+        }
+      },
+      {
+        "tipo": "narracion",
+        "texto": "El 14 de febrero Twitter Inc. señala públicamente al gobierno venezolano por el bloqueo. Una empresa extranjera confirmando lo que la gente sospechaba desde la noche anterior."
+      },
+      {
+        "tipo": "tweet",
+        "autor": "@el_gordo_graba",
+        "handle": "@el_gordo_graba",
+        "tiempo": "10:15",
+        "texto": "Hackearon @NTN24ve y también @PartidoPSUV. Siete universidades suspendieron actividades. La GNB sacó a la gente de Altamira con lacrimógenas.",
+        "metricas": {
+          "rt": 500,
+          "fav": 210
+        }
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — se cayeron las imágenes, no el texto.",
+        "opciones": [
+          {
+            "label": "Describes las fotos con palabras. Muchas palabras.",
+            "deltas": {
+              "PP": 2,
+              "RE": 2
+            },
+            "consecuencia": "Suena a poco y es lo que más se hizo: cuando no cargan las fotos, la gente escribe."
+          },
+          {
+            "label": "Buscas VPN y enseñas a instalarla.",
+            "deltas": {
+              "RE": 2,
+              "RI": 1
+            },
+            "inventario": {
+              "costo": {
+                "contactos": 1
+              }
+            },
+            "consecuencia": "Treinta personas con VPN el jueves. El viernes ya son ochenta."
+          },
+          {
+            "label": "Sacas el material del país: mandas todo a contactos afuera.",
+            "deltas": {
+              "PP": 3,
+              "RI": 2
+            },
+            "flags": {
+              "material-afuera": true
+            },
+            "consecuencia": "Lo que salga hoy del país ya no depende de CANTV para existir."
+          },
+          {
+            "label": "Esperas a que vuelva.",
+            "deltas": {
+              "RE": -2
+            },
+            "consecuencia": "Vuelve a los tres días. Para entonces la conversación es otra."
+          }
+        ]
+      },
+      {
+        "id": "g2",
+        "titulo": "Lo que grabaste el 12 en La Candelaria sigue en el teléfono. Afuera hay quien lo puede publicar.",
+        "condicion": "flags['grabo-candelaria'] === true && flags['material-afuera'] === true",
+        "opciones": [
+          {
+            "label": "Lo mandas completo, con la hora y el lugar.",
+            "deltas": {
+              "PP": 2,
+              "RE": 2,
+              "RI": 1
+            },
+            "flags": {
+              "voz-afuera": true
+            },
+            "consecuencia": "Sale en un medio que no está en el cable venezolano. Aquí casi nadie lo ve y afuera lo ve todo el mundo."
+          },
+          {
+            "label": "Lo mandas recortado, sin las caras de los que corren.",
+            "deltas": {
+              "PP": 1,
+              "CF": 3
+            },
+            "flags": {
+              "voz-afuera": true
+            },
+            "consecuencia": "Pierde fuerza y no expone a nadie. Los dos efectos son reales."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "La censura de 2014 no fue un apagón: fue una degradación selectiva, escalonada y con contramedidas. NTN24 fuera del cable el 12. Las imágenes el 13 a las 22:08. Cuentas hackeadas el 14.",
+    "fuentes": [
+      {
+        "fuente": "Global Voices Advox — caída de imágenes de Twitter el 13 de febrero a las 22:08",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "El Universal, 15 de febrero de 2014 — Twitter Inc. señala al gobierno venezolano",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Foro Penal — denuncia de manipulación de pruebas de uso de arma de fuego en Barquisimeto",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Cronología del ciclo 2014 — el cerco comunicacional de febrero (NTN24, Twitter, Zello)",
+        "certeza": "confirmado"
+      }
+    ],
+    "notaDiseno": "C-03 del entregable C. Es el modelo de toda la mecánica de La Señal: una lista de bajas concretas con hora, no una barra que baja. El g2 solo existe si el jugador grabó en C-01 y decidió sacar material del país; alimenta el final de voz internacional."
+  },
+  {
+    "id": "C-04",
+    "acto": 2,
+    "modo": "ZINE",
+    "fecha": "18 de febrero de 2014",
+    "fechaIso": "2014-02-18",
+    "lugar": "Plaza Brión de Chacaíto, Caracas",
+    "epigrafe": "Cincuenta mil personas y nadie planeó el después.",
+    "ilustracion": {
+      "capas": [
+        "c04-plaza-llena.webp"
+      ],
+      "alt": "Una plaza desbordada de gente vista desde una ventana alta. Decenas de miles de personas como marcas pequeñas, sin que ninguna se distinga. En el medio, una estatua rodeada de gente."
+    },
+    "bloques": [
+      {
+        "tipo": "zineTitulo",
+        "texto": "Plaza Brión",
+        "sub": "18 de febrero · 12:24 pm · siete minutos de discurso"
+      },
+      {
+        "tipo": "narracion",
+        "texto": "El 12 un tribunal ordenó su detención. El 15 allanaron la casa de su padre buscándolo. Hoy se sube a una estatua en Chacaíto, habla y se entrega a la GNB."
+      },
+      {
+        "tipo": "cita",
+        "literal": true,
+        "texto": "una salida pacífica, dentro de la constitución, pero en la calle",
+        "autor": "Leopoldo López",
+        "fuente": "Discurso en la plaza Brión, 18 de febrero de 2014"
+      },
+      {
+        "tipo": "cita",
+        "literal": true,
+        "texto": "Ninguna marcha opositora va a entrar al municipio Libertador, ¡no van a pasar!",
+        "autor": "Diosdado Cabello",
+        "fuente": "Declaración del 17 de febrero de 2014"
+      },
+      {
+        "tipo": "cita",
+        "literal": true,
+        "texto": "lo mataron funcionarios",
+        "autor": "Jonny Montoya, policía, hermano de Juan Carlos Montoya",
+        "fuente": "Declaración del 16 de febrero de 2014"
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Esa última frase la dijo un chavista sobre la muerte de otro chavista, y es la que rompe el relato de dos bandos. Casi nadie la repite."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "La gente se queda en la plaza después de la entrega, sin saber qué hacer."
+      },
+      {
+        "tipo": "dialogo",
+        "hablante": "Andreína",
+        "texto": "¿Y ahora esto de quién es? Porque tú y yo llevamos seis días sin dormir y hoy vino a hablar otro."
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — ¿de quién es esto?",
+        "opciones": [
+          {
+            "label": "«De él. Hay que sostener lo que empezó.»",
+            "deltas": {
+              "RE": 2,
+              "PP": 1,
+              "CF": -1
+            },
+            "flags": {
+              "esto-es-de-el": true
+            },
+            "consecuencia": "Quedas alineado con la conducción política. Eso te va a costar algo en abril."
+          },
+          {
+            "label": "«De nosotros. Empezó en Táchira el 4 de febrero, no aquí.»",
+            "deltas": {
+              "CF": 2,
+              "RE": -1
+            },
+            "flags": {
+              "esto-empezo-en-tachira": true
+            },
+            "consecuencia": "Es históricamente exacto y te deja afuera de todo. Las dos cosas."
+          },
+          {
+            "label": "«De los muertos. De nadie más.»",
+            "deltas": {
+              "PP": 2,
+              "CO": 1
+            },
+            "flags": {
+              "esto-es-de-los-muertos": true
+            },
+            "consecuencia": "Andreína no dice nada durante un rato largo."
+          },
+          {
+            "label": "No contestas.",
+            "consecuencia": "La pregunta queda flotando y va a volver en abril igual."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "La pregunta política del acto queda instalada: si esto es un movimiento estudiantil o el brazo de calle de un partido. Nadie la responde. El archivo tampoco: los estudiantes escribieron ellos mismos, dos meses después, que no se sentían representados.",
+    "fuentes": [
+      {
+        "fuente": "Cobertura internacional de la entrega de Leopoldo López, 18 de febrero de 2014",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Declaración de Diosdado Cabello, 17 de febrero de 2014",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Declaración de Jonny Montoya, 16 de febrero de 2014",
+        "certeza": "confirmado"
+      }
+    ],
+    "notaDiseno": "C-04 del entregable C. Escena sin acción, de pura conversación: el respiro entre el 12F y lo que viene. López y Cabello son personas reales: las citas son textuales y documentadas y no se les agrega una sola línea. La decisión se guarda hasta C-10."
+  },
+  {
+    "id": "C-05",
+    "acto": 2,
+    "modo": "RADIO",
+    "fecha": "21 de febrero de 2014",
+    "fechaIso": "2014-02-21",
+    "lugar": "Avenida Rómulo Gallegos, altura de Horizonte, Caracas",
+    "epigrafe": "Alguien trajo rollo de guaya. Nadie preguntó de dónde.",
+    "ambiente": "aire",
+    "ilustracion": {
+      "capas": [
+        "c05-la-guaya.webp"
+      ],
+      "alt": "Un tramo de avenida de noche, vacío. Atravesado a la altura del pecho, un alambre metálico fino, casi invisible, que atrapa un solo destello del farol. En primer plano, el borde de la acera y un rollo de guaya sobrante. No hay nadie ni nada más."
+    },
+    "bloques": [
+      {
+        "tipo": "radio",
+        "tiempo": "20:41",
+        "emisor": "Horizonte",
+        "texto": "Tenemos como treinta metros.",
+        "cambio": true
+      },
+      {
+        "tipo": "radio",
+        "tiempo": "20:42",
+        "emisor": "Horizonte",
+        "texto": "A la altura de Horizonte no pasa ni Dios.",
+        "cambio": true
+      },
+      {
+        "tipo": "dialogo",
+        "hablante": "Samuel",
+        "texto": "Yo vengo en moto todos los días por esta avenida. Piensa en eso antes de contestar."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "El mismo día bloquearon Zello. La radio es lo único que queda y por la radio hay que decidir esto ahora."
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — la guaya.",
+        "opciones": [
+          {
+            "label": "Se tiende.",
+            "deltas": {
+              "CO": 2,
+              "RI": 2,
+              "PP": -3
+            },
+            "flags": {
+              "guaya-tendida": true
+            },
+            "consecuencia": "Treinta metros de alambre a la altura del pecho de un motorizado, en una avenida que no está cortada."
+          },
+          {
+            "label": "Se tiende, pero con trapos blancos amarrados para que se vea.",
+            "deltas": {
+              "CO": 1,
+              "PP": -1,
+              "CF": 1
+            },
+            "flags": {
+              "guaya-tendida": true,
+              "guaya-señalizada": true
+            },
+            "consecuencia": "De día se ve. De noche, a sesenta por hora y sin luz en la avenida, no tanto."
+          },
+          {
+            "label": "Guaya no. Ramas, escombros, lo que sea, pero guaya no.",
+            "deltas": {
+              "CF": 2,
+              "PP": 2,
+              "CO": -1
+            },
+            "consecuencia": "El que la trajo se va molesto y se lleva el rollo. La avenida queda trancada igual, con basura."
+          },
+          {
+            "label": "Que decida el que la trajo.",
+            "deltas": {
+              "CF": -2
+            },
+            "flags": {
+              "guaya-tendida": true
+            },
+            "consecuencia": "La tiende él, sin trapos, y nadie lo mira mientras lo hace."
+          }
+        ]
+      },
+      {
+        "id": "g2",
+        "titulo": "Al día siguiente. Elvis Rafael Durán De La Rosa, 29 años, almacenista, volvía del trabajo en su moto hacia el barrio 24 de Julio de Petare. Hay dos versiones de cómo murió.",
+        "condicion": "flags['guaya-tendida'] === true",
+        "opciones": [
+          {
+            "label": "Publicas la versión de Foro Penal, que desmiente al gobierno.",
+            "deltas": {
+              "CF": 2,
+              "PP": 1
+            },
+            "consecuencia": "El alambre lo impactó en el pecho y cayó contra el pavimento: murió por la contusión en la cabeza. Que lo desmienta una ONG que denuncia al gobierno todos los días no lo hace menos muerto."
+          },
+          {
+            "label": "No publicas nada sobre eso.",
+            "deltas": {
+              "PP": -1,
+              "CF": -1
+            },
+            "consecuencia": "La versión que queda circulando es la del gobierno, y esa noche nadie de la cuadra duerme bien."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "Los manifestantes que estaban cerca huyeron al ver lo que pasó. Dos días después intentan allanar la casa de un general retirado a quien el presidente acusa de promover la colocación de guayas.",
+    "fuentes": [
+      {
+        "fuente": "Foro Penal — Elvis Rafael Durán: impacto en el pecho y muerte por contusión craneal (21 de febrero)",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "PROVEA y versión oficial — degollamiento",
+        "certeza": "testimonio-no-verificado"
+      },
+      {
+        "fuente": "Cronología del ciclo 2014 — muerte de un tercero por guaya en la avenida Rómulo Gallegos (21 de febrero)",
+        "certeza": "confirmado"
+      }
+    ],
+    "notaDiseno": "C-05 del entregable C, la escena más incómoda del juego. Es la única en la que una decisión del jugador puede matar a un tercero inocente: no a un compañero ni a un policía, a un almacenista de Petare que volvía a su casa. La barricada era defensiva y simbólica y además 6 de las 43 muertes fueron de terceros que chocaron contra obstáculos: las dos cosas a la vez. Sin sermón."
+  },
+  {
+    "id": "C-06",
+    "acto": 2,
+    "modo": "ZINE",
+    "fecha": "24 de febrero de 2014",
+    "fechaIso": "2014-02-24",
+    "lugar": "Este de Caracas",
+    "epigrafe": "Cuatro alcaldes de tu propio bando diciendo que esto está mal.",
+    "ilustracion": {
+      "capas": [
+        "c06-avenida-ballena.webp"
+      ],
+      "alt": "Vista desde un balcón: una avenida ancha entre torres. Al frente, gente de espaldas detrás de una barricada de láminas. A lo lejos, una ballena de la Guardia parada y de espaldas, con humo bajo entre los edificios."
+    },
+    "bloques": [
+      {
+        "tipo": "zineTitulo",
+        "texto": "No van a pasar",
+        "sub": "Doce días entrando por el estacionamiento"
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Doña Carmen, la portera, tiene 61 años y una rodilla mala. La puerta de la calle quedó detrás de la barricada y ella entra por el estacionamiento desde hace doce días."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Hoy los alcaldes de El Hatillo, Sucre, Chacao y Valencia rechazan públicamente esta forma de protesta. Los cuatro son de la oposición."
+      },
+      {
+        "tipo": "dialogo",
+        "hablante": "Doña Carmen",
+        "texto": "Yo no te estoy pidiendo que quites nada. Te estoy diciendo que tengo una rodilla y doce días."
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — la barricada del edificio.",
+        "opciones": [
+          {
+            "label": "Los alcaldes están cómodos en sus despachos.",
+            "deltas": {
+              "CO": 1,
+              "RE": 1,
+              "PP": -2
+            },
+            "consecuencia": "Es fácil de decir y no le arregla la rodilla a nadie."
+          },
+          {
+            "label": "Tienen razón. Hay que abrir un paso.",
+            "deltas": {
+              "PP": 3,
+              "CO": -1
+            },
+            "consecuencia": "Se abre un metro de paso. A los tres días pasa un carro y hay que discutirlo otra vez."
+          },
+          {
+            "label": "Abres un paso solo para los vecinos del edificio.",
+            "deltas": {
+              "PP": 2,
+              "CF": 1
+            },
+            "consecuencia": "Doña Carmen tiene llave del hueco. Nadie más."
+          },
+          {
+            "label": "Que voten los del edificio.",
+            "deltas": {
+              "PP": 2,
+              "RE": 1,
+              "CF": 2
+            },
+            "flags": {
+              "votacion-edificio": true
+            },
+            "consecuencia": "Asamblea de propietarios a las ocho, en el sótano, con la portera contando los votos."
+          }
+        ]
+      },
+      {
+        "id": "g2",
+        "titulo": "Ganaste la votación: el edificio sostiene la barricada.",
+        "condicion": "flags['votacion-edificio'] === true && stats.PP >= 55",
+        "opciones": [
+          {
+            "label": "Pones el turno de noche a cargo de los vecinos que votaron a favor.",
+            "deltas": {
+              "RE": 2,
+              "CF": 2
+            },
+            "consecuencia": "Cuatro señores de más de cincuenta años haciendo guardia hasta las dos de la mañana."
+          },
+          {
+            "label": "Igual abres el paso para Doña Carmen.",
+            "deltas": {
+              "PP": 2,
+              "CO": -1
+            },
+            "consecuencia": "Ganaste y cediste. Nadie del edificio te lo discute."
+          }
+        ]
+      },
+      {
+        "id": "g3",
+        "titulo": "Perdiste la votación: hay que levantar todo.",
+        "condicion": "flags['votacion-edificio'] === true && stats.PP < 55",
+        "opciones": [
+          {
+            "label": "Levantas la barricada esa misma noche, como quedó.",
+            "deltas": {
+              "PP": 3,
+              "CO": -2,
+              "RE": -2
+            },
+            "consecuencia": "Cuatro horas desarmando lo que costó doce días. Doña Carmen baja café a la una."
+          },
+          {
+            "label": "La levantas a medias y dejas los escombros.",
+            "deltas": {
+              "PP": -2,
+              "CF": -2
+            },
+            "consecuencia": "Cumpliste con la letra y con nada más. El edificio toma nota."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "La fractura sobre las trancas es interna y está documentada. El 28 de febrero hay 41 detenidos en Altamira; los liberan el 2 de marzo.",
+    "fuentes": [
+      {
+        "fuente": "Cronología del ciclo 2014 — rechazo público de las barricadas por Smolansky, Ocariz, Muchacho y Cocchiola (24 de febrero)",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Declaración de Diosdado Cabello del 17 de febrero de 2014",
+        "certeza": "confirmado"
+      }
+    ],
+    "notaDiseno": "C-06 del entregable C. La tensión no viene de un chavista ni de un vecino apático: viene de cuatro alcaldes de la oposición y está fechada. La opción 4 le entrega la decisión a gente que no es de la resistencia y es la única escena del juego donde el jugador puede perder una votación."
+  },
+  {
+    "id": "C-07",
+    "acto": 2,
+    "modo": "FEED",
+    "fecha": "2 de marzo de 2014",
+    "fechaIso": "2014-03-02",
+    "lugar": "Cuatro puntos de Caracas",
+    "epigrafe": "Por primera vez en veinte días hay un plan, y el plan es dividirse a propósito.",
+    "ilustracion": {
+      "capas": [
+        "c07-cuatro-marchas.webp"
+      ],
+      "alt": "La ciudad vista desde muy arriba, casi como un mapa. Cuatro columnas de gente avanzan por cuatro avenidas distintas, cada una como una línea fina de marcas, todas hacia el centro y sin encontrarse nunca."
+    },
+    "bloques": [
+      {
+        "tipo": "narracion",
+        "texto": "Cuatro marchas, cuatro temas, cuatro puntos de la ciudad: la censura, la escasez, la inseguridad y la injusticia. Tienes que elegir una."
+      },
+      {
+        "tipo": "cita",
+        "literal": true,
+        "texto": "la lucha del pueblo contra el gobierno ineficiente",
+        "autor": "Juan Requesens, presidente de la FCU-UCV",
+        "fuente": "Declaración del 2 de marzo de 2014"
+      },
+      {
+        "tipo": "tweet",
+        "autor": "@ucv_alerta",
+        "handle": "@ucv_alerta",
+        "tiempo": "08:30",
+        "texto": "Hoy liberaron a las 42 personas detenidas en Altamira. En Mérida se conforma la Junta Patriótica Estudiantil y Popular.",
+        "metricas": {
+          "rt": 420,
+          "fav": 260
+        }
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — ¿a cuál vas?",
+        "opciones": [
+          {
+            "label": "Censura.",
+            "deltas": {
+              "PP": 2,
+              "RE": 2
+            },
+            "flags": {
+              "marcha-censura": true
+            },
+            "consecuencia": "Van los que ya estaban convencidos, y son bastantes."
+          },
+          {
+            "label": "Escasez.",
+            "deltas": {
+              "PP": 3,
+              "RE": 1
+            },
+            "flags": {
+              "marcha-escasez": true
+            },
+            "consecuencia": "Es la que menos épica tiene y la que trae gente que nunca había marchado."
+          },
+          {
+            "label": "Inseguridad.",
+            "deltas": {
+              "PP": 2,
+              "CF": 1
+            },
+            "flags": {
+              "marcha-inseguridad": true
+            },
+            "consecuencia": "Es con lo que empezó todo en Táchira el 4 de febrero, y casi nadie en esta marcha lo sabe."
+          },
+          {
+            "label": "Injusticia: los presos y los muertos.",
+            "deltas": {
+              "CO": 2,
+              "RE": 2,
+              "RI": 1
+            },
+            "flags": {
+              "marcha-injusticia": true
+            },
+            "consecuencia": "Es la más pequeña de las cuatro y la que más caras conocidas tiene."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "Ninguna de las cuatro es mejor. La escasez le importaba a mucha más gente que los presos políticos, y esa es la lección del día.",
+    "fuentes": [
+      {
+        "fuente": "Cronología del ciclo 2014 — cuatro movilizaciones estudiantiles simultáneas el 2 de marzo",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Declaración textual de Juan Requesens, FCU-UCV",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Conformación de la Junta Patriótica Estudiantil y Popular en Mérida",
+        "certeza": "fuente-unica"
+      }
+    ],
+    "notaDiseno": "C-07 del entregable C. Escena de respiro y de estrategia, la única del acto donde el movimiento actúa con cabeza en vez de reaccionar. Requesens es persona real y viva: la frase es textual y no se le agrega nada."
+  },
+  {
+    "id": "C-08",
+    "acto": 2,
+    "modo": "RADIO",
+    "fecha": "6 de marzo de 2014",
+    "fechaIso": "2014-03-06",
+    "lugar": "Calle B, Los Ruices, municipio Sucre, Caracas",
+    "epigrafe": "Hay motorizados, hay vecinos, hay Guardia, y desde donde estás no se distingue quién es quién.",
+    "ambiente": "aire",
+    "ilustracion": {
+      "capas": [
+        "c08-los-ruices.webp"
+      ],
+      "alt": "Una calle residencial con luz de la mañana, vacía. Las santamarías bajas en todos los locales y las cortinas corridas en las ventanas de arriba. Un perro solo sentado en medio de la calzada. No hay nadie."
+    },
+    "bloques": [
+      {
+        "tipo": "radio",
+        "tiempo": "16:12",
+        "emisor": "Calle B",
+        "texto": "Están disparando.",
+        "cambio": true
+      },
+      {
+        "tipo": "radio",
+        "tiempo": "16:12",
+        "emisor": "Base",
+        "texto": "¿Quién?",
+        "cambio": true
+      },
+      {
+        "tipo": "radio",
+        "tiempo": "16:13",
+        "emisor": "Calle B",
+        "texto": "No sé.",
+        "cambio": true
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Los vecinos llamaron varias veces a la policía de Sucre antes de que empezara todo. Nunca se envió una comisión."
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — no se sabe quién dispara.",
+        "opciones": [
+          {
+            "label": "«Nos vamos, ya.»",
+            "deltas": {
+              "CF": 2,
+              "CO": -1
+            },
+            "consecuencia": "Salen todos por la parte de atrás. Nadie de los tuyos queda en la calle B."
+          },
+          {
+            "label": "«Que nadie dispare nada. Nadie tire nada.»",
+            "deltas": {
+              "CF": 3,
+              "PP": 2
+            },
+            "consecuencia": "Se cumple. No cambia el resultado y aun así importa."
+          },
+          {
+            "label": "«Grábenlo todo, después vemos.»",
+            "deltas": {
+              "PP": 1,
+              "RI": 2
+            },
+            "consecuencia": "Cuatro videos donde se oyen los tiros y no se ve de dónde salen."
+          },
+          {
+            "label": "«Respondan.»",
+            "deltas": {
+              "CO": 2,
+              "RI": 3,
+              "CF": -2,
+              "PP": -3
+            },
+            "consecuencia": "Diez minutos de algo que nadie va a poder reconstruir después."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "Mueren dos personas en el mismo enfrentamiento: José Gregorio Amaris Castillo, 25, mototaxista que iba con un grupo a retirar barricadas, y Acner Isaac López Lyon, 22, sargento segundo de la GNB, de un disparo en la espalda. Al día siguiente hay tres versiones de quién se enfrentaba a quién, y dos vienen de organizaciones de derechos humanos que están del mismo lado.",
+    "fuentes": [
+      {
+        "fuente": "Foro Penal — enfrentamiento en Los Ruices: José Gregorio Amaris Castillo y Acner López Lyon (6 de marzo)",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "PROVEA — enfrentamiento entre vecinos, motorizados y la Guardia Nacional",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Vecinos de la calle B — llamadas a la policía de Sucre sin respuesta",
+        "certeza": "testimonio-no-verificado"
+      }
+    ],
+    "notaDiseno": "C-08 del entregable C. Punto de quiebre del acto: Confianza no cae por infiltración, cae porque dejó de poder saberse quién dispara. El detalle que hay que conservar es el de los vecinos llamando a una policía que nunca llegó: el Estado no estaba en todas partes, estaba exactamente donde quería estar y en ningún otro lado. Ninguno de los dos muertos es personaje."
+  },
+  {
+    "id": "C-09",
+    "acto": 2,
+    "modo": "ZINE",
+    "fecha": "11 de abril de 2014",
+    "fechaIso": "2014-04-11",
+    "lugar": "Campamento Conciencia Nacional, frente a la sede del PNUD, Caracas",
+    "epigrafe": "Carpas en la acera frente a un edificio de Naciones Unidas.",
+    "ambiente": "aire",
+    "ilustracion": {
+      "capas": [
+        "c09-campamento.webp"
+      ],
+      "alt": "Un campamento de carpas en la acera frente a un edificio de oficinas de vidrio. Veinte carpas en dos filas, una cuerda con ropa tendida, sillas plegables y botellas de agua. Cuatro personas sentadas de espaldas."
+    },
+    "bloques": [
+      {
+        "tipo": "zineTitulo",
+        "texto": "Cuarenta y cinco días",
+        "sub": "Campamento Conciencia Nacional · Jóvenes Venezolanos"
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Empezó con unos 85 jóvenes y llegó a 13 campamentos en todo el país. Hoy hay 265 personas aquí. Hay gente que llegó de Trujillo en autobús y no tiene dónde volver."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Diez empezaron a no comer hoy a las once de la mañana. Son de Táchira, Trujillo, Mérida, Barinas y Lara, y tienen entre 20 y 37 años. Ninguno es del Distrito Capital."
+      },
+      {
+        "tipo": "dialogo",
+        "hablante": "Samuel",
+        "texto": "Los que vinieron de más lejos son los que más aguantan. Fíjate quiénes son los diez y de dónde salieron."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Después de dos meses de calle, la forma de protesta que queda no requiere ninguna organización: solo un cuerpo y una decisión."
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — el campamento.",
+        "opciones": [
+          {
+            "label": "Te sumas al ayuno.",
+            "deltas": {
+              "CO": 3,
+              "RI": 2,
+              "PP": 2
+            },
+            "flags": {
+              "ayuno": true
+            },
+            "consecuencia": "Al cuarto día te cuesta ponerte de pie. Eso va a importar en mayo."
+          },
+          {
+            "label": "Sostienes el campamento: comida, agua, turnos, baños.",
+            "deltas": {
+              "CF": 3,
+              "RE": 2
+            },
+            "inventario": {
+              "ganancia": {
+                "agua": 2,
+                "gasa": 1
+              }
+            },
+            "consecuencia": "Es lo menos visible del campamento y es lo que lo mantiene en pie."
+          },
+          {
+            "label": "Llevas el caso a las embajadas y a la prensa internacional.",
+            "deltas": {
+              "PP": 3,
+              "RE": 2
+            },
+            "inventario": {
+              "ganancia": {
+                "contactos": 1
+              }
+            },
+            "flags": {
+              "voz-afuera": true
+            },
+            "consecuencia": "Doce embajadas reciben el documento. Dos lo rechazan."
+          },
+          {
+            "label": "Esto ya no es una protesta, es una vigilia. Te vas.",
+            "deltas": {
+              "RE": -3,
+              "PP": -1
+            },
+            "consecuencia": "Tienes razón en lo que dices y te vas igual, que es lo que cuenta."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "El OVCS registró 194 huelgas de hambre en 2014, un 52% más que el año anterior, concentradas en marzo, abril y mayo. Es la firma estadística de un movimiento sin capacidad de coordinar y con enorme cantidad de gente dispuesta.",
+    "fuentes": [
+      {
+        "fuente": "Blog Jóvenes Venezolanos / CalleSinRetorno — comunicado del 11 de abril de 2014 (fuente primaria)",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Blog Jóvenes Venezolanos / CalleSinRetorno — campamento Conciencia Nacional y cronología de Gerardo Carrero",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "OVCS informe anual 2014 — 194 huelgas de hambre",
+        "certeza": "confirmado"
+      }
+    ],
+    "notaDiseno": "C-09 del entregable C. Que ninguno de los diez huelguistas sea de Caracas es un dato real y vale que se note. El ayuno tiene un costo mecánico deliberado: cierra la opción de correr en C-11."
+  },
+  {
+    "id": "C-10",
+    "acto": 2,
+    "modo": "FEED",
+    "fecha": "10 y 11 de abril de 2014",
+    "fechaIso": "2014-04-10",
+    "lugar": "Caracas, Distrito Capital",
+    "epigrafe": "Una mesa larga con manteles. No hay nadie de veintidós años.",
+    "ambiente": "cuarto",
+    "ilustracion": {
+      "capas": [
+        "c10-mesa-vacia.webp"
+      ],
+      "alt": "Una sala oficial vista desde la puerta. Una mesa larga y lustrada con veinte sillas vacías, vasos de agua servidos y cortinas pesadas. No hay nadie."
+    },
+    "bloques": [
+      {
+        "tipo": "narracion",
+        "texto": "El 10 de abril empieza el diálogo nacional entre el gobierno y la MUD, con cancilleres de UNASUR y el nuncio apostólico como mediadores. Sale en cadena."
+      },
+      {
+        "tipo": "narracion",
+        "texto": "En la acera del PNUD hay diez personas que no comen desde ayer."
+      },
+      {
+        "tipo": "cita",
+        "literal": true,
+        "texto": "en el cual NO ESTAMOS REPRESENTADOS",
+        "autor": "Comunicado de los huelguistas del campamento Conciencia Nacional",
+        "fuente": "Blog Jóvenes Venezolanos, 11 de abril de 2014"
+      },
+      {
+        "tipo": "narracion",
+        "texto": "El comunicado exige a los mediadores del falso diálogo que se acerquen al campamento. Va firmado por diez huelguistas con nombre, edad y estado."
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — la mesa y la acera.",
+        "opciones": [
+          {
+            "label": "Firmas el comunicado del falso diálogo.",
+            "deltas": {
+              "CO": 2,
+              "PP": -1,
+              "RE": 2,
+              "CF": 2
+            },
+            "flags": {
+              "firmo-comunicado": true
+            },
+            "consecuencia": "Once firmas en vez de diez. La tuya no le cambia el peso a nada y aun así la pones."
+          },
+          {
+            "label": "Le das una oportunidad a la mesa.",
+            "deltas": {
+              "PP": 2,
+              "CO": -2,
+              "RE": -2
+            },
+            "consecuencia": "En la cancha de la esquina dejan de contarte cosas durante dos semanas."
+          },
+          {
+            "label": "Escribes lo tuyo, distinto del comunicado y distinto de la MUD.",
+            "deltas": {
+              "RE": 1,
+              "PP": 1,
+              "CF": 1
+            },
+            "consecuencia": "Lo leen ciento veinte personas. Ninguna de las dos partes lo cita."
+          },
+          {
+            "label": "No opinas.",
+            "deltas": {
+              "RE": -1
+            },
+            "consecuencia": "Es abril y llevas dos meses. Hay días en que no opinar es todo lo que queda."
+          }
+        ]
+      },
+      {
+        "id": "g2",
+        "titulo": "En febrero dijiste que esto era de él. Ahora él está preso y la mesa está sentada sin ti.",
+        "condicion": "flags['esto-es-de-el'] === true",
+        "opciones": [
+          {
+            "label": "Sostienes lo que dijiste en Chacaíto.",
+            "deltas": {
+              "CF": 1,
+              "RE": 1,
+              "PP": -1
+            },
+            "consecuencia": "Coherente de febrero a abril. Eso también tiene un precio y lo estás pagando."
+          },
+          {
+            "label": "Admites que te equivocaste en la plaza.",
+            "deltas": {
+              "CF": 2,
+              "CO": 1,
+              "RE": -1
+            },
+            "consecuencia": "Andreína se acuerda perfectamente de lo que dijiste ese día y no te lo restriega."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "El arco político de dos meses no dice nunca cuál era el correcto. La primera fractura fue con la sociedad civil; esta es hacia adentro del propio bando, y es más difícil de contar.",
+    "fuentes": [
+      {
+        "fuente": "Blog Jóvenes Venezolanos — comunicado del 11 de abril de 2014 (fuente primaria, cita textual)",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Cronología del ciclo 2014 — inicio del diálogo nacional (10 de abril)",
+        "certeza": "confirmado"
+      }
+    ],
+    "notaDiseno": "C-10 del entregable C. Esta escena existe porque el archivo la regaló: la fractura entre los estudiantes y la conducción opositora está escrita, fechada, firmada con diez nombres y disponible en línea, y ocurre exactamente un día después de que empezara el diálogo. El g2 cobra la decisión de C-04."
+  },
+  {
+    "id": "C-11",
+    "acto": 2,
+    "modo": "RADIO",
+    "modoFinal": "ZINE",
+    "fecha": "8 de mayo de 2014",
+    "fechaIso": "2014-05-08",
+    "lugar": "Frente al PNUD, Caracas",
+    "epigrafe": "Cuatro y media de la mañana. Cuarenta y cinco días de carpas y el ruido es de camiones.",
+    "ilustracion": {
+      "capas": [
+        "c11-acera-vacia.webp"
+      ],
+      "alt": "La misma acera del campamento al amanecer, después de que se llevaran todo. Carpas caídas y plegadas a un costado, una silla rota, botellas tiradas y un zapato solo. No queda nadie."
+    },
+    "bloques": [
+      {
+        "tipo": "radio",
+        "tiempo": "04:31",
+        "emisor": "Carpa 3",
+        "texto": "Están entrando.",
+        "cambio": true
+      },
+      {
+        "tipo": "radio",
+        "tiempo": "04:31",
+        "emisor": "Carpa 3",
+        "texto": "Son un montón.",
+        "cambio": true
+      },
+      {
+        "tipo": "radio",
+        "tiempo": "04:32",
+        "emisor": "Carpa 7",
+        "texto": "Agarraron a Gerardo.",
+        "cambio": true
+      },
+      {
+        "tipo": "narracion",
+        "texto": "Los que estaban ahí lo llaman el madrugonazo, y así se va a quedar."
+      }
+    ],
+    "grupos": [
+      {
+        "id": "g1",
+        "titulo": "Decisión — la última del acto.",
+        "opciones": [
+          {
+            "label": "Te quedas.",
+            "deltas": {
+              "CO": 3,
+              "RI": 4
+            },
+            "consecuencia": "Te sientas en la acera con los brazos cruzados. Hay una probabilidad muy alta de que hoy no vuelvas a tu casa."
+          },
+          {
+            "label": "Corres.",
+            "deltas": {
+              "RI": -2,
+              "CO": -2
+            },
+            "requiere": "!flags['ayuno']",
+            "consecuencia": "Cuatro cuadras sin mirar atrás. Llegas al metro cuando abre."
+          },
+          {
+            "label": "Grabas mientras corres.",
+            "deltas": {
+              "PP": 3,
+              "RI": 2
+            },
+            "consecuencia": "Cincuenta segundos que se mueven demasiado y en los que se oye todo."
+          },
+          {
+            "label": "Sacas a los que puedas y después corres.",
+            "deltas": {
+              "CF": 3,
+              "RI": 2
+            },
+            "consecuencia": "Sacas a tres por el lado de la reja. El cuarto no llega."
+          }
+        ]
+      }
+    ],
+    "consecuenciaComun": "El campamento no existe más. Se llevan detenidos a Gerardo Carrero, coordinador nacional de Jóvenes Venezolanos, y a Gerardo Resplandor, Nixon Leal, Carlos Pérez, Ángel Contreras, Dioris Albarrán, Abril Tovar y Anderson Briceño, entre otros. Siguen presos el 31 de diciembre. El mismo día muere José Steven Colina, 26, funcionario de la PNB, de un disparo en el cuello dispersando una manifestación en Los Palos Grandes. El acto termina con la acera vacía y una lista de nombres, y sin saber qué les pasó. Igual que ellos.",
+    "fuentes": [
+      {
+        "fuente": "Blog Jóvenes Venezolanos — seis comunicados a lo largo de siete meses (fuente primaria)",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Foro Penal — José Steven Colina (8 de mayo)",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "El desgaste de julio a diciembre — cronología de Gerardo Carrero (blog Jóvenes Venezolanos / CalleSinRetorno)",
+        "certeza": "confirmado"
+      },
+      {
+        "fuente": "Fecha del desmantelamiento: la cronología de Wikipedia lo sitúa el 4 de mayo; la fuente primaria dice 8 de mayo y lo repite durante siete meses",
+        "certeza": "fuente-unica"
+      }
+    ],
+    "notaDiseno": "C-11 del entregable C. Los otros dos actos cierran con una ciudad limpia y con un muerto; este cierra con gente viva y presa, que es la forma específica en que Caracas perdió. Si el jugador ayunó en C-09 la opción de correr queda oculta. Si termina detenido, el juego no muestra la celda (entregable G §3.2): muestra el después. Lo que le pasó a Carrero va en la pantalla de cierre del juego completo, no aquí."
+  }
+]

@@ -1,0 +1,13 @@
+# scripts/allowlist-locale.txt — Exenciones R1 (design §11, GS-041).
+#
+# Cada entrada exime UNA forma prohibida en un punto exacto. Si una entrada
+# no se usa, el script falla (dead-entry detection): se debe borrar.
+#
+# Formato:
+#   archivo:escenaId:forma     para JSON de contenido (escena conocida)
+#   archivo:linea:forma        para .js / .md (por número de línea)
+#
+# "forma" es la etiqueta del match, ej: tenés | mirá | acá (usar "aquí").
+# Las líneas que empiezan con # son comentarios.
+#
+# (vacío por ahora — M0 no tiene contenido; las exenciones llegan con #2)

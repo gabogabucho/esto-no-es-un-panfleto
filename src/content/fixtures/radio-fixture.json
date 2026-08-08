@@ -1,0 +1,60 @@
+{
+  "id": "FIX-03",
+  "acto": 3,
+  "modo": "RADIO",
+  "epigrafe": "Maracaibo, febrero de 2014. La frecuencia no duerme.",
+  "fecha": "20 de febrero de 2014",
+  "fechaIso": "2014-02-20",
+  "lugar": "Maracaibo, Zulia",
+  "inventarioInicial": { "mascaras": 2, "agua": 3, "gasa": 1, "contactos": 1 },
+  "bloques": [
+    {
+      "tipo": "narracion",
+      "texto": "La frecuencia del walkie-talkie escupe estática. En Maracaibo la noche huele a lago y a sal, y el contacto aguarda la contraseña del grupo."
+    },
+    {
+      "tipo": "radio",
+      "tiempo": "23:41",
+      "emisor": "Base Sur",
+      "texto": "Grupo Halcón, confirmen posición, cambio.",
+      "cambio": true
+    },
+    {
+      "tipo": "dialogo",
+      "hablante": "Primo Roldán",
+      "texto": "Vos tenéis la radio encendida, ¿no? Aquí en el Zulia nadie duerme mientras el lago tiembla."
+    },
+    {
+      "tipo": "narracion",
+      "texto": "El viento del lago arranca palabras. Alguien responde desde una azotea, y la noche sigue su curso."
+    }
+  ],
+  "grupos": [
+    {
+      "id": "g1",
+      "titulo": "Decisión — la ronda de la madrugada.",
+      "opciones": [
+        {
+          "label": "Respondes por la frecuencia con la contraseña.",
+          "deltas": { "CO": 1, "RE": 1 },
+          "consecuencia": "Una voz seca confirma el punto de encuentro."
+        },
+        {
+          "label": "Mantienes el silencio y aguardas el amanecer.",
+          "deltas": { "CF": 2 },
+          "consecuencia": "La estática te cubre, pero la ronda queda a medio cerrar."
+        },
+        {
+          "label": "Apagas la radio y vuelves a tu cuarto.",
+          "deltas": { "PP": 2 },
+          "consecuencia": "El silencio de la casa se siente más pesado que el del lago."
+        }
+      ]
+    }
+  ],
+  "consecuenciaComun": "La madrugada pasa y la frecuencia guarda lo que escuchó.",
+  "fuentes": [
+    { "fuente": "Referencia regional Zulia (ficción de fixture)", "certeza": "testimonio-no-verificado" }
+  ],
+  "notaDiseno": "FIXTURE — reemplazar en cambio #2"
+}

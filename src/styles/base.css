@@ -1,0 +1,260 @@
+/* ==========================================================================
+   base.css — reset, layout de una columna, accesibilidad y móvil.
+   ========================================================================== */
+
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--negro-concreto);
+  color: var(--papel-viejo);
+  font-family: var(--font-cuerpo);
+  font-size: var(--step-1);
+  line-height: 1.6;
+  min-height: 100vh;
+  /* Sin scroll horizontal (GS-080) */
+  overflow-x: clip;
+  /* iOS Safari: respeta las zonas seguras (GS-070) */
+  padding:
+    env(safe-area-inset-top)
+    env(safe-area-inset-right)
+    env(safe-area-inset-bottom)
+    env(safe-area-inset-left);
+}
+
+main {
+  display: block;
+  max-width: 40rem;
+  margin-inline: auto;
+  padding: var(--espacio-3) var(--espacio-2) calc(var(--espacio-4) + env(safe-area-inset-bottom));
+  position: relative;
+  z-index: 1;
+}
+
+/* Landmarks */
+.encabezado {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: var(--espacio-1) var(--espacio-2);
+  background: color-mix(in srgb, var(--negro-concreto) 88%, transparent);
+  backdrop-filter: blur(4px);
+}
+
+.encabezado nav {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 40rem;
+  margin-inline: auto;
+}
+
+.pie {
+  max-width: 40rem;
+  margin-inline: auto;
+  padding: var(--espacio-2);
+  color: var(--verde-senal);
+  font-size: var(--step-0);
+}
+
+/* Skip-link (GS-080) */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--ocre-bandera);
+  color: var(--negro-concreto);
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  left: 0;
+  top: env(safe-area-inset-top, 0);
+}
+
+/* Foco visible: NUNCA outline:none (GS-080) */
+:focus-visible {
+  outline: 3px solid var(--ocre-bandera);
+  outline-offset: 2px;
+}
+
+a {
+  color: var(--verde-senal);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--papel-viejo);
+}
+
+img,
+canvas {
+  max-width: 100%;
+}
+
+/* Canvas decorativo de La Señal (GS-030): fijo, sin pointer, invisible a SR */
+#senal {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.25s linear;
+}
+
+#senal.activo {
+  opacity: 1;
+}
+
+/* Región aria-live de consecuencias (GS-022) */
+#consecuencia-live {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Zona de decisiones — una decisión a la vez (GS-021) */
+.decisiones {
+  margin-top: var(--espacio-3);
+}
+
+.grupo-decision {
+  margin-bottom: var(--espacio-3);
+}
+
+.grupo-decision h3 {
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: var(--espacio-2);
+  color: var(--ocre-bandera);
+}
+
+.opciones {
+  display: grid;
+  gap: var(--espacio-2);
+}
+
+.opcion {
+  display: block;
+  width: 100%;
+  min-height: 56px; /* targets ≥56px (GS-080) */
+  padding: var(--espacio-2);
+  font-family: var(--font-cuerpo);
+  font-size: var(--step-1);
+  line-height: 1.4;
+  text-align: left;
+  background: transparent;
+  color: var(--papel-viejo);
+  border: 2px solid var(--verde-senal);
+  border-radius: var(--radio);
+  cursor: pointer;
+  transition: transform 0.08s ease, background-color 0.12s ease,
+    border-color 0.12s ease;
+}
+
+.opcion:hover:not(:disabled),
+.opcion:focus-visible:not(:disabled) {
+  background: color-mix(in srgb, var(--verde-senal) 18%, transparent);
+  border-color: var(--ocre-bandera);
+}
+
+.opcion:active:not(:disabled) {
+  transform: scale(0.985);
+}
+
+.opcion:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  border-style: dashed;
+}
+
+/* Grupo de decisión ya resuelto: se ve pero no es interactivo (GS-021) */
+.grupo-resuelto {
+  opacity: 0.55;
+  filter: grayscale(0.4);
+}
+
+.grupo-resuelto .opcion {
+  border-style: dotted;
+  cursor: default;
+}
+
+/* Botón genérico del shell */
+.boton {
+  min-height: 56px;
+  padding: var(--espacio-2) var(--espacio-3);
+  font-family: var(--font-cuerpo);
+  font-size: var(--step-1);
+  background: color-mix(in srgb, var(--negro-concreto) 82%, transparent);
+  color: var(--papel-viejo);
+  border: 2px solid var(--papel-viejo);
+  border-radius: var(--radio);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.boton:hover,
+.boton:focus-visible {
+  background: var(--papel-viejo);
+  color: var(--negro-concreto);
+}
+
+.boton--primario {
+  border-color: var(--ocre-bandera);
+  color: var(--ocre-bandera);
+}
+
+.boton--primario:hover,
+.boton--primario:focus-visible {
+  background: var(--ocre-bandera);
+  color: var(--negro-concreto);
+}
+
+.boton--peligro {
+  border-color: var(--rojo-ladrillo);
+  color: var(--rojo-ladrillo);
+}
+
+/* prefers-reduced-motion (GS-032): nada anima; el degradado se comunica
+   por color y textura, nunca por movimiento. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .opcion {
+    transition: none;
+  }
+}

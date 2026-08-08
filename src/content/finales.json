@@ -1,0 +1,108 @@
+{
+  "orden": [
+    "detencion-exilio",
+    "voz-internacional",
+    "organizacion-perdura",
+    "repliegue-silencioso",
+    "emigracion",
+    "memoria-activa"
+  ],
+  "actos": {
+    "1": {
+      "detencion-exilio": {
+        "nombre": "Detención y exilio forzado",
+        "descripcion": "La represión te encuentra y el exilio corta tu ronda. Tu nombre queda en una lista, tu historia sigue en otra parte.",
+        "umbrales": { "RI": 70, "CF": 30 }
+      },
+      "voz-internacional": {
+        "nombre": "Voz internacional",
+        "descripcion": "Tu historia cruza la frontera y los medios la repiten. La denuncia encuentra eco fuera del país.",
+        "umbrales": { "RI": 60, "RE": 60, "PP": 60 }
+      },
+      "organizacion-perdura": {
+        "nombre": "Organización que perdura",
+        "descripcion": "La organización sobrevive a la noche. Lo que construiste sigue en pie después de ti.",
+        "umbrales": { "CO": 60, "RE": 60, "CF": 60, "RImin": 30, "RImax": 60 }
+      },
+      "repliegue-silencioso": {
+        "nombre": "Repliegue silencioso",
+        "descripcion": "La calle se vacía y tú te guardas la energía para otra ronda. La red duerme, pero no muere.",
+        "umbrales": { "todos": 30 }
+      },
+      "emigracion": {
+        "nombre": "Emigración",
+        "descripcion": "El pasaporte queda listo en el cajón y la salida pesa más que la esperanza. Te vas para que tu gente siga.",
+        "umbrales": { "ppBaja": 3 }
+      },
+      "memoria-activa": {
+        "nombre": "Memoria activa",
+        "descripcion": "No ganas ni pierdes: la memoria queda viva. La ronda termina y tu historia sigue, aunque nadie la escriba.",
+        "umbrales": { "min": 40, "noMenor": 20 }
+      }
+    },
+    "2": {
+      "detencion-exilio": {
+        "nombre": "Detención y exilio forzado",
+        "descripcion": "La represión te encuentra y el exilio corta tu ronda. Tu nombre queda en una lista, tu historia sigue en otra parte.",
+        "umbrales": { "RI": 75, "CF": 30 }
+      },
+      "voz-internacional": {
+        "nombre": "Voz internacional",
+        "descripcion": "Tu historia cruza la frontera y los medios la repiten. La denuncia encuentra eco fuera del país.",
+        "umbrales": { "RI": 65, "RE": 65, "PP": 65 }
+      },
+      "organizacion-perdura": {
+        "nombre": "Organización que perdura",
+        "descripcion": "La organización sobrevive a la noche. Lo que construiste sigue en pie después de ti.",
+        "umbrales": { "CO": 65, "RE": 65, "CF": 65, "RImin": 30, "RImax": 60 }
+      },
+      "repliegue-silencioso": {
+        "nombre": "Repliegue silencioso",
+        "descripcion": "La calle se vacía y tú te guardas la energía para otra ronda. La red duerme, pero no muere.",
+        "umbrales": { "todos": 30 }
+      },
+      "emigracion": {
+        "nombre": "Emigración",
+        "descripcion": "El pasaporte queda listo en el cajón y la salida pesa más que la esperanza. Te vas para que tu gente siga.",
+        "umbrales": { "ppBaja": 3 }
+      },
+      "memoria-activa": {
+        "nombre": "Memoria activa",
+        "descripcion": "No ganas ni pierdes: la memoria queda viva. La ronda termina y tu historia sigue, aunque nadie la escriba.",
+        "umbrales": { "min": 45, "noMenor": 20 }
+      }
+    },
+    "3": {
+      "detencion-exilio": {
+        "nombre": "Detención y exilio forzado",
+        "descripcion": "La represión te encuentra y el exilio corta tu ronda. Tu nombre queda en una lista, tu historia sigue en otra parte.",
+        "umbrales": { "RI": 65, "CF": 35 }
+      },
+      "voz-internacional": {
+        "nombre": "Voz internacional",
+        "descripcion": "Tu historia cruza la frontera y los medios la repiten. La denuncia encuentra eco fuera del país.",
+        "umbrales": { "RI": 55, "RE": 55, "PP": 55 }
+      },
+      "organizacion-perdura": {
+        "nombre": "Organización que perdura",
+        "descripcion": "La organización sobrevive a la noche. Lo que construiste sigue en pie después de ti.",
+        "umbrales": { "CO": 55, "RE": 55, "CF": 55, "RImin": 25, "RImax": 60 }
+      },
+      "repliegue-silencioso": {
+        "nombre": "Repliegue silencioso",
+        "descripcion": "La calle se vacía y tú te guardas la energía para otra ronda. La red duerme, pero no muere.",
+        "umbrales": { "todos": 35 }
+      },
+      "emigracion": {
+        "nombre": "Emigración",
+        "descripcion": "El pasaporte queda listo en el cajón y la salida pesa más que la esperanza. Te vas para que tu gente siga.",
+        "umbrales": { "ppBaja": 3 }
+      },
+      "memoria-activa": {
+        "nombre": "Memoria activa",
+        "descripcion": "No ganas ni pierdes: la memoria queda viva. La ronda termina y tu historia sigue, aunque nadie la escriba.",
+        "umbrales": { "min": 35, "noMenor": 25 }
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+/* ==========================================================================
+   Tokens — Esto no es un panfleto
+   Los 6 tokens del sistema visual (referencia §3), tipografía auto-hospedada
+   y escala tipográfica mobile-first.
+   ========================================================================== */
+
+:root {
+  /* Tokens de color */
+  --negro-concreto: #12130f;
+  --papel-viejo: #e8ddc4;
+  --rojo-ladrillo: #8c2f1f;
+  --ocre-bandera: #c9a227;
+  --verde-noche: #2c4a52;
+  --verde-senal: #5b7a63;
+
+  /* La Señal — intensidad continua 0-1 y nivel 0-3 (la setea signal.js) */
+  --senal-intensidad: 0;
+  --senal-nivel: 0;
+
+  /* Tipografía */
+  --font-display: 'Anton', 'Oswald', 'Arial Narrow', sans-serif;
+  --font-cuerpo: 'IBM Plex Mono', 'JetBrains Mono', 'Consolas', monospace;
+
+  /* Escala tipográfica (mobile-first) */
+  --step-0: 0.9375rem; /* 15px — utilidades, timestamps */
+  --step-1: 1.125rem; /* 18px — cuerpo */
+  --step-2: 1.375rem; /* 22px — decisiones */
+  --step-3: 1.75rem; /* 28px — títulos de sección */
+  --step-4: 2.25rem; /* 36px — títulos grandes */
+
+  /* Espaciado */
+  --espacio-1: 0.5rem;
+  --espacio-2: 1rem;
+  --espacio-3: 1.5rem;
+  --espacio-4: 2rem;
+  --radio: 0.25rem;
+}
+
+/* Fuentes WOFF2 auto-hospedadas (offline, GS-070). La carpeta es
+   src/assets/fonts/; Vite las procesa y las emite en dist/assets/.
+   Fallback: tipografías de sistema. */
+
+@font-face {
+  font-family: 'Anton';
+  src: url('../assets/fonts/anton-latin-400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../assets/fonts/oswald-latin-400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../assets/fonts/oswald-latin-500-normal.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../assets/fonts/oswald-latin-600-normal.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../assets/fonts/oswald-latin-700-normal.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('../assets/fonts/ibm-plex-mono-latin-400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('../assets/fonts/ibm-plex-mono-latin-500-normal.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('../assets/fonts/ibm-plex-mono-latin-700-normal.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../assets/fonts/jetbrains-mono-latin-400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../assets/fonts/jetbrains-mono-latin-500-normal.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../assets/fonts/jetbrains-mono-latin-700-normal.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

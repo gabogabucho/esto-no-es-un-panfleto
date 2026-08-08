@@ -1,0 +1,429 @@
+{
+  "titulo": "Memorial",
+  "capas": [
+    {
+      "id": "capa-1",
+      "titulo": "43",
+      "subtitulo": "nombre · edad · ciudad · fecha · causa · fuente",
+      "fichas": [
+        {
+          "nombre": "Bassil Alejandro Da Costa Frías",
+          "edad": 23,
+          "ciudad": "Caracas, Distrito Capital",
+          "fecha": "12 de febrero de 2014",
+          "causa": "Arma de fuego — disparo en la cabeza mientras huía de una arremetida del SEBIN, esquinas Tracabordo a Monroy, La Candelaria",
+          "nota": "Estudiante. Primera víctima fatal del ciclo. Condena en 2016 al comisario del SEBIN José Ramón Perdomo Camacho (29 años y 6 meses)",
+          "fuente": "Runrun.es, 12 feb 2015 · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Juan Carlos \"Juancho\" Montoya",
+          "edad": 50,
+          "ciudad": "Caracas, Distrito Capital",
+          "fecha": "12 de febrero de 2014",
+          "causa": "Arma de fuego — disparo en la cara, av. Sur 11, La Candelaria",
+          "nota": "Dirigente comunitario chavista del 23 de Enero. Su hermano, el policía Jonny Montoya, declaró que \"lo mataron funcionarios\"",
+          "fuente": "Runrun.es, 12 feb 2015 · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Robert Redman",
+          "edad": 31,
+          "ciudad": "Caracas, Distrito Capital",
+          "fecha": "12 de febrero de 2014",
+          "causa": "Arma de fuego — disparo desde una moto, av. Uslar Pietri, Chacao",
+          "nota": "Había ayudado a trasladar a Bassil Da Costa horas antes, y volvió a la calle",
+          "fuente": "Runrun.es, 12 feb 2015 · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "José Ernesto Méndez",
+          "edad": 17,
+          "ciudad": "Carúpano, Sucre",
+          "fecha": "17 de febrero de 2014",
+          "causa": "Arrollamiento — un empleado de PDVSA aceleró contra manifestantes en la av. Perimetral de Carúpano; trauma craneal. 5 heridos más",
+          "nota": "El más joven del listado",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Génesis Carmona",
+          "edad": 22,
+          "ciudad": "Valencia, Carabobo",
+          "fecha": "19 de febrero de 2014",
+          "causa": "Arma de fuego — herida el 18 feb de un disparo en la cabeza, av. Cedeño, Valencia; 7 heridos más",
+          "nota": "Estudiante y Miss Turismo Carabobo 2013. Sargento de la GNB acusado como autor material",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Luzmila Petit de Colina",
+          "edad": 70,
+          "ciudad": "Caracas, Distrito Capital",
+          "fecha": "19 de febrero de 2014",
+          "causa": "Barricada — hipertensión sin atención a tiempo por vías obstaculizadas en El Paraíso",
+          "nota": "Foro Penal considera \"dudosa\" la atribución a las protestas. Su hija era moderadora de un programa de VTV",
+          "fuente": "Foro Penal · Runrun.es"
+        },
+        {
+          "nombre": "Julio Eduardo González Pinto",
+          "edad": 25,
+          "ciudad": "Valencia, Carabobo",
+          "fecha": "19 de febrero de 2014",
+          "causa": "Barricada — choca contra un árbol esquivando obstáculos, av. Cuatricentenaria, Valencia",
+          "nota": "Fiscal auxiliar tercero",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Delia Elena Lobo",
+          "edad": 37,
+          "ciudad": "Mérida",
+          "fecha": "19 de febrero de 2014",
+          "causa": "Barricada — su moto cruza una trampa de alambre de púas, av. Las Américas",
+          "nota": "PROVEA reporta además aceite derramado en el lugar",
+          "fuente": "PROVEA · Runrun.es"
+        },
+        {
+          "nombre": "Arturo Alexis Martínez",
+          "edad": 58,
+          "ciudad": "Barquisimeto, Lara",
+          "fecha": "20 de febrero de 2014",
+          "causa": "Arma de fuego, Barquisimeto",
+          "nota": "Hermano del diputado oficialista Francisco Martínez. Dos versiones irreconciliables",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Elvis Rafael Durán De La Rosa",
+          "edad": 29,
+          "ciudad": "Caracas, Distrito Capital",
+          "fecha": "21 de febrero de 2014",
+          "causa": "Barricada — impacta un alambre metálico en av. Rómulo Gallegos",
+          "nota": "Almacenista. Gobierno y PROVEA dicen degollamiento; Foro Penal lo desmiente (impacto en el pecho, muerte por contusión craneal)",
+          "fuente": "PROVEA · Foro Penal"
+        },
+        {
+          "nombre": "José Alejandro Márquez",
+          "edad": 43,
+          "ciudad": "Caracas, Distrito Capital",
+          "fecha": "21 de febrero de 2014 (fallece el 23)",
+          "causa": "Golpiza — filmaba una protesta en av. Urdaneta; guardias le exigen el teléfono, huye, cae y recibe golpiza en el suelo. Traumatismo craneoencefálico",
+          "nota": "Ingeniero. Diosdado Cabello lo acusó públicamente de ser un sicario; la Federación Venezolana de Airsoft rechazó la acusación por comunicado",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Geraldine Moreno",
+          "edad": 23,
+          "ciudad": "Naguanagua, Carabobo",
+          "fecha": "22 de febrero de 2014",
+          "causa": "Escopeta de perdigones — herida el 19 feb en un cacerolazo en Naguanagua; le disparan directo al rostro, a corta distancia, tres veces",
+          "nota": "Estudiante. Condena de 30 años (pena máxima) al sargento Alvín Bonilla Rojas en 2016; 16 años y 6 meses al sargento Francisco Caridad",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Willmer Carballo Amaya",
+          "edad": 43,
+          "ciudad": "Cagua, Aragua",
+          "fecha": "24 de febrero de 2014",
+          "causa": "Arma de fuego — disparo en la cabeza tras apertura de fuego de colectivos en una marcha en Cagua",
+          "nota": "",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Jimmy Vargas",
+          "edad": 34,
+          "ciudad": "San Cristóbal, Táchira",
+          "fecha": "24 de febrero de 2014",
+          "causa": "Caída — desde un segundo piso (~5 m), traumatismo craneoencefálico, San Cristóbal",
+          "nota": "Su familia sostiene marcas de perdigón; el MP desestimó los perdigones y cerró el caso como accidental. PROVEA sostiene que huía de disparos de la GNB",
+          "fuente": "PROVEA · Runrun.es"
+        },
+        {
+          "nombre": "Antonio José Valbuena Morales",
+          "edad": 32,
+          "ciudad": "Maracaibo, Zulia",
+          "fecha": "24 de febrero de 2014",
+          "causa": "Arma de fuego — un encapuchado le dispara en la cabeza y le roba la moto, calle 79 del barrio Francisco de Miranda, Maracaibo",
+          "nota": "Mototaxista. Había salido con ~80 motorizados a retirar barricadas",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Joan Quintero",
+          "edad": 33,
+          "ciudad": "El Limón, Aragua",
+          "fecha": "24 de febrero de 2014",
+          "causa": "Arma de fuego — 12 disparos durante un saqueo en el automercado Súper Líder de El Limón, circunstancias confusas",
+          "nota": "CICPC maneja hipótesis de ajuste de cuentas",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Eduardo Anzola",
+          "edad": 29,
+          "ciudad": "Valencia, Carabobo",
+          "fecha": "25 de febrero de 2014",
+          "causa": "Barricada — impacta una barricada en moto, ~21:00, Valencia",
+          "nota": "PROVEA señala que la zona no tenía alumbrado público",
+          "fuente": "PROVEA · Runrun.es"
+        },
+        {
+          "nombre": "María Julieta Heredia",
+          "edad": 89,
+          "ciudad": "Carabobo",
+          "fecha": "27 de febrero de 2014",
+          "causa": "Ataque cardíaco, atribuido por el gobierno a la presión de un cacerolazo frente a su casa",
+          "nota": "Madre del gobernador de Yaracuy. Foro Penal sostiene que no puede atribuirse a las manifestaciones",
+          "fuente": "Foro Penal · Runrun.es"
+        },
+        {
+          "nombre": "Giovanni Pantoja",
+          "edad": 29,
+          "ciudad": "Valencia, Carabobo",
+          "fecha": "28 de febrero de 2014",
+          "causa": "Arma de fuego — disparo en la cara mientras removía escombros, Valencia",
+          "nota": "Sargento de la GNB. Fuentes oficialistas hablan de emboscada; el MP nunca publicó resultados. Según Foro Penal, los tres civiles procesados no están vinculados",
+          "fuente": "Foro Penal · Runrun.es"
+        },
+        {
+          "nombre": "Deivis Durán Useche",
+          "edad": 31,
+          "ciudad": "Caracas, Distrito Capital",
+          "fecha": "3 de marzo de 2014",
+          "causa": "Barricada — fractura craneal al frenar ante una alcantarilla destapada, autopista Francisco Fajardo, distribuidor Altamira",
+          "nota": "Mototaxista",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Luis Gutiérrez Camargo",
+          "edad": 26,
+          "ciudad": "Rubio, Táchira",
+          "fecha": "5 de marzo de 2014",
+          "causa": "Barricada — sale expulsado de su carro esquivando una barricada en Rubio",
+          "nota": "Estudiante de la UPEL",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "José Gregorio Amaris Castillo",
+          "edad": 25,
+          "ciudad": "Los Ruices, Distrito Capital",
+          "fecha": "6 de marzo de 2014",
+          "causa": "Arma de fuego — disparo en el cuello, enfrentamiento en Los Ruices, municipio Sucre",
+          "nota": "Mototaxista. Foro Penal y PROVEA discrepan sobre quiénes se enfrentaban",
+          "fuente": "Foro Penal · PROVEA"
+        },
+        {
+          "nombre": "Acner Isaac López Lyon",
+          "edad": 22,
+          "ciudad": "Los Ruices, Distrito Capital",
+          "fecha": "6 de marzo de 2014",
+          "causa": "Arma de fuego — disparo en la espalda, mismo enfrentamiento en Los Ruices",
+          "nota": "Sargento 2° GNB. Cabello afirmó que fue un disparo en la cabeza de un francotirador. Vecinos reportan que llamaron a la policía repetidamente sin respuesta",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Giselle Rubilar",
+          "edad": 47,
+          "ciudad": "Mérida",
+          "fecha": "9 de marzo de 2014",
+          "causa": "Arma de fuego — disparo mientras retiraba una barricada, av. Los Próceres; muere 24 h después",
+          "nota": "Chilena, oficialista. Maduro responsabilizó a motorizados opositores; su propio hijo lo desmintió",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Daniel Tinoco",
+          "edad": 24,
+          "ciudad": "San Cristóbal, Táchira",
+          "fecha": "10 de marzo de 2014",
+          "causa": "Arma de fuego — disparo en el pecho, carrera 17 de San Cristóbal, ~23:00",
+          "nota": "Diez sujetos armados llegaron en dos camionetas blancas. Presuntamente colectivos, pero los vecinos los describieron como funcionarios de seguridad",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Jesús Eduardo Acosta",
+          "edad": 23,
+          "ciudad": "Carabobo",
+          "fecha": "12 de marzo de 2014",
+          "causa": "Arma de fuego — disparo en la cabeza por colectivos con ropa alusiva al partido de gobierno; 6 heridos más",
+          "nota": "Un funcionario del CICPC fue detenido e imputado por el homicidio",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Ramzor Bracho",
+          "edad": 36,
+          "ciudad": "Mañongo, Carabobo",
+          "fecha": "12 de marzo de 2014",
+          "causa": "Arma de fuego — disparo en el tórax, Mañongo",
+          "nota": "Funcionario de la GNB",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Guillermo Sánchez",
+          "edad": 42,
+          "ciudad": "Valencia, Carabobo",
+          "fecha": "12 de marzo de 2014",
+          "causa": "Arma de fuego — golpeado por un grupo de 50–60 motorizados y rematado con bala expansiva, Valencia",
+          "nota": "No participaba en las protestas (volvía de casa de su madre). Su esposa desmintió públicamente a Maduro, que responsabilizó a \"francotiradores guarimberos\"",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "José Guillén Araque",
+          "edad": "s/d",
+          "ciudad": "Maracay, Aragua",
+          "fecha": "17 de marzo de 2014",
+          "causa": "Arma de fuego — disparo en la cabeza dispersando una manifestación en Maracay",
+          "nota": "Capitán de la GNB. Según PROVEA, la trayectoria balística dio negativa para los dos vecinos señalados como responsables",
+          "fuente": "PROVEA · Runrun.es"
+        },
+        {
+          "nombre": "Francisco Madrid",
+          "edad": 31,
+          "ciudad": "Montalbán II, Distrito Capital",
+          "fecha": "17 de marzo de 2014",
+          "causa": "Arma de fuego — fuego cruzado durante un tiroteo, Montalbán II",
+          "nota": "Trabajador de la Corporación de Servicios de la Alcaldía de Libertador; fue enviado a retirar desechos de la vía",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Anthony Rojas",
+          "edad": 18,
+          "ciudad": "Cárdenas, Táchira",
+          "fecha": "19 de marzo de 2014",
+          "causa": "Arma de fuego — disparo en la cara mientras tomaba un refresco con amigos, Cárdenas. +20 detonaciones registradas",
+          "nota": "Estudiante de la Universidad del Táchira. Sus acompañantes resultaron ilesos",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Jhon Castillo",
+          "edad": 23,
+          "ciudad": "San Cristóbal, Táchira",
+          "fecha": "19 de marzo de 2014",
+          "causa": "Arma de fuego — dispersando una manifestación en la UNEFA de San Cristóbal",
+          "nota": "Sargento 2° GNB",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Wilfredo Rey",
+          "edad": 31,
+          "ciudad": "San Cristóbal, Táchira",
+          "fecha": "21 de marzo de 2014",
+          "causa": "Arma de fuego — dos disparos (cabeza y brazo) al bajar a socorrer a un joven herido, Barrio Obrero, San Cristóbal",
+          "nota": "Trabajador ajeno a la protesta. Su muerte desató fuertes protestas por haber ocurrido durante un gesto de solidaridad",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Argenis Hernández",
+          "edad": 26,
+          "ciudad": "San Diego, Carabobo",
+          "fecha": "22 de marzo de 2014",
+          "causa": "Arma de fuego — disparo en el abdomen por un motorizado en una barricada del municipio San Diego; muere por hemorragia interna",
+          "nota": "Trasladado sucesivamente por tres centros de salud",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Jesús Labrador",
+          "edad": 40,
+          "ciudad": "Mérida",
+          "fecha": "22 de marzo de 2014",
+          "causa": "Arma de fuego — herido por grupos armados en presunta compañía de la policía de Mérida",
+          "nota": "Según vecinos, participaba en el secuestro de un autobús para usarlo como barricada",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Adriana Urquiola",
+          "edad": 28,
+          "ciudad": "Los Nuevos Teques, Miranda",
+          "fecha": "23 de marzo de 2014",
+          "causa": "Arma de fuego — un sujeto dispara 14 veces contra manifestantes en la Panamericana, Los Nuevos Teques",
+          "nota": "Intérprete de señas de Venevisión. Recién casada y embarazada. El responsable, Yonny Bolívar, era exescolta de la ministra Iris Varela; huyó del país (alerta roja de Interpol, 1 abr 2014)",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Miguel Antonio Parra",
+          "edad": 42,
+          "ciudad": "Mérida",
+          "fecha": "24 de marzo de 2014",
+          "causa": "Arma de fuego — mientras levantaba escombros, av. Las Américas",
+          "nota": "Sargento de la GNB",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Luis Alberto Romero Moncada",
+          "edad": 44,
+          "ciudad": "San Cristóbal, Táchira",
+          "fecha": "28 de marzo de 2014",
+          "causa": "Electrocución — al golpear un cable de alta tensión moviendo una valla publicitaria para cerrar la vía, residencias Quinimarí, San Cristóbal",
+          "nota": "Dos heridos más, uno de ellos de 16 años",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Roberto Annese",
+          "edad": 30,
+          "ciudad": "Maracaibo, Zulia",
+          "fecha": "29 de marzo de 2014",
+          "causa": "Disputada: arma de fuego (escopeta en el pecho, según vecinos y familiares) vs. explosivo casero (según autoridades y autopsia oficial). Custodiaba una barricada en Maracaibo a las 02:00",
+          "nota": "Ambas versiones coinciden en que llegaron efectivos en camioneta blanca y dispararon. Fue hallado muerto en la azotea de una casa",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Mariana Ceballos",
+          "edad": 32,
+          "ciudad": "Carabobo",
+          "fecha": "10 de abril de 2014",
+          "causa": "Arrollamiento — el 14 de marzo, durante una protesta pacífica, por una Toyota Hilux. Casi un mes en coma",
+          "nota": "Según PROVEA, el conductor Kennet Martínez era funcionario del Ministerio de Agricultura y Tierras",
+          "fuente": "PROVEA · Runrun.es"
+        },
+        {
+          "nombre": "José Daza",
+          "edad": 34,
+          "ciudad": "Barquisimeto, Lara",
+          "fecha": "10 de abril de 2014",
+          "causa": "Arma de fuego — disparo en el pecho durante un enfrentamiento entre fuerzas de seguridad y sujetos armados encapuchados, Barquisimeto",
+          "nota": "Oficial de la Brigada Vehicular de la PNB. El enfrentamiento se originó tras un ataque a estudiantes de la UPT Andrés Blanco que repartían volantes",
+          "fuente": "PROVEA · Runrun.es"
+        },
+        {
+          "nombre": "José Steven Colina",
+          "edad": 26,
+          "ciudad": "Los Palos Grandes, Distrito Capital",
+          "fecha": "8 de mayo de 2014",
+          "causa": "Arma de fuego — disparo en el cuello dispersando una manifestación en Los Palos Grandes",
+          "nota": "Funcionario de la PNB",
+          "fuente": "Runrun.es · Infobae · Foro Penal"
+        },
+        {
+          "nombre": "Josué Enmanuel Farías Sánchez",
+          "edad": 19,
+          "ciudad": "Maracaibo, Zulia",
+          "fecha": "21 de junio de 2014 (herido el 29 may)",
+          "causa": "Arma de fuego — disparo en el abdomen que perforó estómago, hígado y páncreas, mientras se retiraba de clases en la URBE, Maracaibo. Muere de paro respiratorio tras casi un mes en terapia intensiva",
+          "nota": "Estudiante de la Universidad Rafael Belloso Chacín (URBE). Última víctima fatal del ciclo. El movimiento estudiantil de la universidad responsabilizó a la policía del Zulia (CPBEZ); Foro Penal señaló a la PNB. Nadie fue detenido",
+          "fuente": "Runrun.es, 21/06/2014 · Foro Penal"
+        }
+      ]
+    },
+    {
+      "id": "capa-2",
+      "titulo": "más de 800 torturados",
+      "subtitulo": "183 denuncias formales ante la fiscalía",
+      "categorias": [
+        "descargas eléctricas",
+        "asfixia con bolsas plásticas",
+        "fracturas de cráneo",
+        "perdigones a quemarropa",
+        "corte de cabello como castigo"
+      ],
+      "nota": "Categorías documentadas por Foro Penal. Sin nombres, sin descripciones: solo la lista, seca."
+    },
+    {
+      "id": "capa-3",
+      "titulo": "miles de detenidos",
+      "subtitulo": "",
+      "nota": "El Ministerio Público publicó dos cifras que no coinciden: 1.854 y 3.306."
+    },
+    {
+      "id": "capa-4",
+      "titulo": "los que se fueron",
+      "subtitulo": "",
+      "lineas": [
+        "En 2014 había unos 800.000 venezolanos fuera del país.",
+        "En 2018, 3,4 millones.",
+        "Nadie contó cuántos de ellos habían estado en la calle."
+      ]
+    }
+  ],
+  "notaDiseno": "Memorial por capas (entregable-D + entregable-H §3). Sin diálogo inventado: las fichas son dato duro con fuente. No filtrar el listado: incluye chavistas, funcionarios GNB/PNB y terceros ajenos a la protesta."
+}

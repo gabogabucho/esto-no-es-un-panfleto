@@ -1,0 +1,57 @@
+{
+  "id": "FIX-02",
+  "acto": 1,
+  "modo": "ZINE",
+  "epigrafe": "San Cristóbal, enero de 2014. El frío baja de la montaña.",
+  "fecha": "17 de enero de 2014",
+  "fechaIso": "2014-01-17",
+  "lugar": "San Cristóbal, Táchira",
+  "bloques": [
+    {
+      "tipo": "zineTitulo",
+      "texto": "Asamblea estudiantil",
+      "sub": "Liceo Simón Bolívar — viernes 7 p.m."
+    },
+    {
+      "tipo": "narracion",
+      "texto": "El volante fotocopiado tiembla en tus manos. En San Cristóbal el frío de la noche baja de la montaña y la asamblea comienza con el rumor de las sillas de plástico."
+    },
+    {
+      "tipo": "dialogo",
+      "hablante": "Profesora Méndez",
+      "texto": "Usted no tiene por qué gritar aquí. La palabra también se organiza, y esta noche la necesitamos entera."
+    },
+    {
+      "tipo": "narracion",
+      "texto": "Alguien reparte otra hoja entre las mesas. La tinta del volante se corre con el sudor de las manos."
+    }
+  ],
+  "grupos": [
+    {
+      "id": "g1",
+      "titulo": "Decisión — el turno de palabra.",
+      "opciones": [
+        {
+          "label": "Levantas la mano y pides la palabra.",
+          "deltas": { "CO": 2, "RI": 1 },
+          "consecuencia": "La profesora asiente y la sala hace silencio."
+        },
+        {
+          "label": "Escuchas en silencio y tomas notas en tu cuaderno.",
+          "deltas": { "RI": 1, "CF": 1 },
+          "consecuencia": "Cada palabra ajena se vuelve una línea en tu cuaderno."
+        },
+        {
+          "label": "Sales al patio a llamar por teléfono a tu casa.",
+          "deltas": { "PP": 1 },
+          "consecuencia": "La voz de tu mamá te recuerda que en la casa también velan por ti."
+        }
+      ]
+    }
+  ],
+  "consecuenciaComun": "La asamblea termina y el volante queda en tu bolsillo, arrugado pero legible.",
+  "fuentes": [
+    { "fuente": "Testimonio de participante, San Cristóbal (ficción de fixture)", "certeza": "testimonio-no-verificado" }
+  ],
+  "notaDiseno": "FIXTURE — reemplazar en cambio #2"
+}
