@@ -518,6 +518,14 @@ export function crearApp(opts = {}) {
     ir(PANTALLA.MATERIALES, { volverA: sesion.pantalla })
   }
 
+  /** Créditos desde el pie: se ven sin haber terminado el juego. El flag
+   *  volverA distingue esta entrada de la del cierre y evita contar una
+   *  partida completada que no ocurrió (FG: contador). */
+  function abrirCreditos() {
+    if (sesion.pantalla === PANTALLA.CREDITOS) return
+    ir(PANTALLA.CREDITOS, { volverA: sesion.pantalla })
+  }
+
   /** Vuelve de una pantalla lateral (memorial, materiales) a donde estabas. */
   function volverDeLateral() {
     const destino = sesion.volverA || PANTALLA.INICIO
@@ -616,7 +624,11 @@ export function crearApp(opts = {}) {
         })
 
       case PANTALLA.CREDITOS:
-        return pantallas.renderCreditos({ cifras: cifrasData, onReiniciar: reiniciar })
+        return pantallas.renderCreditos({
+          cifras: cifrasData,
+          onReiniciar: reiniciar,
+          onVolver: sesion.volverA ? volverDeLateral : null,
+        })
 
       case PANTALLA.MEMORIAL:
         return pantallas.renderVaciado({
@@ -677,13 +689,17 @@ export function crearApp(opts = {}) {
   function render() {
     const p = pantallaDeSesion()
     if (p !== PANTALLA.ESCENA) soltarSenal()
+    // Los créditos tienen dos entradas: el cierre (partida completada) y el
+    // pie (solo lectura). Solo la del cierre marca el final como visto y suma
+    // la partida al contador; distinguirlas es el flag volverA que deja el pie.
+    const creditosDelCierre = p === PANTALLA.CREDITOS && !sesion.volverA
     // Llegar a los créditos es lo que habilita saltar el cierre la próxima vez.
-    if (p === PANTALLA.CREDITOS && !puedeSaltarCierre) {
+    if (creditosDelCierre && !puedeSaltarCierre) {
       puedeSaltarCierre = true
       marcarCierreVisto(almacen)
     }
     // Y completa una partida: se cuenta una vez por visita a los créditos.
-    if (p === PANTALLA.CREDITOS && !contadaCompletada) {
+    if (creditosDelCierre && !contadaCompletada) {
       contadaCompletada = true
       contarPartidaCompletada(almacen)
     }
@@ -716,7 +732,15 @@ export function crearApp(opts = {}) {
       botonMenu.setAttribute('aria-expanded', menuAbierto ? 'true' : 'false')
     }
     if (pie) {
-      pie.textContent = pantallas.textoPie({ acto: sesion.acto, enActo: PANTALLAS_DE_ACTO.includes(p) })
+      pie.textContent = ''
+      pie.append(pantallas.textoPie({ acto: sesion.acto, enActo: PANTALLAS_DE_ACTO.includes(p) }))
+      // El acceso directo a los créditos vive en el pie, junto a la ubicación
+      // (no en el menú, que ya está lleno). Solo fuera del juego y del cierre:
+      // en las secuencias del cierre el camino a los créditos ya está marcado.
+      const enCierre = SECUENCIA_CIERRE.includes(p)
+      if (!PANTALLAS_DE_ACTO.includes(p) && !enCierre) {
+        pie.append(' · ', pantallas.enlacePieCreditos(abrirCreditos))
+      }
     }
 
     if (p === PANTALLA.ESCENA) {

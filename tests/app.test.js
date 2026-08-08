@@ -188,6 +188,45 @@ describe('partida completa con el banco de escenas del entregable C', () => {
   })
 })
 
+describe('acceso a los créditos desde el pie', () => {
+  it('el pie ofrece el enlace fuera del juego y no dentro del cierre', () => {
+    const app = arrancar()
+    const pie = () => document.querySelector('#pie-texto')
+    expect(pie().textContent).toContain('Venezuela, 2014')
+    expect(pie().querySelector('.pie-creditos')).toBeTruthy()
+
+    // Dentro de una escena el pie nombra el acto y no ofrece créditos.
+    jugarHasta(app, PANTALLA.ESCENA)
+    expect(pie().querySelector('.pie-creditos')).toBeNull()
+
+    // En el cierre el camino a los créditos ya está marcado: tampoco el enlace.
+    jugarHasta(app, PANTALLA.PULSO)
+    expect(pie().querySelector('.pie-creditos')).toBeNull()
+  })
+
+  it('abrirlo no cuenta la partida como completada ni habilita saltar el cierre', () => {
+    const almacen = almacenFalso()
+    const app = arrancar(almacen)
+    expect(leerConteo(almacen)).toEqual({ iniciadas: 0, completadas: 0 })
+    expect(almacen.getItem(CLAVE_CIERRE)).toBeNull()
+
+    document.querySelector('#pie-texto .pie-creditos').click()
+    expect(app.sesion.pantalla).toBe(PANTALLA.CREDITOS)
+    expect(leerConteo(almacen)).toEqual({ iniciadas: 0, completadas: 0 })
+    expect(almacen.getItem(CLAVE_CIERRE)).toBeNull()
+  })
+
+  it('desde el pie ofrece Volver y devuelve a la portada', () => {
+    const app = arrancar()
+    document.querySelector('#pie-texto .pie-creditos').click()
+    expect(app.sesion.pantalla).toBe(PANTALLA.CREDITOS)
+    expect(botonPorTexto('Volver')).toBeTruthy()
+
+    botonPorTexto('Volver').click()
+    expect(app.sesion.pantalla).toBe(PANTALLA.INICIO)
+  })
+})
+
 describe('escena', () => {
   let app
 

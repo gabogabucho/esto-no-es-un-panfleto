@@ -912,7 +912,8 @@ export function renderCifra(opts = {}) {
 
 /**
  * Nota del proyecto, fuentes con enlace y la línea final (entregable H §6).
- * opts: { cifras, onReiniciar }
+ * opts: { cifras, onReiniciar, onVolver } — onVolver solo existe cuando se
+ * abre desde el menú: en ese caso hay que poder regresar sin reiniciar.
  */
 export function renderCreditos(opts = {}) {
   const creditos = opts.cifras?.creditos || {}
@@ -933,6 +934,14 @@ export function renderCreditos(opts = {}) {
     )
   }
 
+  const acciones = el('div', { class: 'acciones' })
+  if (opts.onVolver) {
+    acciones.append(boton('Volver', opts.onVolver, 'boton boton--primario'))
+    acciones.append(boton('Volver al inicio', opts.onReiniciar, 'boton'))
+  } else {
+    acciones.append(boton('Volver al inicio', opts.onReiniciar, 'boton'))
+  }
+
   return pantalla('creditos', [
     el('h1', { class: 'titulo-creditos' }, 'Créditos'),
     nota,
@@ -940,9 +949,7 @@ export function renderCreditos(opts = {}) {
     el('h2', { class: 'subtitulo' }, 'Fuentes'),
     fuentes,
     el('p', { class: 'remate remate--seco' }, creditos.cierre || ''),
-    el('div', { class: 'acciones' }, [
-      boton('Volver al inicio', opts.onReiniciar, 'boton'),
-    ]),
+    acciones,
   ])
 }
 
@@ -977,8 +984,10 @@ export function renderAutor() {
 
 /**
  * Panel del menú. El memorial se abre desde aquí en cualquier momento, sin
- * haber terminado el juego (entregable H §7).
- * opts: { sonido, onMemorial, onSonido, onReiniciar, onCerrar }
+ * haber terminado el juego (entregable H §7). Los créditos viven en el pie,
+ * no aquí: el menú ya está lleno.
+ * opts: { sonido, onMemorial, onMateriales, onTutorial,
+ *         onSonido, onReiniciar, onCerrar }
  */
 export function renderMenu(opts = {}) {
   const cuantos = Number(opts.materiales) || 0
@@ -1004,4 +1013,13 @@ export function textoPie(ubicacion = {}) {
   const meta = ubicacion.enActo && ubicacion.acto ? metaActo(ubicacion.acto) : null
   if (meta) return `Acto ${ubicacion.acto} · ${meta.ciudad}`
   return 'Venezuela, 2014'
+}
+
+/**
+ * Acceso directo a los créditos desde el pie, al lado de "Venezuela, 2014".
+ * Discreto a propósito: un enlace de texto, no un botón. El shell decide en
+ * qué pantallas existe (no en el cierre: para eso ya están las secuencias).
+ */
+export function enlacePieCreditos(onClick) {
+  return el('button', { type: 'button', class: 'pie-creditos', onClick }, 'Créditos')
 }
