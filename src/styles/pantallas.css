@@ -101,6 +101,35 @@
    Portada — es la tapa del juego, no un formulario
    -------------------------------------------------------------------------- */
 
+/* En la portada el menú flota sobre la imagen: si se suma en el flujo, la tapa
+   mide 100dvh + cabecera y el botón de empezar nace debajo del pliegue. */
+/* Ancla explícita para el posicionamiento del menú flotante. */
+body.en-portada {
+  position: relative;
+}
+
+body.en-portada .encabezado {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: auto;
+  width: auto;
+  z-index: 30;
+  background: none;
+  backdrop-filter: none;
+  padding: var(--espacio-1) var(--espacio-2);
+  pointer-events: none;
+}
+
+body.en-portada .encabezado > * {
+  pointer-events: auto;
+}
+
+body.en-portada .boton-menu {
+  background: color-mix(in srgb, var(--negro-concreto) 82%, transparent);
+  backdrop-filter: blur(6px);
+}
+
 .pantalla--inicio {
   position: relative;
   min-height: 100dvh;
@@ -484,15 +513,32 @@ body.en-escena main {
   padding: 0;
 }
 
+/* El menú flota sobre la escena para que la ilustración llegue hasta arriba.
+   Como la escena scrollea, todo lo demás le pasa por debajo: por eso la barra
+   de estado se pega arriba y le reserva su hueco (--ancho-menu). Sin esa
+   reserva el menú terminaba encima de las fichas y, en pantallas chicas, de
+   una carta de decisión: tocabas la carta y se abría el menú. */
 body.en-escena .encabezado {
   position: fixed;
   top: 0;
   right: 0;
   left: auto;
   width: auto;
+  z-index: 30;
   background: none;
   backdrop-filter: none;
-  padding: var(--espacio-2);
+  padding: var(--espacio-1) var(--espacio-2);
+  pointer-events: none;
+}
+
+body.en-escena .encabezado > * {
+  pointer-events: auto;
+}
+
+/* Fondo propio: el botón tiene que leerse sobre cualquier ilustración. */
+body.en-escena .boton-menu {
+  background: color-mix(in srgb, var(--negro-concreto) 82%, transparent);
+  backdrop-filter: blur(6px);
 }
 
 body.en-escena .pie {
@@ -504,6 +550,8 @@ body.en-escena .pie {
   flex-direction: column;
   min-height: 100dvh;
   gap: 0;
+  /* Lo que ocupa el botón de menú flotante, contando su padding. */
+  --ancho-menu: 7.5rem;
 }
 
 .escena-escenario {
@@ -533,6 +581,7 @@ body.en-escena .pie {
   position: absolute;
   inset: auto 0 0 0;
   padding: var(--espacio-2);
+  padding-right: max(var(--espacio-2), var(--ancho-menu));
   display: grid;
   gap: 0.15em;
   pointer-events: none;
@@ -567,11 +616,18 @@ body.en-escena .pie {
 /* Una sola línea. Tres filas de fichas empujaban el relato fuera de la
    pantalla, que es el problema que veníamos a resolver. */
 .hud {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--negro-concreto);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: var(--espacio-1);
   padding: var(--espacio-1) var(--espacio-2);
+  /* Hueco del botón de menú: va DESPUÉS del atajo `padding`, o el atajo lo
+     pisa. Sin esto, las fichas de la derecha quedan debajo del menú. */
+  padding-right: var(--ancho-menu);
   border-bottom: 1px solid color-mix(in srgb, var(--verde-senal) 55%, transparent);
   font-size: var(--step-0);
   row-gap: 0.3em;
@@ -669,6 +725,29 @@ body.en-escena .pie {
 
 .hud .senal-indicador {
   margin-left: auto;
+}
+
+/* En teléfonos, reservar el carril del menú deja poco ancho y la barra se iba
+   a cuatro filas: media pantalla en un 568. Las fichas se achican para que
+   quepan en dos. El nombre completo sigue en title y aria-label. */
+@media (max-width: 480px) {
+  .escena-panel .hud {
+    --ancho-menu: 6rem;
+    gap: 0.25em;
+    padding: 0.35em var(--espacio-1);
+    padding-right: var(--ancho-menu);
+  }
+
+  .hud-eje,
+  .hud-item {
+    gap: 0.25em;
+    padding: 0.05em 0.4em;
+    font-size: 0.9em;
+  }
+
+  .hud-inventario {
+    padding-left: 0.4em;
+  }
 }
 
 /* ---- Relato: fluye con la página, sin scroll interno ---- */
@@ -950,6 +1029,16 @@ body.en-escena .pie {
 /* --------------------------------------------------------------------------
    Final de acto
    -------------------------------------------------------------------------- */
+
+/* El final de acto entra en una pantalla corta: sin esto el botón nace unos
+   pocos píxeles bajo el pliegue y parece que la pantalla está cortada. */
+.pantalla--final {
+  gap: var(--espacio-2);
+}
+
+.pantalla--final .stats {
+  gap: 0.35em;
+}
 
 .titulo-final {
   font-family: var(--font-display);

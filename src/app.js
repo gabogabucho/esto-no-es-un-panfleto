@@ -726,6 +726,10 @@ export function crearApp(opts = {}) {
     // En escena el marco de página se aparta: la escena ocupa la pantalla.
     if (typeof document !== 'undefined' && document.body) {
       document.body.classList.toggle('en-escena', p === PANTALLA.ESCENA)
+      // La portada es una tapa a sangre: el menú flota encima en vez de
+      // sumarse a la altura, que empujaba el botón de empezar fuera de vista
+      // en pantallas cortas.
+      document.body.classList.toggle('en-portada', p === PANTALLA.INICIO)
     }
     if (botonMenu) {
       botonMenu.hidden = false
